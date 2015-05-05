@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Sedona blog</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<header>
+    <!-- this container might be excessive but I am not provided a wide screen template so I guess on
+     big screens we are going to center content  -->
+    <div class="container">
+        <div class="navbar">
+            <div class="navbar-logo">
+                <!--logo image-->
+                <a href="index.html">
+                    <img src="#" alt="home">
+                </a>
+                <!-- toggle buttoon for mobile devices. not visible on wide screens -->
+                <div class="navbar-toggle"></div>
+            </div>
+            <nav class="navbar-collapse">
+                <ul>
+                    <li> <a href="#">карта штата</a> </li>
+                    <li> <a href="#">информация</a> </li>
+                    <li> <a href="#">фото и видео</a> </li>
+                    <li> <a href="#">гостиницы</a> </li>
+                </ul>
+            </nav>
+        </div>
+        <div>
+            <h1>sedona</h1>
+        </div>
+    </div>
+</header>
+<article>
+    <section class="blog-desc">
+        <h2>блог шерифа</h2>
+        <p>
+            седона - удивительный город! горы здесь красного цвета, а шериф ведет блог и
+            общается на форумах
+        </p>
+    </section>
+    <!--list of blog posts. I assume that we are loading posts dynamically or relocate to another page
+    when we click on pagination button so we don't need any kind of 'tab' here -->
+    <section class="article">
+       <h3>Внимание сбежала моя домашняя анаконда!</h3>
+       <!-- I assume that only one paragraph is possible so use p instead of div -->
+       <p>
+           жители седоны и гости города,будьте бдительны - сбежала моя домашняя змея.
+           Увидевшему срочно звонить 911 и бежать подальше.
+       </p>
+       <div class="article-date">позавчера</div>
+       <div class="article-type">проишествия</div>
+    </section>
+    <section class="article">
+        <h3>Принят антитабачный закон штата</h3>
+        <p>
+            уважаемые туристы, пожалуйста, не забывайте, что курение в общественных местах города седона
+            категорически запрещено
+        </p>
+        <div class="article-date">позавчера</div>
+        <div class="article-type">проишествия</div>
+    </section>
+    <ul class="nagination">
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+    </ul>
+</article>
+<footer>
+    <div class="footer-hashtag">#visitsedona</div>
+    <ul class="footer-socials">
+        <li><a href="vk.com" alt="vk"></a></li>
+        <li><a href="facebook.com" alt="facebook"></a></li>
+        <li><a href="youtube.com" alt="youtube"></a></li>
+    </ul>
+    <div class="copyright">разработано</div>
+</footer>
+</body>
+</html>
