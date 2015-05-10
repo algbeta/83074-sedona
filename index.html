@@ -1,17 +1,108 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
-  <meta charset="utf-8">
-  <title>HTML Academy: sedona</title>
-  <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <meta charset="utf-8">
+    <title>Sedona Index</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-
 <body>
-
-  <p>Репозиторий создан для обучения на продвинутом онлайн-интенсиве «<a href="https://htmlacademy.ru/advanced_intensive">Создание веб-интерфейсов с помощью HTML и CSS</a>».</p>
-
-  <!-- <script src="js/script.js"></script> -->
-
+  <header class="page-header">
+      <!-- this container might be excessive but I am not provided a wide screen template so I guess on
+       big screens we are going to center content  -->
+      <div class="container">
+        <div class="navbar">
+          <div class="navbar-logo">
+              <!--logo image-->
+              <a href="app/index.html">
+                  <img src="#">
+              </a>
+              <!-- toggle buttoon for mobile devices. not visible on wide screens -->
+              <div class="navbar-toggle"></div>
+          </div>
+          <nav class="navbar-collapse">
+              <ul>
+                  <li> <a href="#">карта штата</a> </li>
+                  <li> <a href="#">информация</a> </li>
+                  <li> <a href="#">фото и видео</a> </li>
+                  <li> <a href="#">гостиницы</a> </li>
+              </ul>
+          </nav>
+        </div>
+        <!-- will put mauntains image as background -->
+        <!-- not sure about that but probably will add additional text as images using :before and :after
+        since I don't want to load additional font -->
+        <div>
+            <h1>sedona</h1>
+        </div>
+      </div>
+  </header>
+  <main>
+    <section>
+        <h1>Седона - небольшой городок в аризоне, заслуживающий большего!</h1>
+        <p>рассмотрим пять причин, по которым седона лучше, чем гранд каньон</p>
+    </section>
+    <section>
+        <h2>настоящиц городок</h2>
+        <span>#1</span>
+        <p>седона не аттракциона для туристов, там течет своя жизнь</p>
+        <!-- not sure about img :) -->
+        <img src="#" alt="виды седоны"/>
+        <ul>
+            <li>
+                жилье
+                <p>рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+            </li>
+            <li>
+                сувениры
+                <p>не только китайского, но и местного производства!</p>
+            </li>
+            <li>
+                еда
+                <p>всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+            </li>
+        </ul>
+    </section> 
+    <section>
+        <h2>там есть мост дьявола</h2>
+        <span>#2</span>
+        <p>да, по нему можно пройтись, если, конечно, вы осмелитесь</p>
+        <!-- not sure about img :) -->
+        <img src="#" alt="виды седоны"/>
+    </section>
+    <section>
+        <h2>Небольшая площадь</h2>
+        <span>#3</span>
+        <p>все достопримечательности находятся очень близко</p>
+    </section>
+    <section>
+        <h2>Красивая дорога</h2>
+        <span>#4</span>
+        <p>ехать в седону из лас-вегаса совсем не скучно</p>
+    </section>
+    <section>
+        <h2>мало туристов</h2>
+        <span>#5</span>
+        <p>большинство едет в гранд каньон и толпится там</p>
+    </section>
+    <section>
+        <h2>заинтересовались</h2>
+        <p>укажите преполагаемые даты поездки и мы покажем вам лучшие предложения гостиниц в седоне</p>
+        <a href="#">найти гостиницу</a>
+    </section>  
+    <!-- maps -->
+    <section class="map-canvas"></section>
+  </main>
+  <footer class="page-footer">
+      <div class="footer-hashtag">#visitsedona</div>
+      <section class="socials">
+          <ul>
+              <li><a href="vk.com" alt="vk"></a></li>
+              <li><a href="facebook.com" alt="facebook"></a></li>
+              <li><a href="youtube.com" alt="youtube"></a></li>
+          </ul>
+      </section>
+      <section class="copyright">разработано</section>
+  </footer>
 </body>
 </html>
