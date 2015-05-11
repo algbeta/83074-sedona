@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Sedona blog</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<header>
+
+    <!-- this container might be excessive but I am not provided a wide screen template so I guess on
+     big screens we are going to center content  -->
+    <div class="container">
+        <div class="navbar">
+            <div class="navbar-logo">
+                <!--logo image-->
+                <a href="index.html">
+                    <img src="#">
+                </a>
+                <!-- toggle buttoon for mobile devices. not visible on wide screens -->
+                <div class="navbar-toggle"></div>
+            </div>
+            <nav class="navbar-collapse">
+                <ul>
+                    <li> <a href="#" title="карта штата">карта штата</a> </li>
+                    <li> <a href="#" title="информация">информация</a> </li>
+                    <li> <a href="#" title="фото и видео">фото и видео</a> </li>
+                    <li> <a href="#" title="гостиницы">гостиницы</a> </li>
+                </ul>
+            </nav>
+        </div>
+        <div>
+            <h1>sedona</h1>
+        </div>
+    </div>
+</header>
+<main>
+<article>
+    <header class="article-header">
+        <h1>оставьте свой отзыв</h1>
+        <p>
+            помогите нашим отелям стать лучше! оставьте отзыв о них,
+            а также о посещенных вами достопримечательностях
+        </p>
+
+    </header>
+    <section>
+        <form action="#" id="survey">
+            <fieldset>
+                <legend>
+                    представьтесь, пожалуйста:
+                </legend>
+                   <label for="surname">Фамилия:</label>
+                   <input id="surname" type="text" value="Иванов" required=""/>
+                   <label for="name">имя:</label>
+                   <input id="name" type="text" value="петр" required=""/>
+                   <label for="secondname">отчество:</label>
+                   <input id="secondname" type="text" value="александрович"/>
+            </fieldset>
+            <fieldset>
+                <legend>Ваше общее впечатление:</legend>
+                <label for="positiveFeedback">Скорее положительное </label>
+                <input id="positiveFeedback" type="radio"  checked/>
+                <label for="negativeFeedback">Скорее отрицательное</label>
+                <input id="negativeFeedback" type="radio" />
+            </fieldset>
+            <fieldset>
+                <legend>Даты вашей поездки:</legend>
+                  <label for="arrivaldate">дата приезда</label>
+                  <input id="arrivaldate" type="date" value="2015-04-07" required/>
+                  <label for="duration">длительность пребывания:</label>
+                  <input id="duration" type="number" value="14" required/>
+                  <label for="departuredate">дата отъезда</label>
+                  <input id="departuredate" type="date" value="2015-04-28" required/>
+                </ul>
+            </fieldset>
+            <fieldset>
+                <legend>кол-во путешественников:</legend>
+                <label>количество путешественников</label>
+                <input type="number" min="2" required/>
+                <ol>
+                  <li class="traveler-1">
+                       <label>Фамилия</label>
+                       <input type="text" required/>
+                       <label>Имя</label>
+                       <input type="text" required/>
+                       <label>Отчество</label>
+                       <input type="text"/>
+                   </li>
+                  <li class="traveler-2">
+                      <label>Фамилия</label>
+                      <input type="text" required/>
+                      <label>Имя</label>
+                      <input type="text" required/>
+                      <label>Отчество</label>
+                      <input type="text"/>
+                  </li>
+                </ol>
+            </fieldset>
+            <fieldset>
+                <legend>Посещенные достопримечетльносити</legend>
+                <label>Мост дъявола</label>
+                <input checked type="checkbox"/>
+                <label>Слайд-парк</label>
+                <input type="checkbox"/>
+                <label>Гора-колокол</label>
+                <input checked type="checkbox"/>
+                <label>Красные скалы</label>
+                <input checked type="checkbox"/>
+            </fieldset>
+         </form>
+    </section>
+
+    <footer class="article footer">
+        <h2>Что-то пошло не так?</h2>
+        <p>Проверьте поля, выделенные красным, ксорее всего, вы забыли их заполнить</p>
+        <input type="submit"  form="survey" value="ok"/>
+    </footer>
+</article>
+<!-- is this section popup? -->
+<section>
+    <ul class="gallery">
+        <li><img src="#" alt=""/></li>
+        <li><img src="#" alt=""/></li>
+        <li><img src="#" alt=""/></li>
+    </ul>
+    <p>Спасибо за ваше участие, ваш отзыв уже поступил к нам. в ближайшее время мы опубликуем его на сайте</p>
+</section>
+</main>
+<footer class="page-footer">
+    <div class="footer-hashtag">#visitsedona</div>
+    <section class="socials">
+      <ul>
+          <li><a href="vk.com" alt="vk"></a></li>
+          <li><a href="facebook.com" alt="facebook"></a></li>
+          <li><a href="youtube.com" alt="youtube"></a></li>
+      </ul>
+    </section>
+    <section class="copyright">разработано</section>
+</footer>
+</body>
+</html>

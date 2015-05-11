@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Sedona blog</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<header>
+    <!-- this container might be excessive but I am not provided a wide screen template so I guess on
+     big screens we are going to center content  -->
+    <div class="container">
+        <div class="navbar">
+            <div class="navbar-logo">
+                <!--logo image-->
+                <a href="index.html">
+                    <img src="#">
+                </a>
+                <!-- toggle buttoon for mobile devices. not visible on wide screens -->
+                <div class="navbar-toggle"></div>
+            </div>
+            <nav class="navbar-collapse">
+                <ul>
+                    <li> <a href="#" title="карта штата">карта штата</a> </li>
+                    <li> <a href="#" title="информация">информация</a> </li>
+                    <li> <a href="#" title="фото и видео">фото и видео</a> </li>
+                    <li> <a href="#" title="гостиницы">гостиницы</a> </li>
+                </ul>
+            </nav>
+        </div>
+        <div>
+            <h1>sedona</h1>
+        </div>
+    </div>
+</header>
+<main>
+
+    <article class="blog-desc">
+        <h1>блог шерифа</h1>
+        <p>
+            седона - удивительный город! горы здесь красного цвета, а шериф ведет блог и
+            общается на форумах
+        </p>
+    </article>
+    <!--list of blog posts. I assume that we are loading posts dynamically or relocate to another page
+    when we click on pagination button so we don't need any kind of 'tab' here -->
+    <section class="article">
+       <h2>Внимание сбежала моя домашняя анаконда!</h2>
+       <!-- I assume that only one paragraph is possible so use p instead of div -->
+       <p>
+           жители седоны и гости города,будьте бдительны - сбежала моя домашняя змея.
+           Увидевшему срочно звонить 911 и бежать подальше.
+       </p>
+       <span class="article-date">
+           <time datetime="2014-05-08">Вчера</time>
+       </span>
+       <span class="article-type">проишествия</span>
+    </section>
+    <section class="article">
+        <h2>Принят антитабачный закон штата</h2>
+        <p>
+            уважаемые туристы, пожалуйста, не забывайте, что курение в общественных местах города седона
+            категорически запрещено
+        </p>
+        <span class="article-date">
+            <time datetime="2014-05-08">Вчера</time>
+        </span>
+        <span class="article-type">проишествия</span>
+    </section>
+    <section>
+      <ul class="nagination">
+          <li><a href="#">1</a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">4</a></li>
+          <li><a href="#">5</a></li>
+      </ul>
+    </section>
+</main>
+<footer class="page-footer">
+    <div class="footer-hashtag">#visitsedona</div>
+    <section class="socials">
+        <ul>
+            <li><a href="vk.com" alt="vk"></a></li>
+            <li><a href="facebook.com" alt="facebook"></a></li>
+            <li><a href="youtube.com" alt="youtube"></a></li>
+        </ul>
+    </section>
+    <section class="copyright">разработано</section>
+</footer>
+</body>
+</html>
