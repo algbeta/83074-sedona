@@ -7,100 +7,135 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-  <header class="page-header">
-      <!-- this container might be excessive but I am not provided a wide screen template so I guess on
-       big screens we are going to center content  -->
-      <div class="container">
-        <div class="navbar">
-          <div class="navbar-logo">
-              <!--logo image-->
-              <a href="app/index.html">
-                  <img alt="на главную" src="#">
-              </a>
-              <!-- toggle buttoon for mobile devices. not visible on wide screens -->
-              <div class="navbar-toggle"></div>
-          </div>
-          <nav class="navbar-collapse">
-              <ul>
-                    <li> <a href="#" title="карта штата">карта штата</a> </li>
-                    <li> <a href="#" title="информация">информация</a> </li>
-                    <li> <a href="#" title="фото и видео">фото и видео</a> </li>
-                    <li> <a href="#" title="гостиницы">гостиницы</a> </li>
-              </ul>
-          </nav>
+<header class="page-header">
+    <div class="navbar">
+        <div class="navbar-logo">
+            <!--logo image-->
+            <a class="logo_image" href="app/index.html">
+                <img alt="на главную" src="img/logo.png"/>
+            </a>
+            <!-- toggle buttoon for mobile devices. not visible on wide screens -->
+            <div class="navbar-toggle-button"></div>
         </div>
-        <!-- will put mauntains image as background -->
-        <!-- not sure about that but probably will add additional text as images using :before and :after
-        since I don't want to load additional font -->
-        <div>
-            <h1>sedona</h1>
+        <nav class="navbar-collapse">
+            <ul>
+                <!-- this item  contain close-menu button -->
+                <li class="navbar-collapse_item navbar-collapse_item--close">
+                    <a href="#" title="карта штата">карта штата</a>
+                </li>
+                <li class="navbar-collapse_item">
+                    <a href="#" title="информация">информация</a>
+                </li>
+                <li class="navbar-collapse_item">
+                    <a href="#" title="фото и видео">фото и видео</a>
+                </li>
+                <li class="navbar-collapse_item">
+                    <a href="#" title="гостиницы">гостиницы</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="intro">
+        <!-- distance between images are different so I assume we  need different margins and
+             according to BEM we need additional class of state instead of using nth-child? -->
+        <img class="intro_item intro_item--high" src="img/intro-1.png" alt="Welcome to the gorgeous Sedona!"/>
+        <img class="intro_item intro_item--middle" src="img/intro-2.png" alt="Sedona"/>
+        <img class="intro_item intro_item--low" src="img/intro-3.png" alt="Because Grand Canyon sucks!"/>
+    </div>
+</header>
+<main>
+    <div class="sedona-intro">
+        <h1 class="sedona-intro_heading">Седона - небольшой городок в аризоне, заслуживающий большего!</h1>
+
+        <p class="sedona-intro_desc">рассмотрим пять причин, по которым седона лучше, чем гранд каньон</p>
+    </div>
+    <div class="sedona-advantage">
+
+        <div class="sedona-advantage_item">
+
+            <div class="sedona-advantage_item_desc sedona-advantage_item_desc--blue">
+                <h2 class="sedona-advantage_item_desc_heading">настоящиц городок</h2>
+                <span class="sedona-advantage_item_number">#1</span>
+
+                <p class="sedona-advantage_item_content">седона не аттракциона для туристов, там течет своя жизнь</p>
+                <img src="#" alt="виды седоны"/>
+            </div>
+
+            <ul>
+                <li>
+                    жилье
+                    <p>рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+                </li>
+                <li>
+                    сувениры
+                    <p>не только китайского, но и местного производства!</p>
+                </li>
+                <li>
+                    еда
+                    <p>всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+                </li>
+            </ul>
         </div>
-      </div>
-  </header>
-  <main>
-    <section>
-        <h1>Седона - небольшой городок в аризоне, заслуживающий большего!</h1>
-        <p>рассмотрим пять причин, по которым седона лучше, чем гранд каньон</p>
-    </section>
-    <section>
-        <h2>настоящиц городок</h2>
-        <span>#1</span>
-        <p>седона не аттракциона для туристов, там течет своя жизнь</p>
-        <img src="#" alt="виды седоны"/>
-        <ul>
-            <li>
-                жилье
-                <p>рекомендуем пожить в настоящем мотеле, все как в кино!</p>
-            </li>
-            <li>
-                сувениры
-                <p>не только китайского, но и местного производства!</p>
-            </li>
-            <li>
-                еда
-                <p>всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
-            </li>
-        </ul>
-    </section> 
-    <section>
-        <h2>там есть мост дьявола</h2>
-        <span>#2</span>
-        <p>да, по нему можно пройтись, если, конечно, вы осмелитесь</p>
-        <img src="#" alt="виды седоны"/>
-    </section>
-    <section>
-        <h2>Небольшая площадь</h2>
-        <span>#3</span>
-        <p>все достопримечательности находятся очень близко</p>
-    </section>
-    <section>
-        <h2>Красивая дорога</h2>
-        <span>#4</span>
-        <p>ехать в седону из лас-вегаса совсем не скучно</p>
-    </section>
-    <section>
-        <h2>мало туристов</h2>
-        <span>#5</span>
-        <p>большинство едет в гранд каньон и толпится там</p>
-    </section>
-    <section>
-        <h2>заинтересовались</h2>
-        <p>укажите преполагаемые даты поездки и мы покажем вам лучшие предложения гостиниц в седоне</p>
-        <a href="#">найти гостиницу</a>
-    </section>  
+
+        <div class="sedona-advantage_item">
+            <div class="sedona-advantage_item_desc sedona-advantage_item_desc--blue">
+
+                <h2 class="sedona-advantage_item_desc_heading">там есть мост дьявола</h2>
+                <span class="sedona-advantage_item_number">#2</span>
+
+                <p class="sedona-advantage_item_content">да, по нему можно пройтись, если, конечно, вы осмелитесь</p>
+                <img src="#" alt="виды седоны"/>
+            </div>
+        </div>
+
+        <div class="sedona-advantage_item">
+            <div class="sedona-advantage_item_desc sedona-advantage_item_desc--grey">
+                <h2 class="sedona-advantage_item_desc_heading">Небольшая площадь</h2>
+                <span class="sedona-advantage_item_number">#3</span>
+
+                <p class="sedona-advantage_item_content">все достопримечательности находятся очень близко</p>
+            </div>
+        </div>
+
+        <div class="sedona-advantage_item">
+            <div class="sedona-advantage_item_desc sedona-advantage_item_desc--grey">
+                <h2 class="sedona-advantage_item_desc_heading">Красивая дорога</h2>
+                <span class="sedona-advantage_item_number">#4</span>
+
+                <p class="sedona-advantage_item_content">ехать в седону из лас-вегаса совсем не скучно</p>
+            </div>
+        </div>
+
+        <div class="sedona-advantage_item">
+            <div class="sedona-advantage_item_desc sedona-advantage_item_desc--grey">
+                <h2 class="sedona-advantage_item_desc_heading">мало туристов</h2>
+                <span class="sedona-advantage_item_number">#5</span>
+
+                <p class="sedona-advantage_item_content">большинство едет в гранд каньон и толпится там</p>
+            </div>
+        </div>
+
+    </div>
+    <div class="hotel-offer">
+        <h2 class="hotel-offer_heading">Заинтересовались</h2>
+
+        <p class="hotel-offer_content">Укажите преполагаемые даты поездки и мы покажем вам лучшие предложения гостиниц в
+            седоне</p>
+        <a class="hotel-offer_link" href="#">найти гостиницу</a>
+    </div>
     <!-- maps -->
-    <section class="map-canvas"></section>
-  </main>
-  <footer class="page-footer">
-      <div class="footer-hashtag">#visitsedona</div>
-      <section class="socials">
-          <ul>
-              <li><a href="vk.com" alt="vk"></a></li>
-              <li><a href="facebook.com" alt="facebook"></a></li>
-              <li><a href="youtube.com" alt="youtube"></a></li>
-          </ul>
-      </section>
-      <section class="copyright">разработано</section>
-  </footer>
+    <div class="map-canvas"></div>
+</main>
+<footer class="page-footer">
+    <div class="page-footer-hashtag">#visitsedona</div>
+    <div class="page-footer-socials">
+        <ul>
+            <li class="page-footer-socials_item"><a href="vk.com" alt="vk"></a></li>
+            <li class="page-footer-socials_item"><a href="facebook.com" alt="facebook"></a></li>
+            <li class="page-footer-socials_item"><a href="youtube.com" alt="youtube"></a></li>
+        </ul>
+    </div>
+    <div class="page-footer-copyright">разработано</div>
+</footer>
 </body>
 </html>

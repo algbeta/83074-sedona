@@ -7,87 +7,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-<header>
-    <!-- this container might be excessive but I am not provided a wide screen template so I guess on
-     big screens we are going to center content  -->
-    <div class="container">
-        <div class="navbar">
-            <div class="navbar-logo">
-                <!--logo image-->
-                <a href="index.html">
-                    <img alt="на главную" src="#">
-                </a>
-                <!-- toggle buttoon for mobile devices. not visible on wide screens -->
-                <div class="navbar-toggle"></div>
-            </div>
-            <nav class="navbar-collapse">
-                <ul>
-                    <li> <a href="#" title="карта штата">карта штата</a> </li>
-                    <li> <a href="#" title="информация">информация</a> </li>
-                    <li> <a href="#" title="фото и видео">фото и видео</a> </li>
-                    <li> <a href="#" title="гостиницы">гостиницы</a> </li>
-                </ul>
-            </nav>
+<header class="page-header">
+    <div class="navbar">
+        <div class="navbar-logo">
+            <!--logo image-->
+            <a class="logo_image" href="app/index.html">
+                <img alt="на главную" src="img/logo.png"/>
+            </a>
+            <!-- toggle buttoon for mobile devices. not visible on wide screens -->
+            <div class="navbar-toggle-button"></div>
         </div>
-        <div>
-            <h1>sedona</h1>
-        </div>
+        <nav class="navbar-collapse">
+            <ul>
+                <!-- this item  contain close-menu button -->
+                <li class="navbar-collapse_item navbar-collapse_item--close">
+                    <a href="#" title="карта штата">карта штата</a>
+                </li>
+                <li class="navbar-collapse_item">
+                    <a href="#" title="информация">информация</a>
+                </li>
+                <li class="navbar-collapse_item">
+                    <a href="#" title="фото и видео">фото и видео</a>
+                </li>
+                <li class="navbar-collapse_item">
+                    <a href="#" title="гостиницы">гостиницы</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="intro">
+        <img class="intro_item intro_item--middle" src="img/intro-2.png" alt="Sedona"/>
     </div>
 </header>
 <main>
+    <div class="blog-description">
+        <h1 class="blog-description_heading">Блог шерифа</h1>
 
-    <article class="blog-desc">
-        <h1>блог шерифа</h1>
-        <p>
-            седона - удивительный город! горы здесь красного цвета, а шериф ведет блог и
+        <p class="blog-description_content">
+            Седона - удивительный город! горы здесь красного цвета, а шериф ведет блог и
             общается на форумах
         </p>
-    </article>
-    <!--list of blog posts. I assume that we are loading posts dynamically or relocate to another page
-    when we click on pagination button so we don't need any kind of 'tab' here -->
-    <section class="article">
-       <h2>Внимание сбежала моя домашняя анаконда!</h2>
-       <!-- I assume that only one paragraph is possible so use p instead of div -->
-       <p>
-           жители седоны и гости города,будьте бдительны - сбежала моя домашняя змея.
-           Увидевшему срочно звонить 911 и бежать подальше.
-       </p>
-       <span class="article-date">
+    </div>
+    <section class="post">
+        <h2 class="post_heading">Внимание сбежала моя домашняя анаконда!</h2>
+        <!-- I assume that only one paragraph is possible so use p instead of div -->
+        <p class="post_content">
+            жители седоны и гости города,будьте бдительны - сбежала моя домашняя змея.
+            Увидевшему срочно звонить 911 и бежать подальше.
+        </p>
+       <span class="post_date">
            <time datetime="2014-05-08">Вчера</time>
        </span>
-       <span class="article-type">проишествия</span>
+        <span class="post_type">проишествия</span>
     </section>
-    <section class="article">
-        <h2>Принят антитабачный закон штата</h2>
-        <p>
+    <section class="post">
+        <h2 class="post_heading">Принят антитабачный закон штата</h2>
+
+        <p class="post_content">
             уважаемые туристы, пожалуйста, не забывайте, что курение в общественных местах города седона
             категорически запрещено
         </p>
-        <span class="article-date">
+        <span class="post_date">
             <time datetime="2014-05-08">Вчера</time>
         </span>
-        <span class="article-type">проишествия</span>
+        <span class="post_type">проишествия</span>
     </section>
-    <section>
-      <ul class="nagination">
-          <li><a href="#">1</a></li>
-          <li><a href="#">2</a></li>
-          <li><a href="#">3</a></li>
-          <li><a href="#">4</a></li>
-          <li><a href="#">5</a></li>
-      </ul>
-    </section>
+    <ul class="pagination">
+        <li class="pagination_item"><a href="#">1</a></li>
+        <li class="pagination_item"><a href="#">2</a></li>
+        <li class="pagination_item"><a href="#">3</a></li>
+        <li class="pagination_item"><a href="#">4</a></li>
+        <li class="pagination_item"><a href="#">5</a></li>
+    </ul>
 </main>
 <footer class="page-footer">
-    <div class="footer-hashtag">#visitsedona</div>
-    <section class="socials">
+    <div class="page-footer-hashtag">#visitsedona</div>
+    <div class="page-footer-socials">
         <ul>
-            <li><a href="vk.com" alt="vk"></a></li>
-            <li><a href="facebook.com" alt="facebook"></a></li>
-            <li><a href="youtube.com" alt="youtube"></a></li>
+            <li class="page-footer-socials_item"><a href="vk.com" alt="vk"></a></li>
+            <li class="page-footer-socials_item"><a href="facebook.com" alt="facebook"></a></li>
+            <li class="page-footer-socials_item"><a href="youtube.com" alt="youtube"></a></li>
         </ul>
-    </section>
-    <section class="copyright">разработано</section>
+    </div>
+    <div class="page-footer-copyright">разработано</div>
 </footer>
 </body>
 </html>
