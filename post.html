@@ -37,68 +37,76 @@
         <img class="intro__because" src="img/intro-3.png" alt="Because Grand Canyon sucks!"/>
     </div>
 </header>
-<main>
-    <div class="blog-description">
-        <h1 class="blog-description_heading">блог шерифа</h1>
-
-        <p class="blog-description_content">
+<main class="main">
+   
+    <div class="section-description">
+        <p class="section-description__heading">блог шерифа</p>
+        <p class="section-description__content">
             седона - удивительный город! горы здесь красного цвета, а шериф ведет блог и
             общается на форумах
         </p>
     </div>
+  
+    <div class="post-data">
+        <span class="post-data__date">
+              <time datetime="2014-05-08">Вчера</time>
+        </span>
+        <span class="post-data__type">Проишествия</span>
+    </div>
+
     <article class="post-full">
         <header class="post-header">
-          <span class="post-header_date">
-              <time datetime="2014-05-08">Вчера</time>
-          </span>
-            <span class="post-header_type">Проишествия</span>
-
-            <h1 class="post-header_heading">Внимание сбежала моя домашняя анаконда!</h1>
-
-            <p class="post-header_content">
+            <h1 class="post-header__heading">Внимание сбежала моя домашняя анаконда!</h1>
+            <p class="post-header__content">
                 Жители седоны и гости города,будьте бдительны - сбежала моя домашняя змея.
                 Увидевшему срочно звонить 911 и бежать подальше.
             </p>
         </header>
-        <h2 class="post-full_subheading">Предыстория</h2>
 
-        <p class="post-full_content">
+        <h2 class="post-full__subheading">Предыстория</h2>
+
+        <p class="post-full__content">
             В далеком 85-ом я подобрал эту змею на трассе. ее переехал грузовик и она валялась на обочине.
             мне стало жаль ее и я решил взять ее с собой. кинул в багажник пикапа и подумал тогда:
             <q>если доедет до седоны живой, так и быть, оставлю ее себе</q>
         </p>
 
-        <h2 class="post-full_subheading">Пропажа</h2>
+        <h2 class="post-full__subheading">Пропажа</h2>
 
-        <p class="post-full_content">
+        <p class="post-full__content">
             Неделю назад я вернулся из канзаса и не нашел анаконду дома. обошел все 200 гектаров своего участка,
-            но ее нигде нет. решил сообщить в полицию, но вовремя вспомнил, что я и есть полиция, поэтому отправился на
-            поиски сам.
+            но ее нигде нет. решил сообщить в полицию, но вовремя вспомнил, что я и есть полиция, поэтому отправился на поиски сам.
             особые приметы змеи:
-        <ul class="post-full_content_list">
-            <li>
+        </p>
+            
+        <ul class="post-full__list">
+            <li class="post-full__list-item">
                 длина: 5 метров
             </li>
-            <li>
+            <li class="post-full__list-item">
                 масса: 85 кг
             </li>
-            <li>
+            <li class="post-full__list-item">
                 окраска: серовато-зеленая
             </li>
         </ul>
-        если вы увидите эту змею, сразу <span>звоните 911</span> и бегите со всех ног от нее!
-        </p>
-        <h2 class="post-full_subheading">Предостережение</h2>
 
-        <p class="post-full_content">
+        <p class="post-full__content">
+            Если вы увидите эту змею, сразу <span>звоните 911</span> и бегите со всех ног от нее!
+        </p>
+
+        <h2 class="post-full__subheading">Предостережение</h2>
+
+        <p class="post-full__content">
             Не пытайтесь убить змею, если увидите! помните, что она тоже живое существо, хоть и выглядит не очень
             приятно.
             вот цитата, которая мне очень нравится:
-            <blackquote>
-                Самый свирепый из зверей - теперь мы знаем - это человек, он убивает, даже если не голоден.
-                <span>адриано челентано</span>
-            </blackquote>
-        </p>
+        </p>    
+        <blockquote class="post-full__quote">
+            Самый свирепый из зверей - теперь мы знаем - это человек, он убивает, даже если не голоден.
+            <span class="post-full__quote-author">адриано челентано</span>
+        </blockquote>
+        
     </article>
     <div class="previous-next-section">
         <a class="previous-next-section_item" href="#previos">Пред.</a>
