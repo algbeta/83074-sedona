@@ -39,99 +39,81 @@
 </header>
 
 
-<main>
+<main class="main">
+    
     <div class="sedona-intro">
-        <h1 class="sedona-intro_heading">Седона - небольшой городок в аризоне, заслуживающий большего!</h1>
-
-        <p class="sedona-intro_desc">рассмотрим пять причин, по которым седона лучше, чем гранд каньон</p>
+        <h1 class="sedona-intro__heading">Седона - небольшой городок в аризоне, заслуживающий большего!</h1>
+        <p class="sedona-intro__desc">рассмотрим пять причин, по которым седона лучше, чем гранд каньон</p>
     </div>
-    <div class="sedona-advantage">
 
-        <div class="sedona-advantage_item">
-
-            <div class="sedona-advantage_item_desc sedona-advantage_item_desc--blue">
-                <h2 class="sedona-advantage_item_desc_heading">настоящиц городок</h2>
-                <span class="sedona-advantage_item_number">#1</span>
-
-                <p class="sedona-advantage_item_content">седона не аттракциона для туристов, там течет своя жизнь</p>
-                <img src="#" alt="виды седоны"/>
-            </div>
-
-            <ul>
-                <li>
-                    жилье
-                    <p>рекомендуем пожить в настоящем мотеле, все как в кино!</p>
-                </li>
-                <li>
-                    сувениры
-                    <p>не только китайского, но и местного производства!</p>
-                </li>
-                <li>
-                    еда
-                    <p>всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
-                </li>
-            </ul>
+    <div class="advantage">
+        <div class="advantage__item advantage__item--left">
+          <h2 class="advantage__item-heading">настоящиц городок</h2>
+          <!-- number will be in :before -->
+          <p class="sedona-advantage__item-content">седона не аттракциона для туристов, там течет своя жизнь</p>
         </div>
-
-        <div class="sedona-advantage_item">
-            <div class="sedona-advantage_item_desc sedona-advantage_item_desc--blue">
-
-                <h2 class="sedona-advantage_item_desc_heading">там есть мост дьявола</h2>
-                <span class="sedona-advantage_item_number">#2</span>
-
-                <p class="sedona-advantage_item_content">да, по нему можно пройтись, если, конечно, вы осмелитесь</p>
-                <img src="#" alt="виды седоны"/>
-            </div>
-        </div>
-
-        <div class="sedona-advantage_item">
-            <div class="sedona-advantage_item_desc sedona-advantage_item_desc--grey">
-                <h2 class="sedona-advantage_item_desc_heading">Небольшая площадь</h2>
-                <span class="sedona-advantage_item_number">#3</span>
-
-                <p class="sedona-advantage_item_content">все достопримечательности находятся очень близко</p>
-            </div>
-        </div>
-
-        <div class="sedona-advantage_item">
-            <div class="sedona-advantage_item_desc sedona-advantage_item_desc--grey">
-                <h2 class="sedona-advantage_item_desc_heading">Красивая дорога</h2>
-                <span class="sedona-advantage_item_number">#4</span>
-
-                <p class="sedona-advantage_item_content">ехать в седону из лас-вегаса совсем не скучно</p>
-            </div>
-        </div>
-
-        <div class="sedona-advantage_item">
-            <div class="sedona-advantage_item_desc sedona-advantage_item_desc--grey">
-                <h2 class="sedona-advantage_item_desc_heading">мало туристов</h2>
-                <span class="sedona-advantage_item_number">#5</span>
-
-                <p class="sedona-advantage_item_content">большинство едет в гранд каньон и толпится там</p>
-            </div>
-        </div>
-
+        <img class="advantage_view advantage_view--right" src="#" alt="виды седоны"/>
     </div>
+
+    <ul class="advantage-list">
+        <li class="advantage-list__item advantage-list__item--accomodation">
+            <span class="advantage-list__item-heading">жилье</span>
+            <p class="advantage-list__item-desc">рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+        </li>
+        <li class="advantage-list__item advantage-list__item--gift">
+            <span class="advantage-list__item-heading">сувениры</span>
+            <p class="advantage-list__item-desc">не только китайского, но и местного производства!</p>
+        </li>
+        <li class="advantage-list__item advantage-list__item--food">
+            <span class="advantage-list__item-heading">еда</span>
+            <p class="advantage-list__item-desc">всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+        </li>
+    </ul>
+
+    <div class="advantage">
+        <div class="advantage__item advantage__item--right">
+          <h2 class="advantage__item-heading">там есть мост дьявола</h2>
+          <p class="sedona-advantage__item-content">да, по нему можно пройтись, если, конечно, вы осмелитесь</p>
+        </div>
+        <img class="advantage_view advantage_view--left" src="#" alt="виды седоны"/>
+    </div>
+    
+    
+    <ul class="advantage-list advantage">
+        <li class="advantage-list__item">
+            <span class="advantage-list__item-heading">Небольшая площадь</span>
+            <p class="advantage-list__item-desc">Все достопримечательности находятся очень близко</p>
+        </li>
+        <li class="advantage-list__item">
+            <span class="advantage-list__item-heading">Красивая дорога</span>
+            <p class="advantage-list__item-desc">Eхать в седону из лас-вегаса совсем не скучно</p>
+        </li>
+        <li class="advantage-list__item">
+            <span class="advantage-list__item-heading">Мало туристов</span>
+            <p class="advantage-list__item-desc">Большинство едет в гранд каньон и толпится там</p>
+        </li>
+    </ul>
+  
     <div class="hotel-offer">
-        <h2 class="hotel-offer_heading">Заинтересовались</h2>
-
-        <p class="hotel-offer_content">Укажите преполагаемые даты поездки и мы покажем вам лучшие предложения гостиниц в
-            седоне</p>
-        <a class="hotel-offer_link" href="#">найти гостиницу</a>
+        <h2 class="hotel-offer__heading">Заинтересовались</h2>
+        <p class="hotel-offer__content">Укажите преполагаемые даты поездки и мы покажем вам лучшие предложения гостиниц в седоне</p>
+        <a class="hotel-offer__link" href="#">найти гостиницу</a>
     </div>
+    
     <!-- maps -->
     <div class="map-canvas"></div>
+
 </main>
 <footer class="page-footer">
-    <div class="page-footer-hashtag">#visitsedona</div>
-    <div class="page-footer-socials">
-        <ul>
-            <li class="page-footer-socials_item"><a href="vk.com" alt="vk"></a></li>
-            <li class="page-footer-socials_item"><a href="facebook.com" alt="facebook"></a></li>
-            <li class="page-footer-socials_item"><a href="youtube.com" alt="youtube"></a></li>
-        </ul>
+    <div class="page-footer__hashtag">#visitsedona</div>
+    <div class="page-footer__socials">
+        <a class="page-footer__link page-footer__link--vk" href="vk.com" title="vk"></a>
+        <a class="page-footer__link page-footer__link--facebook" href="facebook.com" title="facebook"></a>
+        <a class="page-footer__link page-footer__link--youtube" href="youtube.com" title="youtube"></a>     
     </div>
-    <div class="page-footer-copyright">разработано</div>
+    <div class="page-footer__copyright">
+          разработано <a class="page-footer__copyright-author-link" href="#"><img src="#" alt="htmlacademy"/></a>
+    </div>
 </footer>
 </body>
 </html>
