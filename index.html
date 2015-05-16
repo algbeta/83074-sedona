@@ -9,40 +9,36 @@
 <body>
 <header class="page-header">
     <div class="navbar">
-        <div class="navbar-logo">
-            <!--logo image-->
-            <a class="logo_image" href="app/index.html">
-                <img alt="на главную" src="img/logo.png"/>
-            </a>
-            <!-- toggle buttoon for mobile devices. not visible on wide screens -->
-            <div class="navbar-toggle-button"></div>
-        </div>
-        <nav class="navbar-collapse">
+        <a class="navbar__logo" href="app/index.html">
+            <img alt="на главную" src="img/logo.png"/>
+        </a>
+        <div class="navbar__toggle-btn"></div>
+        <nav class="navbar__menu">
             <ul>
-                <!-- this item  contain close-menu button -->
-                <li class="navbar-collapse_item navbar-collapse_item--close">
+                <li class="navbar__menu-item">
                     <a href="#" title="карта штата">карта штата</a>
+                    <span class="navbar__close"></span>
                 </li>
-                <li class="navbar-collapse_item">
+                <li class="navbar__menu-item">
                     <a href="#" title="информация">информация</a>
                 </li>
-                <li class="navbar-collapse_item">
+                <li class="navbar__menu-item">
                     <a href="#" title="фото и видео">фото и видео</a>
                 </li>
-                <li class="navbar-collapse_item">
+                <li class="navbar__menu-item">
                     <a href="#" title="гостиницы">гостиницы</a>
                 </li>
             </ul>
         </nav>
     </div>
     <div class="intro">
-        <!-- distance between images are different so I assume we  need different margins and
-             according to BEM we need additional class of state instead of using nth-child? -->
-        <img class="intro_item intro_item--high" src="img/intro-1.png" alt="Welcome to the gorgeous Sedona!"/>
-        <img class="intro_item intro_item--middle" src="img/intro-2.png" alt="Sedona"/>
-        <img class="intro_item intro_item--low" src="img/intro-3.png" alt="Because Grand Canyon sucks!"/>
+        <img class="intro__welcome" src="img/intro-1.png" alt="Welcome to the gorgeous Sedona!"/>
+        <img class="intro__sedona" src="img/intro-2.png" alt="Sedona"/>
+        <img class="intro__because" src="img/intro-3.png" alt="Because Grand Canyon sucks!"/>
     </div>
 </header>
+
+
 <main>
     <div class="sedona-intro">
         <h1 class="sedona-intro_heading">Седона - небольшой городок в аризоне, заслуживающий большего!</h1>
