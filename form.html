@@ -7,137 +7,190 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-<header>
-
-    <!-- this container might be excessive but I am not provided a wide screen template so I guess on
-     big screens we are going to center content  -->
-    <div class="container">
-        <div class="navbar">
-            <div class="navbar-logo">
-                <!--logo image-->
-                <a href="index.html">
-                    <img src="#">
-                </a>
-                <!-- toggle buttoon for mobile devices. not visible on wide screens -->
-                <div class="navbar-toggle"></div>
-            </div>
-            <nav class="navbar-collapse">
-                <ul>
-                    <li> <a href="#">карта штата</a> </li>
-                    <li> <a href="#">информация</a> </li>
-                    <li> <a href="#">фото и видео</a> </li>
-                    <li> <a href="#">гостиницы</a> </li>
-                </ul>
-            </nav>
-        </div>
-        <div>
-            <h1>sedona</h1>
-        </div>
+<header class="page-header">
+    <div class="navbar">
+        <a class="navbar__logo" href="app/index.html">
+            <img alt="на главную" src="img/logo.png"/>
+        </a>
+        <div class="navbar__toggle-btn"></div>
+        <nav class="navbar__menu">
+            <ul>
+                <li class="navbar__menu-item">
+                    <a href="#" title="карта штата">карта штата</a>
+                    <span class="navbar__close"></span>
+                </li>
+                <li class="navbar__menu-item">
+                    <a href="#" title="информация">информация</a>
+                </li>
+                <li class="navbar__menu-item">
+                    <a href="#" title="фото и видео">фото и видео</a>
+                </li>
+                <li class="navbar__menu-item">
+                    <a href="#" title="гостиницы">гостиницы</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="intro">
+        <img class="intro__sedona" src="img/intro-2.png" alt="Sedona"/>
     </div>
 </header>
-<main>
-<article>
-    <header class="article-header">
-        <h1>оставьте свой отзыв</h1>
-        <p>
-            помогите нашим отелям стать лучше! оставьте отзыв о них,
-            а также о посещенных вами достопримечательностях
+
+<main class="main">
+
+    <div class="form-description">
+        <h1 class="form-description__heading">Оставьте свой отзыв</h1>
+        <p class="form-description__content">
+            Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных Вами достопримечательностях
         </p>
+    </div>
 
-    </header>
-    <section>
-        <form action="#" id="survey">
-            <fieldset>
-                <legend>
-                    представьтесь, пожалуйста:
-                </legend>
-                   <label for="surname">Фамилия:</label>
-                   <input id="surname" type="text" value="Иванов" required=""/>
-                   <label for="name">имя:</label>
-                   <input id="name" type="text" value="петр" required=""/>
-                   <label for="secondname">отчество:</label>
-                   <input id="secondname" type="text" value="александрович"/>
-            </fieldset>
-            <fieldset>
-                <legend>Ваше общее впечатление:</legend>
-                <label for="positiveFeedback">Скорее положительное </label>
-                <input id="positiveFeedback" type="radio"  checked/>
-                <label for="negativeFeedback">Скорее отрицательное</label>
-                <input id="negativeFeedback" type="radio" />
-            </fieldset>
-            <fieldset>
-                <legend>Даты вашей поездки:</legend>
-                  <label for="arrivaldate">дата приезда</label>
-                  <input id="arrivaldate" type="date" value="2015-04-07" required/>
-                  <label for="duration">длительность пребывания:</label>
-                  <input id="duration" type="number" value="14" required/>
-                  <label for="departuredate">дата отъезда</label>
-                  <input id="departuredate" type="date" value="2015-04-28" required/>
-                </ul>
-            </fieldset>
-            <fieldset>
-                <legend>кол-во путешественников:</legend>
-                <label>количество путешественников</label>
-                <input type="number" min="2" required/>
-                <ol>
-                  <li class="traveler-1">
-                       <label>Фамилия</label>
-                       <input type="text" required/>
-                       <label>Имя</label>
-                       <input type="text" required/>
-                       <label>Отчество</label>
-                       <input type="text"/>
-                   </li>
-                  <li class="traveler-2">
-                      <label>Фамилия</label>
-                      <input type="text" required/>
-                      <label>Имя</label>
-                      <input type="text" required/>
-                      <label>Отчество</label>
-                      <input type="text"/>
-                  </li>
-                </ol>
-            </fieldset>
-            <fieldset>
-                <legend>Посещенные достопримечетльносити</legend>
-                <label>Мост дъявола</label>
-                <input checked type="checkbox"/>
-                <label>Слайд-парк</label>
-                <input type="checkbox"/>
-                <label>Гора-колокол</label>
-                <input checked type="checkbox"/>
-                <label>Красные скалы</label>
-                <input checked type="checkbox"/>
-            </fieldset>
-         </form>
-    </section>
+    <form action="#" id="survey" class="survey">
+        <fieldset class="survey__section">
+            <legend class="survey__legend">
+                Представьтесь, пожалуйста:
+            </legend>
+            <label class="survey__field-name" for="surname">Фамилия:</label>
+            <input class="survey__field-value" id="surname" type="text" value="Иванов" required=""/>
+            <label class="survey__field-name" for="name">имя:</label>
+            <input class="survey__field-value" id="name" type="text" value="петр" required=""/>
+            <label class="survey__field-name" for="secondname">отчество:</label>
+            <input class="survey__field-value" id="secondname" type="text" value="александрович"/>
+        </fieldset>
 
-    <footer class="article footer">
-        <h2>Что-то пошло не так?</h2>
-        <p>Проверьте поля, выделенные красным, ксорее всего, вы забыли их заполнить</p>
-        <input type="submit"  form="survey" value="ok"/>
-    </footer>
-</article>
-<!-- is this section popup? -->
-<section>
-    <ul class="gallery">
-        <li><img src="#" alt=""/></li>
-        <li><img src="#" alt=""/></li>
-        <li><img src="#" alt=""/></li>
-    </ul>
-    <p>Спасибо за ваше участие, ваш отзыв уже поступил к нам. в ближайшее время мы опубликуем его на сайте</p>
-</section>
+        <fieldset class="survey__section">
+            <legend class="survey__legend">Ваше общее впечатление:</legend>
+            <label class="survey__field-name" for="positiveFeedback">Скорее положительное </label>
+            <input class="survey__field-value-radio" id="positiveFeedback" type="radio" checked/>
+            <label class="survey__field-name" for="negativeFeedback">Скорее отрицательное</label>
+            <input class="survey__field-value-radio" id="negativeFeedback" type="radio"/>
+        </fieldset>
+
+        <fieldset class="survey__section">
+            <legend class="survey__legend">Даты вашей поездки:</legend>
+            <label class="survey__field-name" for="arrivaldate">Дата приезда</label>
+            <input class="survey__field-value" id="arrivaldate" type="date" value="2015-04-07" required/>
+            <label class="survey__field-name" for="duration">Длительность пребывания:</label>
+
+            <div class="survey-complex-value">
+                <span class="survey-complex-value__decrease"></span>
+                <input class="survey-complex-value__field-value" id="duration" type="number" value="14" required/>
+                <span class="survey-complex-value__increase"></span>
+            </div>
+
+            <label class="survey__field-name" for="departuredate">Дата отъезда</label>
+            <input class="survey__field-value" id="departuredate" type="date" value="2015-04-28" required/>
+        </fieldset>
+
+        <fieldset class="survey__section">
+            <legend class="survey__legend">Кол-во путешественников:</legend>
+            <label class="survey__field-name">количество путешественников</label>
+
+            <div class="survey-complex-value">
+                <span class="survey-complex-value__decrease"></span>
+                <input class="survey-complex-value__field-value" type="number" min="2" required/>
+                <span class="survey-complex-value__increase"></span>
+            </div>
+
+            <ol class="survey-travelers">
+                <li class="survey-travelers__item">
+                    <label class="survey-travelers__field-name">Фамилия</label>
+                    <input class="survey-travelers__field-value" type="text" required/>
+                    <label class="survey-travelers__field-name">Имя</label>
+                    <input class="survey-travelers__field-value" type="text" required/>
+                    <label class="survey-travelers__field-name">Отчество</label>
+                    <input class="survey-travelers__field-value" type="text"/>
+                </li>
+                <li class="survey-travelers__item">
+                    <label class="survey-travelers__field-name">Фамилия</label>
+                    <input class="survey-travelers__field-value" type="text" required/>
+                    <label class="survey-travelers__field-name">Имя</label>
+                    <input class="survey-travelers__field-value" type="text" required/>
+                    <label class="survey-travelers__field-name">Отчество</label>
+                    <input class="survey-travelers__field-value" type="text"/>
+                </li>
+            </ol>
+
+        </fieldset>
+
+        <fieldset class="survey__section">
+            <legend class="survey__legend">Посещенные достопримечетльносити</legend>
+            <label class="survey__field-name">Мост дъявола</label>
+            <input class="survey__field-value-check" checked type="checkbox"/>
+            <label class="survey__field-name">Слайд-парк</label>
+            <input class="survey__field-value-check" type="checkbox"/>
+            <label class="survey__field-name">Гора-колокол</label>
+            <input class="survey__field-value-check" checked type="checkbox"/>
+            <label class="survey__field-name">Красные скалы</label>
+            <input class="survey__field-value-check" checked type="checkbox"/>
+        </fieldset>
+
+        <fieldset class="survey__section">
+            <legend class="survey__legend">Загрузите фотографии:</legend>
+
+            <div class="survey-file">
+                <span class="survey-file__name">Выбрать фотографии</span>
+                <input class="survey-file__value" type="file"/>
+            </div>
+
+            <ul class="survey-gallery">
+                <li class="survey-gallery__item">
+                    <span class="survey-gallery__item-close"></span>
+                    <img src="#" alt="attached file">
+                </li>
+                <li class="survey-gallery__item">
+                    <span class="survey-gallery__item-close"></span>
+                    <img src="#" alt="attached file">
+                </li>
+                <li class="survey-gallery__item">
+                    <span class="survey-gallery__item-close"></span>
+                    <img src="#" alt="attached file">
+                </li>
+                <li class="survey-gallery__item">
+                    <span class="survey-gallery__item-close"></span>
+                    <img src="#" alt="attached file">
+                </li>
+                <li class="survey-gallery__item">
+                    <span class="survey-gallery__item-close"></span>
+                    <img src="#" alt="attached file">
+                </li>
+            </ul>
+        </fieldset>
+
+        <input class="survey__field-value-submit" type="submit" value="Отправить отзыв"/>
+    </form>
+
+    <!-- failure popup-->
+    <div class="popup">
+        <h2 class="popup__heading">Что-то пошло не так?</h2>
+        <p class="popup__content">Проверьте поля, выделенные красным, ксорее всего, вы забыли их заполнить</p>
+        <a class="popup__btn">Ok</a>
+    </div>
+
+
+    <!-- success popup -->
+    <div class="popup">
+        <h2 class="popup__heading">Ваш отзыв отправлен!</h2>
+        <p class="popup__content">
+            Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте
+        </p>
+        <div class="popup__footer">
+           <a class="popup-footer_btn">Закрыть окно</a>
+        </div>
+    </div>
 </main>
+
 <footer class="page-footer">
-    <div class="footer-hashtag">#visitsedona</div>
-    <section class="socials">
-      <ul>
-          <li><a href="vk.com" alt="vk"></a></li>
-          <li><a href="facebook.com" alt="facebook"></a></li>
-          <li><a href="youtube.com" alt="youtube"></a></li>
-      </ul>
-    </section>
-    <section class="copyright">разработано</section>
+    <div class="page-footer__hashtag">#visitsedona</div>
+    <div class="page-footer__socials">
+        <a class="page-footer__link page-footer__link--vk" href="vk.com" title="vk"></a>
+        <a class="page-footer__link page-footer__link--facebook" href="facebook.com" title="facebook"></a>
+        <a class="page-footer__link page-footer__link--youtube" href="youtube.com" title="youtube"></a>
+    </div>
+    <div class="page-footer__copyright">
+          разработано <a class="page-footer__copyright-author-link" href="#"><img src="#" alt="htmlacademy"/></a>
+    </div>
 </footer>
+
 </body>
 </html>

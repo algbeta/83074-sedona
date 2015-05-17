@@ -7,107 +7,123 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-<header>
-    <!-- this container might be excessive but I am not provided a wide screen template so I guess on
-     big screens we are going to center content  -->
-    <div class="container">
-        <div class="navbar">
-            <div class="navbar-logo">
-                <!--logo image-->
-                <a href="index.html">
-                    <img src="#">
-                </a>
-                <!-- toggle buttoon for mobile devices. not visible on wide screens -->
-                <div class="navbar-toggle"></div>
-            </div>
-            <nav class="navbar-collapse">
-                <ul>
-                    <li> <a href="#">карта штата</a> </li>
-                    <li> <a href="#">информация</a> </li>
-                    <li> <a href="#">фото и видео</a> </li>
-                    <li> <a href="#">гостиницы</a> </li>
-                </ul>
-            </nav>
-        </div>
-        <div>
-            <h1>sedona</h1>
-        </div>
+<header class="page-header">
+    <div class="navbar">
+        <a class="navbar__logo" href="app/index.html">
+            <img alt="на главную" src="img/logo.png"/>
+        </a>
+        <div class="navbar__toggle-btn"></div>
+        <nav class="navbar__menu">
+            <ul>
+                <li class="navbar__menu-item">
+                    <a href="#" title="карта штата">карта штата</a>
+                    <span class="navbar__close"></span>
+                </li>
+                <li class="navbar__menu-item">
+                    <a href="#" title="информация">информация</a>
+                </li>
+                <li class="navbar__menu-item">
+                    <a href="#" title="фото и видео">фото и видео</a>
+                </li>
+                <li class="navbar__menu-item">
+                    <a href="#" title="гостиницы">гостиницы</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="intro">
+        <img class="intro__sedona" src="img/intro-2.png" alt="Sedona"/>
     </div>
 </header>
-<main>
-    <article class="blog-desc">
-        <h1>блог шерифа</h1>
-        <p>
+<main class="main">
+
+    <div class="section-description">
+        <p class="section-description__heading">блог шерифа</p>
+        <p class="section-description__content">
             седона - удивительный город! горы здесь красного цвета, а шериф ведет блог и
             общается на форумах
         </p>
-    </article>
-    <article class="article">
-        <span class="article-date">
-            <time datetime="2014-05-08">Вчера</time>
+    </div>
+
+    <div class="post-data">
+        <span class="post-data__date">
+              <time datetime="2014-05-08">Вчера</time>
         </span>
-        <span class="article-type"></span>
-        <h1>Внимание сбежала моя домашняя анаконда!</h1>
-        <p>
-            жители седоны и гости города,будьте бдительны - сбежала моя домашняя змея.
-            Увидевшему срочно звонить 911 и бежать подальше.
-        </p>
-        <section>
-          <h2>предыстория</h2>
-          <p>
-              в далеком 85-ом я подобрал эту змею на трассе. ее переехал грузовик и она валялась на обочине.
-              мне стало жаль ее и я решил взять ее с собой. кинул в багажник пикапа и подумал тогда:
-              <q>если доедет до седоны живой, так и быть, оставлю ее себе</q>
-          </p>
-        </section>
-        <section>
-          <h2>пропажа</h2>
-          <p>
-              неделю назад я вернулся из канзаса и не нашел анаконду дома. обошел все 200 гектаров своего участка,
-              но ее нигде нет. решил сообщить в полицию, но вовремя вспомнил, что я и есть полиция, поэтому отправился на поиски сам.
-              особые приметы змеи:
-              <ul>
-                 <li>
-                     длина: 5 метров
-                 </li>
-                 <li>
-                     масса: 85 кг
-                 </li>
-                 <li>
-                     окраска: серовато-зеленая
-                 </li>
-              </ul>
-              если вы увидите эту змею, сразу <span>звоните 911</span> и бегите со всех ног от нее!
-          </p>
-        </section>
-        <section>
-            <h2>предостережение</h2>
-            <p>
-              не пытайтесь убить змею, если увидите! помните, что она тоже живое существо, хоть и выглядит не очень приятно.
-              вот цитата, которая мне очень нравится:
-              <blackquote>
-                  самый свирепый из зверей - теперь мы знаем - это человек, он убивает, даже если не голоден.
-                  <span>адриано челентано</span>
-              </blackquote>
+        <span class="post-data__type">Проишествия</span>
+    </div>
+
+    <article class="post-full">
+        <header class="post-header">
+            <h1 class="post-header__heading">Внимание сбежала моя домашняя анаконда!</h1>
+            <p class="post-header__content">
+                Жители седоны и гости города,будьте бдительны - сбежала моя домашняя змея.
+                Увидевшему срочно звонить 911 и бежать подальше.
             </p>
-         </section>
-    </article>
-    <section>
-        <a href="#previos">пред.</a>
-        <a href="#next">след.</a>
-        <a href="#back">назад к списку</a>
-    </section>
-</main>
-<footer class="page-footer">
-    <div class="footer-hashtag">#visitsedona</div>
-    <section class="socials">
-        <ul>
-            <li><a href="vk.com" alt="vk"></a></li>
-            <li><a href="facebook.com" alt="facebook"></a></li>
-            <li><a href="youtube.com" alt="youtube"></a></li>
+        </header>
+
+        <h2 class="post-full__subheading">Предыстория</h2>
+
+        <p class="post-full__content">
+            В далеком 85-ом я подобрал эту змею на трассе. ее переехал грузовик и она валялась на обочине.
+            мне стало жаль ее и я решил взять ее с собой. кинул в багажник пикапа и подумал тогда:
+            <q>если доедет до седоны живой, так и быть, оставлю ее себе</q>
+        </p>
+
+        <h2 class="post-full__subheading">Пропажа</h2>
+
+        <p class="post-full__content">
+            Неделю назад я вернулся из канзаса и не нашел анаконду дома. обошел все 200 гектаров своего участка,
+            но ее нигде нет. решил сообщить в полицию, но вовремя вспомнил, что я и есть полиция, поэтому отправился на поиски сам.
+            особые приметы змеи:
+        </p>
+
+        <ul class="post-full__list">
+            <li class="post-full__list-item">
+                длина: 5 метров
+            </li>
+            <li class="post-full__list-item">
+                масса: 85 кг
+            </li>
+            <li class="post-full__list-item">
+                окраска: серовато-зеленая
+            </li>
         </ul>
-    </section>
-    <section class="copyright">разработано</section>
+
+        <p class="post-full__content">
+            Если вы увидите эту змею, сразу <span>звоните 911</span> и бегите со всех ног от нее!
+        </p>
+
+        <h2 class="post-full__subheading">Предостережение</h2>
+
+        <p class="post-full__content">
+            Не пытайтесь убить змею, если увидите! помните, что она тоже живое существо, хоть и выглядит не очень
+            приятно.
+            вот цитата, которая мне очень нравится:
+        </p>
+        <blockquote class="post-full__quote">
+            Самый свирепый из зверей - теперь мы знаем - это человек, он убивает, даже если не голоден.
+            <span class="post-full__quote-author">адриано челентано</span>
+        </blockquote>
+
+    </article>
+    <div class="previous-next-section">
+        <a class="previous-next-section_item" href="#previos">Пред.</a>
+        <a class="previous-next-section_item" href="#next">След.</a>
+        <a class="previous-next-section_item" href="#back">Назад к списку</a>
+    </div>
+</main>
+
+<footer class="page-footer">
+    <div class="page-footer__hashtag">#visitsedona</div>
+    <div class="page-footer__socials">
+        <a class="page-footer__link page-footer__link--vk" href="vk.com" title="vk"></a>
+        <a class="page-footer__link page-footer__link--facebook" href="facebook.com" title="facebook"></a>
+        <a class="page-footer__link page-footer__link--youtube" href="youtube.com" title="youtube"></a>
+    </div>
+    <div class="page-footer__copyright">
+          разработано <a class="page-footer__copyright-author-link" href="#"><img src="#" alt="htmlacademy"/></a>
+    </div>
 </footer>
+
 </body>
 </html>
