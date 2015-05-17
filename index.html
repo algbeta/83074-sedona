@@ -7,102 +7,113 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-  <header class="page-header">
-      <!-- this container might be excessive but I am not provided a wide screen template so I guess on
-       big screens we are going to center content  -->
-      <div class="container">
-        <div class="navbar">
-          <div class="navbar-logo">
-              <!--logo image-->
-              <a href="app/index.html">
-                  <img src="#">
-              </a>
-              <!-- toggle buttoon for mobile devices. not visible on wide screens -->
-              <div class="navbar-toggle"></div>
-          </div>
-          <nav class="navbar-collapse">
-              <ul>
-                  <li> <a href="#">карта штата</a> </li>
-                  <li> <a href="#">информация</a> </li>
-                  <li> <a href="#">фото и видео</a> </li>
-                  <li> <a href="#">гостиницы</a> </li>
-              </ul>
-          </nav>
+<header class="page-header">
+    <div class="navbar">
+        <a class="navbar__logo" href="app/index.html">
+            <img alt="на главную" src="img/logo.png"/>
+        </a>
+        <div class="navbar__toggle-btn"></div>
+        <nav class="navbar__menu">
+            <ul>
+                <li class="navbar__menu-item">
+                    <a href="#" title="карта штата">карта штата</a>
+                    <span class="navbar__close"></span>
+                </li>
+                <li class="navbar__menu-item">
+                    <a href="#" title="информация">информация</a>
+                </li>
+                <li class="navbar__menu-item">
+                    <a href="#" title="фото и видео">фото и видео</a>
+                </li>
+                <li class="navbar__menu-item">
+                    <a href="#" title="гостиницы">гостиницы</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="intro">
+        <img class="intro__welcome" src="img/intro-1.png" alt="Welcome to the gorgeous Sedona!"/>
+        <img class="intro__sedona" src="img/intro-2.png" alt="Sedona"/>
+        <img class="intro__because" src="img/intro-3.png" alt="Because Grand Canyon sucks!"/>
+    </div>
+</header>
+
+
+<main class="main">
+
+    <div class="sedona-intro">
+        <h1 class="sedona-intro__heading">Седона - небольшой городок в аризоне, заслуживающий большего!</h1>
+        <p class="sedona-intro__desc">рассмотрим пять причин, по которым седона лучше, чем гранд каньон</p>
+    </div>
+
+    <div class="advantage">
+        <div class="advantage__item advantage__item--left">
+          <h2 class="advantage__item-heading">настоящиц городок</h2>
+          <!-- number will be in :before -->
+          <p class="sedona-advantage__item-content">седона не аттракциона для туристов, там течет своя жизнь</p>
         </div>
-        <!-- will put mauntains image as background -->
-        <!-- not sure about that but probably will add additional text as images using :before and :after
-        since I don't want to load additional font -->
-        <div>
-            <h1>sedona</h1>
+        <img class="advantage_view advantage_view--right" src="#" alt="виды седоны"/>
+    </div>
+
+    <ul class="advantage-list">
+        <li class="advantage-list__item advantage-list__item--accomodation">
+            <span class="advantage-list__item-heading">жилье</span>
+            <p class="advantage-list__item-desc">рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+        </li>
+        <li class="advantage-list__item advantage-list__item--gift">
+            <span class="advantage-list__item-heading">сувениры</span>
+            <p class="advantage-list__item-desc">не только китайского, но и местного производства!</p>
+        </li>
+        <li class="advantage-list__item advantage-list__item--food">
+            <span class="advantage-list__item-heading">еда</span>
+            <p class="advantage-list__item-desc">всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+        </li>
+    </ul>
+
+    <div class="advantage">
+        <div class="advantage__item advantage__item--right">
+          <h2 class="advantage__item-heading">там есть мост дьявола</h2>
+          <p class="sedona-advantage__item-content">да, по нему можно пройтись, если, конечно, вы осмелитесь</p>
         </div>
-      </div>
-  </header>
-  <main>
-    <section>
-        <h1>Седона - небольшой городок в аризоне, заслуживающий большего!</h1>
-        <p>рассмотрим пять причин, по которым седона лучше, чем гранд каньон</p>
-    </section>
-    <section>
-        <h2>настоящиц городок</h2>
-        <span>#1</span>
-        <p>седона не аттракциона для туристов, там течет своя жизнь</p>
-        <!-- not sure about img :) -->
-        <img src="#" alt="виды седоны"/>
-        <ul>
-            <li>
-                жилье
-                <p>рекомендуем пожить в настоящем мотеле, все как в кино!</p>
-            </li>
-            <li>
-                сувениры
-                <p>не только китайского, но и местного производства!</p>
-            </li>
-            <li>
-                еда
-                <p>всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
-            </li>
-        </ul>
-    </section> 
-    <section>
-        <h2>там есть мост дьявола</h2>
-        <span>#2</span>
-        <p>да, по нему можно пройтись, если, конечно, вы осмелитесь</p>
-        <!-- not sure about img :) -->
-        <img src="#" alt="виды седоны"/>
-    </section>
-    <section>
-        <h2>Небольшая площадь</h2>
-        <span>#3</span>
-        <p>все достопримечательности находятся очень близко</p>
-    </section>
-    <section>
-        <h2>Красивая дорога</h2>
-        <span>#4</span>
-        <p>ехать в седону из лас-вегаса совсем не скучно</p>
-    </section>
-    <section>
-        <h2>мало туристов</h2>
-        <span>#5</span>
-        <p>большинство едет в гранд каньон и толпится там</p>
-    </section>
-    <section>
-        <h2>заинтересовались</h2>
-        <p>укажите преполагаемые даты поездки и мы покажем вам лучшие предложения гостиниц в седоне</p>
-        <a href="#">найти гостиницу</a>
-    </section>  
+        <img class="advantage_view advantage_view--left" src="#" alt="виды седоны"/>
+    </div>
+
+
+    <ul class="advantage-list advantage">
+        <li class="advantage-list__item">
+            <span class="advantage-list__item-heading">Небольшая площадь</span>
+            <p class="advantage-list__item-desc">Все достопримечательности находятся очень близко</p>
+        </li>
+        <li class="advantage-list__item">
+            <span class="advantage-list__item-heading">Красивая дорога</span>
+            <p class="advantage-list__item-desc">Eхать в седону из лас-вегаса совсем не скучно</p>
+        </li>
+        <li class="advantage-list__item">
+            <span class="advantage-list__item-heading">Мало туристов</span>
+            <p class="advantage-list__item-desc">Большинство едет в гранд каньон и толпится там</p>
+        </li>
+    </ul>
+
+    <div class="hotel-offer">
+        <h2 class="hotel-offer__heading">Заинтересовались</h2>
+        <p class="hotel-offer__content">Укажите преполагаемые даты поездки и мы покажем вам лучшие предложения гостиниц в седоне</p>
+        <a class="hotel-offer__link" href="#">найти гостиницу</a>
+    </div>
+
     <!-- maps -->
-    <section class="map-canvas"></section>
-  </main>
-  <footer class="page-footer">
-      <div class="footer-hashtag">#visitsedona</div>
-      <section class="socials">
-          <ul>
-              <li><a href="vk.com" alt="vk"></a></li>
-              <li><a href="facebook.com" alt="facebook"></a></li>
-              <li><a href="youtube.com" alt="youtube"></a></li>
-          </ul>
-      </section>
-      <section class="copyright">разработано</section>
-  </footer>
+    <div class="map-canvas"></div>
+
+</main>
+<footer class="page-footer">
+    <div class="page-footer__hashtag">#visitsedona</div>
+    <div class="page-footer__socials">
+        <a class="page-footer__link page-footer__link--vk" href="vk.com" title="vk"></a>
+        <a class="page-footer__link page-footer__link--facebook" href="facebook.com" title="facebook"></a>
+        <a class="page-footer__link page-footer__link--youtube" href="youtube.com" title="youtube"></a>
+    </div>
+    <div class="page-footer__copyright">
+          разработано <a class="page-footer__copyright-author-link" href="#"><img src="#" alt="htmlacademy"/></a>
+    </div>
+</footer>
 </body>
 </html>
