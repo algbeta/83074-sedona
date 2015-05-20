@@ -1,0 +1,54 @@
+@import "sprites/functions";
+@import "sprites/icons-sprite";
+
+.page-footer{
+  background-color: #fefefe;
+  padding: 40px 0 25px 0;
+  text-align: center;
+}
+
+.page-footer__hashtag{
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 42px;
+}
+
+.page-footer__socials{
+  margin-bottom: 40px;
+}
+
+.page-footer__link{
+  display: inline-block;
+  width: 46px;
+  height: 48px;
+  line-height: 46px;
+  vertical-align: middle;
+  background-color: $blue;
+  margin-right: 3px;
+  &:before{
+    content: '';
+    display: inherit;
+    vertical-align: middle;
+  }
+
+  &--twitter:before{
+     @include sprite($twitter-icon-1x);
+  }
+
+  &--facebook:before{
+     @include sprite($facebook-icon-1x);
+  }
+
+  &--youtube:before{
+    @include sprite($youtube-icon-1x);
+  }
+}
+
+.page-footer__copyright-text{
+  vertical-align: middle;
+}
+
+.page-footer__copyright-author-link{
+  vertical-align: middle;
+  display: inline-block;
+}
