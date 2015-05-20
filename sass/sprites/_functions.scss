@@ -1,0 +1,74 @@
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: str-slice(nth($sprite, 9), 4);
+  background-image: url(#{$sprite-image});
+  background-repeat: no-repeat;
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+@mixin sprite-without-image($sprite) {
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+};
+
+
+@mixin sprite-background-size($sprites_1x_full){
+  background-size: nth($sprites_1x_full, 1) nth($sprites_1x_full, 2);
+}
+
+@mixin sprite-retina($sprite-1x, $sprite-2x, $sprites_1x_full) {
+  @include sprite-image($sprite-1x);
+  @include sprite-position($sprite-1x);
+  @include sprite-width($sprite-1x);
+  @include sprite-height($sprite-1x);
+  // we use retina only on small screens
+  @media
+  only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (   min--moz-device-pixel-ratio: 2),
+  only screen and (     -o-min-device-pixel-ratio: 2/1),
+  only screen and (        min-device-pixel-ratio: 2),
+  only screen and (                min-resolution: 192dpi),
+  only screen and (                min-resolution: 2dppx) {
+    @include sprite-image($sprite-2x);
+    background-size: nth($sprites_1x_full, 1) nth($sprites_1x_full, 2);
+  }
+}
+
+
+
+
