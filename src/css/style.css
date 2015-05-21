@@ -131,6 +131,53 @@ $spritesheet: width height image $spritesheet-sprites;
   line-height: 1.5;
   padding-left: 50px; }
 
+.post {
+  width: 85%;
+  margin: 0 auto;
+  border-bottom: 1px solid #dbdbdb;
+  border-top: 1px solid #dbdbdb;
+  padding: 40px 0 37px;
+  text-align: center;
+  line-height: 1.5; }
+
+.post__heading {
+  margin-bottom: 35px; }
+
+.post__content {
+  margin-bottom: 30px; }
+
+.post__date {
+  margin-left: -10px; }
+
+.pagination__page {
+  display: none; }
+
+.pagination__list {
+  margin: 0 20px; }
+
+.pagination__list {
+  padding: 45px 0;
+  border-bottom: 1px solid #dbdbdb; }
+
+.pagination-list__item {
+  width: 57px;
+  height: 57px;
+  background-color: #81b3d2;
+  display: inline-block;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0 15px 16px 0; }
+  .pagination-list__item a, .pagination-list__item a:visited, .pagination-list__item a:active, .pagination-list__item a:hover {
+    color: #fff;
+    text-decoration: none; }
+  .pagination-list__item--active {
+    background: #e5e5e5;
+    cursor: auto; }
+    .pagination-list__item--active a {
+      color: #000; }
+
 /*
 The `sprites` mixin generates identical output to the CSS template
   but can be overridden inside of SCSS
@@ -231,6 +278,21 @@ $spritesheet: width height image $spritesheet-sprites;
 .map-canvas {
   height: 350px; }
 
+.section-description {
+  text-align: center;
+  width: 90%;
+  margin: 0 auto; }
+
+.section-description__heading {
+  font-size: 2.143rem;
+  margin-bottom: 40px;
+  font-weight: bold; }
+
+.section-description__content {
+  line-height: 1.714rem;
+  margin-bottom: 30px;
+  color: #333; }
+
 .intro {
   background: url("../img/intro-sm.jpg") no-repeat;
   text-align: center;
@@ -238,12 +300,17 @@ $spritesheet: width height image $spritesheet-sprites;
   max-width: 320px;
   margin: -15px 0 45px 0; }
 
+.intro--shortered {
+  background: url("../img/intro-shortered-sm.jpg") no-repeat; }
+
 .intro__welcome {
   margin-top: 47px;
   margin-bottom: 62px; }
 
 .intro__sedona {
   margin-bottom: 68px; }
+  .intro--shortered .intro__sedona {
+    margin-top: 50px; }
 
 .intro__because {
   margin-bottom: 35px; }
@@ -298,6 +365,155 @@ $spritesheet: width height image $spritesheet-sprites;
   top: -6px;
   font-size: 4rem; }
 
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+.post-data {
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 42px; }
+
+.post-data__date, .post__date, .post-data__type, .post__type {
+  display: inline-block;
+  font-style: italic;
+  line-height: 1;
+  color: #999; }
+  .post-data__date:before, .post__date:before, .post-data__type:before, .post__type:before {
+    content: '';
+    display: inline-block;
+    float: left;
+    margin-right: 10px;
+    vertical-align: middle; }
+
+.post-data__date, .post__date {
+  margin-right: 45px; }
+  .post-data__date:before, .post__date:before {
+    background-image: url(../img/icons.png);
+    background-repeat: no-repeat;
+    background-position: -45px -56px;
+    width: 11px;
+    height: 11px; }
+
+.post-data__type:before, .post__type:before {
+  background-image: url(../img/icons.png);
+  background-repeat: no-repeat;
+  background-position: -58px -56px;
+  width: 11px;
+  height: 9px; }
+
+.post-full {
+  width: 90%;
+  margin: 0 auto; }
+
+.post-header {
+  text-align: center; }
+
+.post-header__content {
+  font-size: 1.286rem;
+  line-height: 1.857rem;
+  margin-bottom: 40px;
+  color: #766357; }
+
+.post-header__heading {
+  font-size: 1.714rem;
+  line-height: 2.5rem;
+  margin-bottom: 35px; }
+
+.post-full__subheading {
+  font-weight: bold;
+  font-size: 2.143rem;
+  margin-bottom: 35px; }
+
+.post-full__content {
+  line-height: 1.714rem;
+  color: #333;
+  margin-bottom: 50px; }
+  .post-full__content-before-list {
+    margin-bottom: 35px; }
+
+.post-full__list {
+  margin-bottom: 38px; }
+  .post-full__list:before, .post-full__list:after {
+    content: " ";
+    display: table; }
+  .post-full__list:after {
+    clear: both; }
+
+.post-full__list-item {
+  color: #333;
+  line-height: 1.714rem;
+  font-weight: bold; }
+  .post-full__list-item:before {
+    content: '';
+    display: block;
+    width: 7px;
+    height: 7px;
+    -webkit-box-shadow: inset 0 0 7px #81b3d2;
+    box-shadow: inset 0 0 7px #81b3d2;
+    float: left;
+    margin: 8px 10px 0 0; }
+
+.post-full__underlined {
+  text-decoration: underline;
+  color: #766357; }
+
+.post-full__quote {
+  line-height: 1.714rem;
+  padding-left: 19px;
+  border-left: 1px solid #81b3d2;
+  margin: 0; }
+
+.post-full__quote-author {
+  display: block;
+  text-transform: capitalize;
+  font-style: italic;
+  color: #766357;
+  margin-bottom: 40px; }
+
+.previous-next-section {
+  border-top: 1px solid #dbdbdb;
+  border-bottom: 1px solid #dbdbdb;
+  padding: 45px 4% 47px;
+  font-weight: bold;
+  font-style: 1.5rem;
+  line-height: 1.857rem; }
+
+.previous-next-section_item {
+  padding: 18px;
+  border: 1px solid #81b3d2;
+  text-align: center;
+  display: block; }
+  .previous-next-section_item, .previous-next-section_item:visited, .previous-next-section_item:hover, .previous-next-section_item:active {
+    text-decoration: none;
+    color: #000; }
+  .previous-next-section_item:not(:last-child) {
+    width: 48%;
+    margin-bottom: 20px; }
+  .previous-next-section_item:first-child {
+    margin-right: 2%;
+    float: left; }
+  .previous-next-section_item:nth-child(2) {
+    float: right; }
+  .previous-next-section_item:last-child {
+    width: 100%;
+    clear: both; }
+
 * {
   box-sizing: border-box; }
 
@@ -307,13 +523,14 @@ body, html {
   padding: 0;
   text-transform: uppercase;
   font-size: 14px;
-  min-width: 320px;
+  min-width: 240px;
   max-width: 320px; }
 
-ul, menu, dir, h1, h2, h3, p {
+ul, menu, dir, h1, h2, h3, p, blockquote {
   -webkit-margin-before: 0;
   -webkit-margin-after: 0;
-  -webkit-padding-start: 0; }
+  -webkit-padding-start: 0;
+  -webkit-padding-end: 0; }
 
 ul {
   list-style-type: none; }
