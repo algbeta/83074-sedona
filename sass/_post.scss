@@ -1,0 +1,159 @@
+@import "sprites/icons-sprite";
+@import "sprites/functions";
+
+.post-data{
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 42px;
+}
+
+
+
+
+.post-data__date,
+.post-data__type{
+  display: inline-block;
+  font-style: italic;
+  line-height: 1;
+  color: #999;
+  &:before{
+    content: '';
+    display: inline-block;
+    float:left;
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+
+}
+
+.post-data__date{
+  &:before{
+    @include sprite($post-date-icon);
+  }
+  margin-right: 45px;
+}
+
+.post-data__type{
+  &:before{
+    @include sprite($post-category-icon);
+  }
+}
+
+.post-full{
+  width:90%;
+  margin: 0 auto;
+}
+
+.post-header{
+  text-align: center;
+}
+
+.post-header__content{
+  font-size: $font-size-big;
+  line-height: 1.857rem;
+  margin-bottom: 40px;
+  color: $reddish-brown;
+}
+
+.post-header__heading{
+  font-size: 1.714rem;
+  line-height: 2.5rem;
+  margin-bottom: 35px;
+}
+
+.post-full__subheading{
+  font-weight: bold;
+  font-size: 2.143rem;
+  margin-bottom: 35px;
+}
+
+.post-full__content{
+  line-height: 1.714rem;
+  color: #333;
+  margin-bottom: 50px;
+  &-before-list{
+    margin-bottom: 35px;
+  }
+}
+
+.post-full__list{
+  margin-bottom: 38px;
+  @include clearfix;
+}
+
+.post-full__list-item{
+  color: #333;
+  line-height: 1.714rem;
+  font-weight: bold;
+  &:before{
+    content: '';
+    display: block;
+    width: 7px;
+    height: 7px;
+    @include box-shadow(inset 0 0 7px $blue);
+    float: left;
+    margin:8px 10px 0 0;
+  }
+}
+
+.post-full__underlined{
+  text-decoration: underline;
+  color: $reddish-brown;
+}
+
+.post-full__quote{
+  line-height: 1.714rem;
+  padding-left: 19px;
+  border-left: 1px solid $blue;
+  margin: 0;
+}
+
+.post-full__quote-author{
+  display: block;
+  text-transform: capitalize;
+  font-style: italic;
+  color: $reddish-brown;
+  margin-bottom: 40px;
+}
+
+.previous-next-section{
+  border-top: 1px solid $border-grey;
+  border-bottom: 1px solid $border-grey;
+  padding: 45px 4% 47px;
+  font-weight: bold;
+  font-style: 1.5rem;
+  line-height: 1.857rem;
+}
+
+.previous-next-section_item{
+  padding: 18px;
+  border: 1px solid $blue;
+  text-align: center;
+  display: block;
+
+  &,
+  &:visited,
+  &:hover,
+  &:active{
+    text-decoration: none;
+    color: #000;
+  }
+  &:not(:last-child){
+    width:48%;
+    margin-bottom: 20px;
+  }
+
+  &:first-child{
+    margin-right: 2%;
+    float:left;
+  }
+
+  &:nth-child(2){
+    float:right;
+  }
+
+  &:last-child{
+    width: 100%;
+    clear: both;
+  }
+}

@@ -1,0 +1,39 @@
+.hotel-offer{
+  padding: 35px 0 40px 0;
+  text-align: center;
+}
+
+.hotel-offer__heading{
+  font-size: 1.5rem;
+  margin-bottom: 32px;
+  font-weight: bold;
+}
+
+.hotel-offer__content{
+  margin: 0 auto;
+  margin-bottom: 40px;
+  line-height: 1.714rem;
+  width:75%;
+}
+
+.hotel-offer__link{
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.5rem;
+  display: block;
+  width: 280px;
+  padding: 20px 0;
+  background: $blue;
+  margin: 0 auto;
+
+  &,
+  &:visited,
+  &:hover,
+  &:active{
+    text-decoration: none;
+  }
+}
+
+.map-canvas{
+  height: 350px;
+}

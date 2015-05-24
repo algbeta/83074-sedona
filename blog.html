@@ -5,37 +5,37 @@
     <title>Sedona blog</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
 <header class="page-header">
     <div class="navbar">
-        <a class="navbar__logo" href="app/index.html">
-            <img alt="на главную" src="img/logo.png"/>
-        </a>
-        <div class="navbar__toggle-btn"></div>
         <nav class="navbar__menu">
             <ul>
                 <li class="navbar__menu-item">
-                    <a href="#" title="карта штата">карта штата</a>
-                    <span class="navbar__close"></span>
+                    <a href="#">карта штата</a>
                 </li>
                 <li class="navbar__menu-item">
-                    <a href="#" title="информация">информация</a>
+                    <a href="#">информация</a>
                 </li>
                 <li class="navbar__menu-item">
-                    <a href="#" title="фото и видео">фото и видео</a>
+                    <a href="#">фото и видео</a>
                 </li>
                 <li class="navbar__menu-item">
-                    <a href="#" title="гостиницы">гостиницы</a>
+                    <a href="#">гостиницы</a>
                 </li>
             </ul>
         </nav>
+        <a class="navbar__logo" href="app/index.html">
+            <img alt="на главную" src="img/logo.png"/>
+        </a>
+        <a class="navbar__close" href="#">&times;</a>
+        <div class="navbar__toggle-btn"></div>
     </div>
-    <div class="intro">
-        <img class="intro__sedona" src="img/intro-2.png" alt="Sedona"/>
+    <div class="intro intro--shortered">
+        <img class="intro__sedona" src="img/intro-3.png" alt="Sedona"/>
     </div>
 </header>
-
 <main class="main">
 
     <div class="section-description">
@@ -45,7 +45,7 @@
             общается на форумах
         </p>
     </div>
-
+  
     <article class="post">
         <h1 class="post__heading">Внимание сбежала моя домашняя анаконда!</h1>
         <p class="post__content">
@@ -69,11 +69,11 @@
         </span>
         <span class="post__type">проишествия</span>
     </article>
-
+    
     <div class="pagination">
-      <span class="pagination__next">Следующая</span>
+      <span class="pagination__page">Страница</span>
       <ul class="pagination__list">
-          <li class="pagination-list__item"><a href="#">1</a></li>
+          <li class="pagination-list__item pagination-list__item--active"><a href="#">1</a></li>
           <li class="pagination-list__item"><a href="#">2</a></li>
           <li class="pagination-list__item"><a href="#">3</a></li>
           <li class="pagination-list__item"><a href="#">4</a></li>
@@ -85,12 +85,13 @@
 <footer class="page-footer">
     <div class="page-footer__hashtag">#visitsedona</div>
     <div class="page-footer__socials">
-        <a class="page-footer__link page-footer__link--vk" href="vk.com" title="vk"></a>
+        <a class="page-footer__link page-footer__link--twitter" href="twitter.com" title="twitter"></a>
         <a class="page-footer__link page-footer__link--facebook" href="facebook.com" title="facebook"></a>
         <a class="page-footer__link page-footer__link--youtube" href="youtube.com" title="youtube"></a>
     </div>
     <div class="page-footer__copyright">
-          разработано <a class="page-footer__copyright-author-link" href="#"><img src="#" alt="htmlacademy"/></a>
+        <span class="page-footer__copyright-text">разработано</span>
+        <a class="page-footer__copyright-author-link" href="#"><img src="img/htmlacademy_1x.png" alt="htmlacademy"/></a>
     </div>
 </footer>
 

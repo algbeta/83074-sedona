@@ -1,0 +1,25 @@
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+            $advantage-food-icon: (39px, 0px, -39px, 0px, 37px, 35px, 76px, 77px, '../../img/icons.png', 'advantage-food-icon', );
+            $advantage-gift-icon: (0px, 39px, 0px, -39px, 32px, 38px, 76px, 77px, '../../img/icons.png', 'advantage-gift-icon', );
+            $advantage-house-icon: (0px, 0px, 0px, 0px, 37px, 37px, 76px, 77px, '../../img/icons.png', 'advantage-house-icon', );
+            $facebook-icon-1x: (34px, 56px, -34px, -56px, 9px, 19px, 76px, 77px, '../../img/icons.png', 'facebook-icon_1x', );
+            $post-category-icon: (58px, 56px, -58px, -56px, 11px, 9px, 76px, 77px, '../../img/icons.png', 'post-category-icon', );
+            $post-date-icon: (45px, 56px, -45px, -56px, 11px, 11px, 76px, 77px, '../../img/icons.png', 'post-date-icon', );
+            $twitter-icon-1x: (34px, 39px, -34px, -39px, 19px, 15px, 76px, 77px, '../../img/icons.png', 'twitter-icon_1x', );
+            $youtube-icon-1x: (55px, 39px, -55px, -39px, 20px, 14px, 76px, 77px, '../../img/icons.png', 'youtube-icon_1x', );
+        $icon-sprites: ($advantage-food-icon, $advantage-gift-icon, $advantage-house-icon, $facebook-icon-1x, $post-category-icon, $post-date-icon, $twitter-icon-1x, $youtube-icon-1x, );
+        $icon: (76px, 77px, '../../img/icons.png', $icon-sprites, );
+
+

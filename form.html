@@ -5,34 +5,36 @@
     <title>Sedona blog</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
 <header class="page-header">
     <div class="navbar">
-        <a class="navbar__logo" href="app/index.html">
-            <img alt="на главную" src="img/logo.png"/>
-        </a>
-        <div class="navbar__toggle-btn"></div>
         <nav class="navbar__menu">
             <ul>
                 <li class="navbar__menu-item">
-                    <a href="#" title="карта штата">карта штата</a>
-                    <span class="navbar__close"></span>
+                    <a href="#">карта штата</a>
                 </li>
                 <li class="navbar__menu-item">
-                    <a href="#" title="информация">информация</a>
+                    <a href="#">информация</a>
                 </li>
                 <li class="navbar__menu-item">
-                    <a href="#" title="фото и видео">фото и видео</a>
+                    <a href="#">фото и видео</a>
                 </li>
                 <li class="navbar__menu-item">
-                    <a href="#" title="гостиницы">гостиницы</a>
+                    <a href="#">гостиницы</a>
                 </li>
             </ul>
         </nav>
+        <a class="navbar__logo" href="app/index.html">
+            <img alt="на главную" src="img/logo.png"/>
+        </a>
+        <a class="navbar__close" href="#">&times;</a>
+        <div class="navbar__toggle-btn"></div>
     </div>
-    <div class="intro">
-        <img class="intro__sedona" src="img/intro-2.png" alt="Sedona"/>
+    <div class="intro intro--shortered">
+        <img class="intro__sedona" src="img/intro-3.png" alt="Sedona"/>
     </div>
 </header>
 
@@ -51,19 +53,19 @@
                 Представьтесь, пожалуйста:
             </legend>
             <label class="survey__field-name" for="surname">Фамилия:</label>
-            <input class="survey__field-value" id="surname" type="text" value="Иванов" required=""/>
+            <input class="survey__field-value" id="surname" type="text" value="Иванов" required/>
             <label class="survey__field-name" for="name">имя:</label>
-            <input class="survey__field-value" id="name" type="text" value="петр" required=""/>
+            <input class="survey__field-value" id="name" type="text" value="Петр" required/>
             <label class="survey__field-name" for="secondname">отчество:</label>
-            <input class="survey__field-value" id="secondname" type="text" value="александрович"/>
+            <input class="survey__field-value" id="secondname" type="text" value="Александрович"/>
         </fieldset>
 
         <fieldset class="survey__section">
             <legend class="survey__legend">Ваше общее впечатление:</legend>
+            <input class="survey__field-value-radio"  name="group1" id="positiveFeedback" type="radio" checked/>
             <label class="survey__field-name" for="positiveFeedback">Скорее положительное </label>
-            <input class="survey__field-value-radio" id="positiveFeedback" type="radio" checked/>
+            <input class="survey__field-value-radio" name="group1" id="negativeFeedback" type="radio"/>
             <label class="survey__field-name" for="negativeFeedback">Скорее отрицательное</label>
-            <input class="survey__field-value-radio" id="negativeFeedback" type="radio"/>
         </fieldset>
 
         <fieldset class="survey__section">
@@ -112,7 +114,7 @@
             </ol>
 
         </fieldset>
-
+        
         <fieldset class="survey__section">
             <legend class="survey__legend">Посещенные достопримечетльносити</legend>
             <label class="survey__field-name">Мост дъявола</label>
@@ -124,7 +126,7 @@
             <label class="survey__field-name">Красные скалы</label>
             <input class="survey__field-value-check" checked type="checkbox"/>
         </fieldset>
-
+        
         <fieldset class="survey__section">
             <legend class="survey__legend">Загрузите фотографии:</legend>
 
@@ -159,7 +161,7 @@
 
         <input class="survey__field-value-submit" type="submit" value="Отправить отзыв"/>
     </form>
-
+    
     <!-- failure popup-->
     <div class="popup">
         <h2 class="popup__heading">Что-то пошло не так?</h2>
@@ -183,12 +185,13 @@
 <footer class="page-footer">
     <div class="page-footer__hashtag">#visitsedona</div>
     <div class="page-footer__socials">
-        <a class="page-footer__link page-footer__link--vk" href="vk.com" title="vk"></a>
+        <a class="page-footer__link page-footer__link--twitter" href="twitter.com" title="twitter"></a>
         <a class="page-footer__link page-footer__link--facebook" href="facebook.com" title="facebook"></a>
         <a class="page-footer__link page-footer__link--youtube" href="youtube.com" title="youtube"></a>
     </div>
     <div class="page-footer__copyright">
-          разработано <a class="page-footer__copyright-author-link" href="#"><img src="#" alt="htmlacademy"/></a>
+        <span class="page-footer__copyright-text">разработано</span>
+        <a class="page-footer__copyright-author-link" href="#"><img src="img/htmlacademy_1x.png" alt="htmlacademy"/></a>
     </div>
 </footer>
 
