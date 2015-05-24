@@ -1,0 +1,83 @@
+
+
+.survey__field-value:required ~ label{
+  padding: 15px 22px;
+  display: block;
+  &:after{
+    content:'*';
+    color: #ff2626;
+  }
+}
+
+.survey__field-value[type=text]{
+  font-weight: bold;
+  padding:22px;
+  background: #f2f2f2;
+  font-size: $font-size-big;
+  border:none;
+  margin-bottom: 23px;
+}
+
+
+.survey__field-value-radio{
+  display: none;
+}
+
+input[type="radio"] + label{
+  position:relative;
+  padding-left: 80px;
+  line-height: 55px;
+  margin-bottom: 12px;
+  text-transform: none;
+  cursor:pointer;
+
+  &:before, &:after{
+    position: absolute;
+    content: '';
+    left:0;
+    border-radius: 50%;
+  }
+
+  &:before{
+    width: 55px;
+    height: 55px;
+    background: #f2f2f2;
+  }
+
+  &:after{
+    @include same(width, height, 22px);
+    @include same(left, top, 17px);
+    background: #333;
+    display: none;
+   /* transform: scale(0);
+    transition: transform 0.28s;*/
+  }
+}
+
+input[type="radio"]:checked + label:after {
+    display: block;
+}
+/*
+input[type="radio"]:checked + label{
+  &:before{
+    background-color: #333;
+    //border: 17px solid #f2f2f2;
+    @include box-shadow(0 0 0 17px #f2f2f2 inset);
+  }
+}
+
+input[type="radio"] + label{
+  font-weight: bold;
+  font-size: $font-size-big;
+  &:before{
+    content: '';
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background-color: #f2f2f2;
+    display: block;
+  }
+}
+*/
+
+

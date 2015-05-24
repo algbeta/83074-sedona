@@ -16,7 +16,7 @@
 }
 
 .sedona-intro__heading {
-  font-size: $heading-font-size;
+  font-size: $font-size-big;
   line-height: 1.857rem;
   margin-bottom: 40px;
 }
@@ -55,7 +55,7 @@
 }
 
 .advantage__item-heading{
-  font-size: $heading-font-size;
+  font-size: $font-size-big;
   margin-bottom: 20px;
 }
 
@@ -99,7 +99,7 @@
 
 .advantage-list__item-heading{
   line-height: 2.5;
-  font-size: 1.286rem;
+  font-size: $font-size-big;
   font-weight: bold;
   &:before{
     content:'';

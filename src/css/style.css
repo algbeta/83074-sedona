@@ -535,3 +535,93 @@ ul, menu, dir, h1, h2, h3, p, blockquote {
 ul {
   list-style-type: none; }
 
+.survey__section {
+  border: none; }
+  .survey__section label {
+    display: inline-block; }
+
+.survey__legend {
+  font-size: 1.286rem;
+  line-height: 1.857rem;
+  font-weight: bold; }
+
+.form-description__heading {
+  font-size: 1.286rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 40px; }
+
+.form-description__content {
+  font-size: 1.286rem;
+  text-align: center;
+  margin-bottom: 45px; }
+
+.survey__field-value:required ~ label {
+  padding: 15px 22px;
+  display: block; }
+  .survey__field-value:required ~ label:after {
+    content: '*';
+    color: #ff2626; }
+
+.survey__field-value[type=text] {
+  font-weight: bold;
+  padding: 22px;
+  background: #f2f2f2;
+  font-size: 1.286rem;
+  border: none;
+  margin-bottom: 23px; }
+
+.survey__field-value-radio {
+  display: none; }
+
+input[type="radio"] + label {
+  position: relative;
+  padding-left: 80px;
+  line-height: 55px;
+  margin-bottom: 12px;
+  text-transform: none;
+  cursor: pointer; }
+  input[type="radio"] + label:before, input[type="radio"] + label:after {
+    position: absolute;
+    content: '';
+    left: 0;
+    border-radius: 50%; }
+  input[type="radio"] + label:before {
+    width: 55px;
+    height: 55px;
+    background: #f2f2f2; }
+  input[type="radio"] + label:after {
+    width: 22px;
+    height: 22px;
+    left: 17px;
+    top: 17px;
+    background: #333;
+    display: none;
+    /* transform: scale(0);
+    transition: transform 0.28s;*/ }
+
+input[type="radio"]:checked + label:after {
+  display: block; }
+
+/*
+input[type="radio"]:checked + label{
+  &:before{
+    background-color: #333;
+    //border: 17px solid #f2f2f2;
+    @include box-shadow(0 0 0 17px #f2f2f2 inset);
+  }
+}
+
+input[type="radio"] + label{
+  font-weight: bold;
+  font-size: $font-size-big;
+  &:before{
+    content: '';
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background-color: #f2f2f2;
+    display: block;
+  }
+}
+*/
