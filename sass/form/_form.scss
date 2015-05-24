@@ -1,0 +1,26 @@
+.survey__section{
+  border:none;
+  label{
+    display: inline-block;
+  }
+}
+
+.survey__legend{
+  font-size: $font-size-big;
+  line-height: 1.857rem;
+  font-weight: bold;
+}
+
+.form-description__heading{
+  font-size: $font-size-big;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.form-description__content{
+  font-size: $font-size-big;
+  text-align: center;
+  margin-bottom: 45px;
+
+}

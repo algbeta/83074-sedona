@@ -6,6 +6,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-githooks');
   grunt.loadNpmTasks('grunt-lintspaces');
+  grunt.loadNpmTasks('grunt-spritesmith');
 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
@@ -21,9 +22,52 @@ module.exports = function(grunt) {
     sass: {
       style: {
         files: {
-          'css/style.css': 'sass/style.scss'
+          'src/css/style.css': 'sass/style.scss'
         }
       }
+    },
+
+    cssmin: {
+       options: {
+          shorthandCompacting: false,
+          roundingPrecision: -1
+       },
+       target: {
+            files: {
+                'css/style.css': ['src/css/style.css']
+            }
+       }
+    },
+
+    uglify: {
+        target: {
+            files: {
+                'js/app.min.js': ['src/js/application.js']
+            }
+        }
+    },
+
+    watch: {
+       css: {
+            files: 'sass/*.scss',
+            tasks: ['sass','cssmin']
+        },
+        js: {
+            files: 'src/js/appliction.js',
+            tasks: ['uglify']
+        }
+    },
+
+    //generate sprite
+    sprite:{
+       icons: {
+           src: 'src/img/*.png',
+           dest:'img/icons.png',
+           destCss: 'sass/sprites/_icons-sprite.scss',
+           cssTemplate: 'src/template.scss.handlebars',
+           padding: 2,
+           cssSpritesheetName: 'icon'
+       }
     },
 
     lintspaces: {
@@ -70,6 +114,10 @@ module.exports = function(grunt) {
   });
 
   grunt.registerTask('test', ['lintspaces:test']);
+  grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.registerTask('default',['watch']);
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
 
   if (grunt.file.exists(__dirname, 'less', 'style.less')) {
     grunt.registerTask('gosha', ['less:style', 'copy:gosha', 'clean:gosha']);
@@ -78,4 +126,5 @@ module.exports = function(grunt) {
   } else {
     grunt.registerTask('gosha', ['copy:gosha', 'clean:gosha']);
   }
+
 };

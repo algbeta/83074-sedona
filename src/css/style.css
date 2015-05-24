@@ -1,0 +1,627 @@
+@charset "UTF-8";
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+.sedona-intro {
+  line-height: 1.5;
+  text-align: center;
+  background-image: linear-gradient(5deg, #81b3d2 15px, transparent 15px), linear-gradient(355deg, #81b3d2 15px, transparent 15px);
+  background-image: -webkit-linear-gradient(linear, 5deg, #81b3d2 15px, transparent 15px), -webkit-linear-gradient(linear, 355deg, #81b3d2 15px, transparent 15px);
+  background-image: -o-linear-gradient(5deg, #81b3d2 15px, transparent 15px), -o-linear-gradient(355deg, #81b3d2 15px, transparent 15px);
+  background-image: -ms-linear-gradient(5deg, #81b3d2 15px, transparent 15px), -ms-linear-gradient(355deg, #81b3d2 15px, transparent 15px);
+  padding-bottom: 50px; }
+  .sedona-intro > * {
+    margin: 0 auto;
+    width: 95%; }
+
+.sedona-intro__heading {
+  font-size: 1.286rem;
+  line-height: 1.857rem;
+  margin-bottom: 40px; }
+
+.sedona-intro__content {
+  line-height: 1.857rem; }
+
+.advantage--grey {
+  background: #eee; }
+
+.advantage__item {
+  color: #fff;
+  padding: 45px 0;
+  background-color: #81b3d2;
+  text-align: center;
+  line-height: 1.5rem; }
+  .advantage--grey .advantage__item, .advantage--grey-no-border .advantage__item {
+    border-bottom: 1px solid #d6d6d6;
+    color: #000;
+    background: #eee;
+    width: 90%;
+    margin: 0 auto; }
+
+.advantage--no-border .advantage__item {
+  border: none; }
+
+.advantage__item-heading {
+  font-size: 1.286rem;
+  margin-bottom: 20px; }
+
+.sedona-advantage__item-content {
+  width: 85%;
+  margin: 0 auto; }
+  .sedona-advantage__item-content:before {
+    content: '\2014 \20 №1 \20 \2014';
+    display: block;
+    margin-bottom: 25px;
+    width: 100%; }
+  .sedona-advantage__item-content--second:before {
+    content: '\2014 \20 №2 \20 \2014'; }
+  .sedona-advantage__item-content--third:before {
+    content: '\2014 \20 №3 \20 \2014'; }
+  .sedona-advantage__item-content--fourth:before {
+    content: '\2014 \20 №4 \20 \2014'; }
+  .sedona-advantage__item-content--fifth {
+    width: 86%; }
+  .sedona-advantage__item-content--fifth:before {
+    content: '\2014 \20 №5 \20 \2014'; }
+
+.advantage-list {
+  margin: 0 auto;
+  width: 90%;
+  padding-top: 30px; }
+
+.advantage-list__item-heading {
+  line-height: 2.5;
+  font-size: 1.286rem;
+  font-weight: bold; }
+  .advantage-list__item-heading:before {
+    content: '';
+    display: block;
+    float: left; }
+
+.advantage-list__item {
+  margin-bottom: 25px; }
+
+.advantage-list__item--accomodation .advantage-list__item-heading:before {
+  background-image: url(../img/icons.png);
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+  width: 37px;
+  height: 37px;
+  width: 37px;
+  height: 37px;
+  margin-right: 11px; }
+
+.advantage-list__item--gift .advantage-list__item-heading:before {
+  background-image: url(../img/icons.png);
+  background-repeat: no-repeat;
+  background-position: 0px -39px;
+  width: 32px;
+  height: 38px;
+  width: 32px;
+  height: 38px;
+  margin: 0 13px 0 5px; }
+
+.advantage-list__item--food .advantage-list__item-heading:before {
+  background-image: url(../img/icons.png);
+  background-repeat: no-repeat;
+  background-position: -39px 0px;
+  width: 37px;
+  height: 35px;
+  width: 37px;
+  height: 35px;
+  margin-right: 13px; }
+
+.advantage-list__item-desc {
+  line-height: 1.5;
+  padding-left: 50px; }
+
+.post {
+  width: 85%;
+  margin: 0 auto;
+  border-bottom: 1px solid #dbdbdb;
+  border-top: 1px solid #dbdbdb;
+  padding: 40px 0 37px;
+  text-align: center;
+  line-height: 1.5; }
+
+.post__heading {
+  margin-bottom: 35px; }
+
+.post__content {
+  margin-bottom: 30px; }
+
+.post__date {
+  margin-left: -10px; }
+
+.pagination__page {
+  display: none; }
+
+.pagination__list {
+  margin: 0 20px; }
+
+.pagination__list {
+  padding: 45px 0;
+  border-bottom: 1px solid #dbdbdb; }
+
+.pagination-list__item {
+  width: 57px;
+  height: 57px;
+  background-color: #81b3d2;
+  display: inline-block;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0 15px 16px 0; }
+  .pagination-list__item a, .pagination-list__item a:visited, .pagination-list__item a:active, .pagination-list__item a:hover {
+    color: #fff;
+    text-decoration: none; }
+  .pagination-list__item--active {
+    background: #e5e5e5;
+    cursor: auto; }
+    .pagination-list__item--active a {
+      color: #000; }
+
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+.page-footer {
+  background-color: #fefefe;
+  padding: 40px 0 25px 0;
+  text-align: center; }
+
+.page-footer__hashtag {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 42px; }
+
+.page-footer__socials {
+  margin-bottom: 40px; }
+
+.page-footer__link {
+  display: inline-block;
+  width: 46px;
+  height: 48px;
+  line-height: 46px;
+  vertical-align: middle;
+  background-color: #81b3d2;
+  margin-right: 3px; }
+  .page-footer__link:before {
+    content: '';
+    display: inherit;
+    vertical-align: middle; }
+  .page-footer__link--twitter:before {
+    background-image: url(../img/icons.png);
+    background-repeat: no-repeat;
+    background-position: -34px -39px;
+    width: 19px;
+    height: 15px; }
+  .page-footer__link--facebook:before {
+    background-image: url(../img/icons.png);
+    background-repeat: no-repeat;
+    background-position: -34px -56px;
+    width: 9px;
+    height: 19px; }
+  .page-footer__link--youtube:before {
+    background-image: url(../img/icons.png);
+    background-repeat: no-repeat;
+    background-position: -55px -39px;
+    width: 20px;
+    height: 14px; }
+
+.page-footer__copyright-text {
+  vertical-align: middle; }
+
+.page-footer__copyright-author-link {
+  vertical-align: middle;
+  display: inline-block; }
+
+.hotel-offer {
+  padding: 35px 0 40px 0;
+  text-align: center; }
+
+.hotel-offer__heading {
+  font-size: 1.5rem;
+  margin-bottom: 32px;
+  font-weight: bold; }
+
+.hotel-offer__content {
+  margin: 0 auto;
+  margin-bottom: 40px;
+  line-height: 1.714rem;
+  width: 75%; }
+
+.hotel-offer__link {
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.5rem;
+  display: block;
+  width: 280px;
+  padding: 20px 0;
+  background: #81b3d2;
+  margin: 0 auto; }
+  .hotel-offer__link, .hotel-offer__link:visited, .hotel-offer__link:hover, .hotel-offer__link:active {
+    text-decoration: none; }
+
+.map-canvas {
+  height: 350px; }
+
+.section-description {
+  text-align: center;
+  width: 90%;
+  margin: 0 auto; }
+
+.section-description__heading {
+  font-size: 2.143rem;
+  margin-bottom: 40px;
+  font-weight: bold; }
+
+.section-description__content {
+  line-height: 1.714rem;
+  margin-bottom: 30px;
+  color: #333; }
+
+.intro {
+  background: url("../img/intro-sm.jpg") no-repeat;
+  text-align: center;
+  width: 100%;
+  max-width: 320px;
+  margin: -15px 0 45px 0; }
+
+.intro--shortered {
+  background: url("../img/intro-shortered-sm.jpg") no-repeat; }
+
+.intro__welcome {
+  margin-top: 47px;
+  margin-bottom: 62px; }
+
+.intro__sedona {
+  margin-bottom: 68px; }
+  .intro--shortered .intro__sedona {
+    margin-top: 50px; }
+
+.intro__because {
+  margin-bottom: 35px; }
+
+.navbar {
+  width: 100%;
+  text-align: center;
+  position: relative; }
+
+.navbar__menu {
+  -webkit-box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.2)  inset;
+  box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.2)  inset; }
+  .navbar__menu ul {
+    overflow: hidden; }
+
+.navbar__menu-item {
+  color: #fff;
+  border-top: 1px solid #9ac2db;
+  border-bottom: 1px solid #678fa8;
+  font-weight: bold;
+  text-transform: uppercase; }
+  .navbar__menu-item:last-of-type {
+    border-bottom: none; }
+  .navbar__menu-item a {
+    display: block;
+    padding: 20px 0;
+    background-color: #81b3d2;
+    font-size: 1.286rem; }
+    .navbar__menu-item a, .navbar__menu-item a:visited, .navbar__menu-item a:active, .navbar__menu-item a:hover {
+      color: #fff;
+      text-decoration: none; }
+
+.navbar__logo {
+  display: inline-block; }
+
+.navbar__toggle-btn {
+  position: absolute;
+  right: 20px;
+  bottom: 30px;
+  height: 22px;
+  width: 23px;
+  background-image: linear-gradient(#81b3d2 4px, transparent 4px, transparent 9px, #81b3d2 9px, #81b3d2 13px, transparent 13px, transparent 18px, #81b3d2 18px);
+  background-image: -webkit-linear-gradient(linear, #81b3d2 4px, transparent 4px, transparent 9px, #81b3d2 9px, #81b3d2 13px, transparent 13px, transparent 18px, #81b3d2 18px);
+  background-image: -o-linear-gradient(#81b3d2 4px, transparent 4px, transparent 9px, #81b3d2 9px, #81b3d2 13px, transparent 13px, transparent 18px, #81b3d2 18px);
+  background-image: -ms-linear-gradient(#81b3d2 4px, transparent 4px, transparent 9px, #81b3d2 9px, #81b3d2 13px, transparent 13px, transparent 18px, #81b3d2 18px); }
+
+.navbar__close {
+  text-decoration: none;
+  color: #fff;
+  position: absolute;
+  right: 20px;
+  top: -6px;
+  font-size: 4rem; }
+
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+.post-data {
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 42px; }
+
+.post-data__date, .post__date, .post-data__type, .post__type {
+  display: inline-block;
+  font-style: italic;
+  line-height: 1;
+  color: #999; }
+  .post-data__date:before, .post__date:before, .post-data__type:before, .post__type:before {
+    content: '';
+    display: inline-block;
+    float: left;
+    margin-right: 10px;
+    vertical-align: middle; }
+
+.post-data__date, .post__date {
+  margin-right: 45px; }
+  .post-data__date:before, .post__date:before {
+    background-image: url(../img/icons.png);
+    background-repeat: no-repeat;
+    background-position: -45px -56px;
+    width: 11px;
+    height: 11px; }
+
+.post-data__type:before, .post__type:before {
+  background-image: url(../img/icons.png);
+  background-repeat: no-repeat;
+  background-position: -58px -56px;
+  width: 11px;
+  height: 9px; }
+
+.post-full {
+  width: 90%;
+  margin: 0 auto; }
+
+.post-header {
+  text-align: center; }
+
+.post-header__content {
+  font-size: 1.286rem;
+  line-height: 1.857rem;
+  margin-bottom: 40px;
+  color: #766357; }
+
+.post-header__heading {
+  font-size: 1.714rem;
+  line-height: 2.5rem;
+  margin-bottom: 35px; }
+
+.post-full__subheading {
+  font-weight: bold;
+  font-size: 2.143rem;
+  margin-bottom: 35px; }
+
+.post-full__content {
+  line-height: 1.714rem;
+  color: #333;
+  margin-bottom: 50px; }
+  .post-full__content-before-list {
+    margin-bottom: 35px; }
+
+.post-full__list {
+  margin-bottom: 38px; }
+  .post-full__list:before, .post-full__list:after {
+    content: " ";
+    display: table; }
+  .post-full__list:after {
+    clear: both; }
+
+.post-full__list-item {
+  color: #333;
+  line-height: 1.714rem;
+  font-weight: bold; }
+  .post-full__list-item:before {
+    content: '';
+    display: block;
+    width: 7px;
+    height: 7px;
+    -webkit-box-shadow: inset 0 0 7px #81b3d2;
+    box-shadow: inset 0 0 7px #81b3d2;
+    float: left;
+    margin: 8px 10px 0 0; }
+
+.post-full__underlined {
+  text-decoration: underline;
+  color: #766357; }
+
+.post-full__quote {
+  line-height: 1.714rem;
+  padding-left: 19px;
+  border-left: 1px solid #81b3d2;
+  margin: 0; }
+
+.post-full__quote-author {
+  display: block;
+  text-transform: capitalize;
+  font-style: italic;
+  color: #766357;
+  margin-bottom: 40px; }
+
+.previous-next-section {
+  border-top: 1px solid #dbdbdb;
+  border-bottom: 1px solid #dbdbdb;
+  padding: 45px 4% 47px;
+  font-weight: bold;
+  font-style: 1.5rem;
+  line-height: 1.857rem; }
+
+.previous-next-section_item {
+  padding: 18px;
+  border: 1px solid #81b3d2;
+  text-align: center;
+  display: block; }
+  .previous-next-section_item, .previous-next-section_item:visited, .previous-next-section_item:hover, .previous-next-section_item:active {
+    text-decoration: none;
+    color: #000; }
+  .previous-next-section_item:not(:last-child) {
+    width: 48%;
+    margin-bottom: 20px; }
+  .previous-next-section_item:first-child {
+    margin-right: 2%;
+    float: left; }
+  .previous-next-section_item:nth-child(2) {
+    float: right; }
+  .previous-next-section_item:last-child {
+    width: 100%;
+    clear: both; }
+
+* {
+  box-sizing: border-box; }
+
+body, html {
+  font-family: 'PT Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  font-size: 14px;
+  min-width: 240px;
+  max-width: 320px; }
+
+ul, menu, dir, h1, h2, h3, p, blockquote {
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-padding-start: 0;
+  -webkit-padding-end: 0; }
+
+ul {
+  list-style-type: none; }
+
+.survey__section {
+  border: none; }
+  .survey__section label {
+    display: inline-block; }
+
+.survey__legend {
+  font-size: 1.286rem;
+  line-height: 1.857rem;
+  font-weight: bold; }
+
+.form-description__heading {
+  font-size: 1.286rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 40px; }
+
+.form-description__content {
+  font-size: 1.286rem;
+  text-align: center;
+  margin-bottom: 45px; }
+
+.survey__field-value:required ~ label {
+  padding: 15px 22px;
+  display: block; }
+  .survey__field-value:required ~ label:after {
+    content: '*';
+    color: #ff2626; }
+
+.survey__field-value[type=text] {
+  font-weight: bold;
+  padding: 22px;
+  background: #f2f2f2;
+  font-size: 1.286rem;
+  border: none;
+  margin-bottom: 23px; }
+
+.survey__field-value-radio {
+  display: none; }
+
+input[type="radio"] + label {
+  position: relative;
+  padding-left: 80px;
+  line-height: 55px;
+  margin-bottom: 12px;
+  text-transform: none;
+  cursor: pointer; }
+  input[type="radio"] + label:before, input[type="radio"] + label:after {
+    position: absolute;
+    content: '';
+    left: 0;
+    border-radius: 50%; }
+  input[type="radio"] + label:before {
+    width: 55px;
+    height: 55px;
+    background: #f2f2f2; }
+  input[type="radio"] + label:after {
+    width: 22px;
+    height: 22px;
+    left: 17px;
+    top: 17px;
+    background: #333;
+    display: none;
+    /* transform: scale(0);
+    transition: transform 0.28s;*/ }
+
+input[type="radio"]:checked + label:after {
+  display: block; }
+
+/*
+input[type="radio"]:checked + label{
+  &:before{
+    background-color: #333;
+    //border: 17px solid #f2f2f2;
+    @include box-shadow(0 0 0 17px #f2f2f2 inset);
+  }
+}
+
+input[type="radio"] + label{
+  font-weight: bold;
+  font-size: $font-size-big;
+  &:before{
+    content: '';
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background-color: #f2f2f2;
+    display: block;
+  }
+}
+*/
