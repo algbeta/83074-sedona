@@ -1,4 +1,3 @@
-
 function showMap(mapObjects, mapIconUrl){
     var centerlat = .0, centerlng = .0;
 
@@ -26,4 +25,16 @@ function showMap(mapObjects, mapIconUrl){
             icon: mapIconUrl
         });
     }
-}
+};
+
+(function(){
+    var toggleButtons = document.querySelectorAll(".navbar__toggle-btn, .navbar__close");
+    if(toggleButtons && toggleButtons.length > 0){
+        //no foreach for nodelist :(
+        for (var i = 0; i < toggleButtons.length; ++i){
+            toggleButtons[i].addEventListener('click', function(){
+                document.querySelector(".navbar__menu").classList.toggle('navbar__menu--expanded');
+            });
+        }
+    }
+}());

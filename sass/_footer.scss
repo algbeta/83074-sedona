@@ -25,6 +25,18 @@
   vertical-align: middle;
   background-color: $blue;
   margin-right: 3px;
+
+  &:hover{
+    background-color: $blue-hover;
+  }
+
+  &:active{
+    background-color: $blue-active;
+    &:before{
+    opacity: .3;
+    }
+  }
+
   &:before{
     content: '';
     display: inherit;
@@ -51,4 +63,18 @@
 .page-footer__copyright-author-link{
   vertical-align: middle;
   display: inline-block;
+}
+
+@media (min-width: $screen-sm) {
+  .page-footer{
+    width: 85%;
+    margin: 0 auto;
+  }
+
+  .page-footer__hashtag,
+  .page-footer__socials,
+  .page-footer__copyright{
+    display: inline-block;
+    width: 33%;
+  }
 }

@@ -1,13 +1,25 @@
 .intro{
-  background: url("../img/intro-sm.jpg") no-repeat;
+  background: url("../img/photo-background@1x.jpg") no-repeat;
   text-align: center;
   width:100%;
-  max-width: 320px;
-  margin: -15px 0 45px 0;
+  margin: -15px 0 80px 0;
+  position: relative;
+
+  &:after{
+    content:'';
+    position: absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    background: url("../img/intro-triangle.svg") no-repeat;
+    height: 63px;
+    background-position: 50% 100%;
+  }
 }
 
 .intro--shortered{
-  background: url("../img/intro-shortered-sm.jpg") no-repeat;
+  background: url("../img/photo-background@1x.jpg") no-repeat;
+  background-position: 45% 39%;
 }
 
 .intro__welcome{
@@ -16,9 +28,20 @@
 }
 
 .intro__sedona{
+  width: 52%;
+  margin:0 auto;
   margin-bottom: 68px;
+
   .intro--shortered &{
     margin-top: 50px;
+  }
+}
+
+@media(min-width: $screen-sm){
+  .intro__sedona{
+    .intro--shortered &{
+      margin: 100px 0 110px 0;
+    }
   }
 }
 

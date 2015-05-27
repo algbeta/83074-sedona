@@ -1,0 +1,97 @@
+.survey-complex-value{
+  display: flex;
+}
+
+@media (min-width: $screen-sm){
+  .survey-complex-value{
+    width:245px;
+    margin: 0 auto;
+  }
+}
+
+.survey-complex-value__field-value{
+  @extend .survey__field-value;
+  padding:20px;
+  margin-right: 6px;
+}
+
+@media (min-width: $screen-sm) {
+  .survey-complex-value__field-value{
+    width: 100%;
+  }
+}
+
+.survey-complex-value__field-value-wrapper{
+  position:relative;
+  width: calc(100% - 130px);
+  &:after{
+    content:'дн.';
+    position: absolute;
+    display: block;
+    @include  same(right, top, 22px);
+    opacity: .3;
+  }
+
+  &--trlnum{
+    &:after{
+      content: 'чел.';
+    }
+  }
+}
+
+@media(min-width: $screen-sm){
+  .survey-complex-value__field-value-wrapper{
+    width:63px;
+    margin-left:0;
+    &:after{
+      display: none;
+    }
+  }
+}
+
+.survey-complex-value__decrease,
+.survey-complex-value__increase{
+  background-color: $input-grey;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  cursor: pointer;
+  @include same(width, height, 60px);
+  &:before{
+    display: inline-block;
+    //I use px here because font-size is relative to height of block
+    font-size: 45px;
+    vertical-align: middle;
+    opacity: .3;
+  }
+
+  &:hover{
+    background-color: $input-grey-hover;
+  }
+
+  &:active{
+    background-color: $input-grey-active;
+    color: $input-grey-active-cl;
+  }
+}
+
+.survey-complex-value__decrease{
+  margin-right: 6px;
+  &:before{
+    content: '-';
+  }
+}
+
+.survey-complex-value__increase{
+  margin-left: 6px;
+  &:before{
+    content: '+';
+  }
+}
+
+@media(min-width: $screen-sm){
+  .survey-complex-value__decrease,
+  .survey-complex-value__increase{
+    margin:0;
+  }
+}
