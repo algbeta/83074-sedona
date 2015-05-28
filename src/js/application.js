@@ -28,6 +28,8 @@ function showMap(mapObjects, mapIconUrl){
 };
 
 (function(){
+
+    //navbar menu actions
     var toggleButtons = document.querySelectorAll(".navbar__toggle-btn, .navbar__close");
     if(toggleButtons && toggleButtons.length > 0){
         //no foreach for nodelist :(
@@ -37,4 +39,24 @@ function showMap(mapObjects, mapIconUrl){
             });
         }
     }
+
+    //form complex fields actions
+    var complexValues = document.querySelectorAll(".survey-complex-value__decrease, .survey-complex-value__increase");
+    if(complexValues && complexValues.length > 0){
+        for(var i = 0; i < complexValues.length; ++i){
+            complexValues[i].addEventListener('click', function(){
+                //we always have only one input in complex value but not sure if min/max are always set so adding additional check
+                var input = this.parentElement.querySelector('input');
+                if(this.classList.contains('survey-complex-value__decrease') &&
+                    ( input.attributes.min ? input.value >input.attributes.min.value : input.value > 0)){
+                        input.value= Number(input.value) - 1;
+                }else if(this.classList.contains('survey-complex-value__increase') &&
+                        (input.attributes.max ? input.value < input.attributes.max.value : true)){
+                        input.value = Number(input.value) +  1;
+                }
+            });
+        }
+    }
+
+
 }());
