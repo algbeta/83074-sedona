@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
+<div class="container">
 <header class="page-header">
     <div class="navbar">
         <nav class="navbar__menu">
@@ -34,7 +35,7 @@
         <div class="navbar__toggle-btn"></div>
     </div>
     <div class="intro intro--shortered">
-        <img class="intro__sedona" src="img/intro-3.png" alt="Sedona"/>
+        <img class="intro__sedona" src="img/text-sedona.svg" alt="Sedona"/>
     </div>
 </header>
 
@@ -49,67 +50,111 @@
 
     <form action="#" id="survey" class="survey">
         <fieldset class="survey__section">
-            <legend class="survey__legend">
+            <legend class="survey__legend survey__legend--striked">
+                <span class="survey__legend-strike"></span>
                 Представьтесь, пожалуйста:
+                <span class="survey__legend-strike"></span>
             </legend>
-            <label class="survey__field-name" for="surname">Фамилия:</label>
-            <input class="survey__field-value" id="surname" type="text" value="Иванов" required/>
-            <label class="survey__field-name" for="name">имя:</label>
-            <input class="survey__field-value" id="name" type="text" value="Петр" required/>
-            <label class="survey__field-name" for="secondname">отчество:</label>
-            <input class="survey__field-value" id="secondname" type="text" value="Александрович"/>
+            <div class="survey__field-wrap">
+              <label class="survey__field-name survey__field-name--required" for="surname">Фамилия:</label>
+              <input class="survey__field-value" id="surname" type="text" value="Иванов" required/>
+            </div>
+            <div  class="survey__field-wrap">
+              <label class="survey__field-name survey__field-name--required" for="name">имя:</label>
+              <input class="survey__field-value" id="name" type="text" value="Петр" required/>
+            </div>
+            <div  class="survey__field-wrap">
+              <label class="survey__field-name" for="secondname">отчество:</label>
+              <input class="survey__field-value" id="secondname" type="text" value="Александрович"/>
+            </div>
         </fieldset>
 
         <fieldset class="survey__section">
             <legend class="survey__legend">Ваше общее впечатление:</legend>
-            <input class="survey__field-value-radio"  name="group1" id="positiveFeedback" type="radio" checked/>
-            <label class="survey__field-name" for="positiveFeedback">Скорее положительное </label>
-            <input class="survey__field-value-radio" name="group1" id="negativeFeedback" type="radio"/>
-            <label class="survey__field-name" for="negativeFeedback">Скорее отрицательное</label>
+            <div class="survey__field-wrap survey__field-wrap--half">
+              <input class="survey__field-value survey__field-value--radio"  name="group1" id="positiveFeedback" type="radio" checked/>
+              <label class="survey__field-name" for="positiveFeedback">Скорее положительное </label>
+            </div>
+            <div class="survey__field-wrap survey__field-wrap--half">
+              <input class="survey__field-value survey__field-value--radio" name="group1" id="negativeFeedback" type="radio"/>
+              <label class="survey__field-name" for="negativeFeedback">Скорее отрицательное</label>
+            </div>
         </fieldset>
 
         <fieldset class="survey__section">
-            <legend class="survey__legend">Даты вашей поездки:</legend>
-            <label class="survey__field-name" for="arrivaldate">Дата приезда</label>
-            <input class="survey__field-value" id="arrivaldate" type="date" value="2015-04-07" required/>
-            <label class="survey__field-name" for="duration">Длительность пребывания:</label>
-
-            <div class="survey-complex-value">
-                <span class="survey-complex-value__decrease"></span>
-                <input class="survey-complex-value__field-value" id="duration" type="number" value="14" required/>
-                <span class="survey-complex-value__increase"></span>
+            <legend class="survey__legend survey__legend--striked">
+                <span class="survey__legend-strike"></span>
+                Даты вашей поездки:
+                <span class="survey__legend-strike"></span>
+            </legend>
+            <div  class="survey__field-wrap">
+              <label class="survey__field-name survey__field-name--fordate survey__field-name--required" for="arrivaldate">Дата приезда</label>
+              <input class="survey__field-value survey__field-value--date" id="arrivaldate" type="date" value="2015-04-07" required/>
             </div>
 
-            <label class="survey__field-name" for="departuredate">Дата отъезда</label>
-            <input class="survey__field-value" id="departuredate" type="date" value="2015-04-28" required/>
+            <div  class="survey__field-wrap">
+              <label class="survey__field-name survey__field-name--required" for="duration">Длительность пребывания:</label>
+
+              <div class="survey-complex-value">
+                  <span class="survey-complex-value__decrease"></span>
+                  <span class="survey-complex-value__field-value-wrapper">
+                      <input class="survey-complex-value__field-value" id="duration" type="text" value="14" required/>
+                  </span>
+                  <span class="survey-complex-value__increase"></span>
+              </div>
+            </div>
+            <div  class="survey__field-wrap">
+              <label class="survey__field-name survey__field-name--fordate survey__field-name--required" for="departuredate">Дата отъезда</label>
+              <input class="survey__field-value" id="departuredate" type="date" value="2015-04-28" required/>
+            </div>
         </fieldset>
 
         <fieldset class="survey__section">
-            <legend class="survey__legend">Кол-во путешественников:</legend>
-            <label class="survey__field-name">количество путешественников</label>
+            <legend class="survey__legend survey__legend--striked">
+                <span class="survey__legend-strike"></span>
+                Кол-во путешественников:
+                <span class="survey__legend-strike"></span>
+            </legend>
 
-            <div class="survey-complex-value">
-                <span class="survey-complex-value__decrease"></span>
-                <input class="survey-complex-value__field-value" type="number" min="2" required/>
-                <span class="survey-complex-value__increase"></span>
+            <div class="survey__field-wrap survey__field-wrap--full">
+                <label class="survey__field-name survey__field-name--required">количество путешественников</label>
+                <div class="survey-complex-value">
+                    <span class="survey-complex-value__decrease"></span>
+                     <span class="survey-complex-value__field-value-wrapper  survey-complex-value__field-value-wrapper--trlnum">
+                         <input class="survey-complex-value__field-value" type="number" value="2" min="2" required/>
+                    </span>
+                    <span class="survey-complex-value__increase"></span>
+                </div>
             </div>
 
             <ol class="survey-travelers">
                 <li class="survey-travelers__item">
-                    <label class="survey-travelers__field-name">Фамилия</label>
-                    <input class="survey-travelers__field-value" type="text" required/>
-                    <label class="survey-travelers__field-name">Имя</label>
-                    <input class="survey-travelers__field-value" type="text" required/>
-                    <label class="survey-travelers__field-name">Отчество</label>
-                    <input class="survey-travelers__field-value" type="text"/>
+                    <div  class="survey__field-wrap">
+                      <label class="survey-travelers__field-name survey__field-name--required">Фамилия</label>
+                      <input class="survey-travelers__field-value" type="text" value="Иванов" required/>
+                    </div>
+                    <div  class="survey__field-wrap">
+                      <label class="survey-travelers__field-name survey__field-name--required">Имя</label>
+                      <input class="survey-travelers__field-value" type="text" value="Петр" required/>
+                    </div>
+                    <div  class="survey__field-wrap">
+                      <label class="survey-travelers__field-name">Отчество</label>
+                      <input class="survey-travelers__field-value" value="Александрович" type="text"/>
+                     </div>
                 </li>
                 <li class="survey-travelers__item">
-                    <label class="survey-travelers__field-name">Фамилия</label>
-                    <input class="survey-travelers__field-value" type="text" required/>
-                    <label class="survey-travelers__field-name">Имя</label>
-                    <input class="survey-travelers__field-value" type="text" required/>
-                    <label class="survey-travelers__field-name">Отчество</label>
-                    <input class="survey-travelers__field-value" type="text"/>
+                    <div  class="survey__field-wrap">
+                      <label class="survey-travelers__field-name survey__field-name--required">Фамилия</label>
+                      <input class="survey-travelers__field-value" type="text" value="Иванов" required/>
+                    </div>
+                    <div  class="survey__field-wrap">
+                       <label class="survey-travelers__field-name survey__field-name--required">Имя</label>
+                       <input class="survey-travelers__field-value" type="text" value="Петр" required/>
+                    </div>
+                    <div  class="survey__field-wrap">
+                       <label class="survey-travelers__field-name">Отчество</label>
+                       <input class="survey-travelers__field-value" value="Александрович" type="text"/>
+                    </div>
                 </li>
             </ol>
 
@@ -117,44 +162,63 @@
         
         <fieldset class="survey__section">
             <legend class="survey__legend">Посещенные достопримечетльносити</legend>
-            <label class="survey__field-name">Мост дъявола</label>
-            <input class="survey__field-value-check" checked type="checkbox"/>
-            <label class="survey__field-name">Слайд-парк</label>
-            <input class="survey__field-value-check" type="checkbox"/>
-            <label class="survey__field-name">Гора-колокол</label>
-            <input class="survey__field-value-check" checked type="checkbox"/>
-            <label class="survey__field-name">Красные скалы</label>
-            <input class="survey__field-value-check" checked type="checkbox"/>
+            <div class="survey__section-wrap">
+                <div  class="survey__field-wrap survey__field-wrap--half">
+                  <input class="survey__field-value-check" checked type="checkbox" id="checkoption1"/>
+                  <label class="survey__field-name survey__field-name--check" for="checkoption1">Мост дъявола</label>
+
+                  <input class="survey__field-value-check" type="checkbox" id="checkoption2"/>
+                  <label class="survey__field-name survey__field-name--check" for="checkoption2">Слайд-парк</label>
+                </div>
+                <div  class="survey__field-wrap survey__field-wrap--half">
+                  <input class="survey__field-value-check" checked type="checkbox" id="checkoption3"/>
+                  <label class="survey__field-name survey__field-name--check" for="checkoption3">Гора-колокол</label>
+
+                  <input class="survey__field-value-check" checked type="checkbox" id="checkoption4"/>
+                  <label class="survey__field-name survey__field-name--check" for="checkoption4">Красные скалы</label>
+                </div>
+            </div>
+
         </fieldset>
         
         <fieldset class="survey__section">
             <legend class="survey__legend">Загрузите фотографии:</legend>
 
             <div class="survey-file">
-                <span class="survey-file__name">Выбрать фотографии</span>
-                <input class="survey-file__value" type="file"/>
+                <label class="survey-file__name" for="fileInput">Выбрать фотографии</label>
+                <input class="survey-file__value" id="fileInput" type="file"/>
             </div>
 
             <ul class="survey-gallery">
                 <li class="survey-gallery__item">
-                    <span class="survey-gallery__item-close"></span>
-                    <img src="#" alt="attached file">
+                    <span class="survey-gallery__item-close">+</span>
+                    <!--<img src="#" alt="attached file">-->
+                    <div class="survey-galley__item-image"></div>
+                    <div class="survey-gallery__item-name">Img686.jpg</div>
                 </li>
                 <li class="survey-gallery__item">
-                    <span class="survey-gallery__item-close"></span>
-                    <img src="#" alt="attached file">
+                    <span class="survey-gallery__item-close">+</span>
+                   <!-- <img src="#" alt="attached file">-->
+                    <div class="survey-galley__item-image"></div>
+                    <div class="survey-gallery__item-name">Img686.jpg</div>
                 </li>
                 <li class="survey-gallery__item">
-                    <span class="survey-gallery__item-close"></span>
-                    <img src="#" alt="attached file">
+                    <span class="survey-gallery__item-close">+</span>
+                    <!--<img src="#" alt="attached file">-->
+                    <div class="survey-galley__item-image"></div>
+                    <div class="survey-gallery__item-name">Img686.jpg</div>
                 </li>
                 <li class="survey-gallery__item">
-                    <span class="survey-gallery__item-close"></span>
-                    <img src="#" alt="attached file">
+                    <span class="survey-gallery__item-close">+</span>
+                    <!--<img src="#" alt="attached file">-->
+                    <div class="survey-galley__item-image"></div>
+                    <div class="survey-gallery__item-name">Img686.jpg</div>
                 </li>
                 <li class="survey-gallery__item">
-                    <span class="survey-gallery__item-close"></span>
-                    <img src="#" alt="attached file">
+                    <span class="survey-gallery__item-close">+</span>
+                    <!--<img src="#" alt="attached file">-->
+                    <div class="survey-galley__item-image"></div>
+                    <div class="survey-gallery__item-name">Img686.jpg</div>
                 </li>
             </ul>
         </fieldset>
@@ -163,15 +227,15 @@
     </form>
     
     <!-- failure popup-->
-    <div class="popup">
+    <!--<div class="popup">
         <h2 class="popup__heading">Что-то пошло не так?</h2>
         <p class="popup__content">Проверьте поля, выделенные красным, ксорее всего, вы забыли их заполнить</p>
         <a class="popup__btn">Ok</a>
     </div>
-
+-->
 
     <!-- success popup -->
-    <div class="popup">
+   <!-- <div class="popup">
         <h2 class="popup__heading">Ваш отзыв отправлен!</h2>
         <p class="popup__content">
             Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте
@@ -179,7 +243,7 @@
         <div class="popup__footer">
            <a class="popup-footer_btn">Закрыть окно</a>
         </div>
-    </div>
+    </div>-->
 </main>
 
 <footer class="page-footer">
@@ -194,6 +258,7 @@
         <a class="page-footer__copyright-author-link" href="#"><img src="img/htmlacademy_1x.png" alt="htmlacademy"/></a>
     </div>
 </footer>
-
+</div>
+<script src="js/app.min.js"></script>
 </body>
 </html>

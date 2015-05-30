@@ -1,0 +1,56 @@
+.survey__field-value-check{
+  display: none;
+
+}
+
+
+
+.survey__field-value-check + .survey__field-name{
+  position: relative;
+  &:before,
+  &:after{
+    content:'';
+    position: absolute;
+    left:0;
+    top:0;
+  }
+
+  &:before{
+    display: block;
+    @include same(width, height, 60px);
+    background-color: $input-grey;
+  }
+  
+  &:hover:before{
+    background-color: $input-grey-hover;
+  }
+  
+  &:active:before{
+    background-color: $input-grey-active;
+  }
+
+  &:active:after{
+    border-color: $input-grey-active-cl;
+  }
+}
+
+.survey__field-value-check + label{
+  margin-bottom: 25px;
+  padding: 20px 0 0 75px;
+  height: 60px;
+  font-weight: bold;
+  @include text-select-disable;
+}
+
+.survey__field-value-check:checked + label{
+
+  &:after{
+    @include same(border-bottom, border-right, 7px solid #333);
+    transform: rotate(45deg);
+    width: 10px;
+    height: 20px;
+    left: 23px;
+    top: 12px;
+  }
+}
+
