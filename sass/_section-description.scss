@@ -7,6 +7,10 @@
 @media(min-width: $screen-sm){
   .section-description{
     width: 62%;
+
+    &--narrow{
+      width: 37%;
+    }
   }
 }
 
@@ -24,6 +28,11 @@
 
 @media (min-width: $screen-sm) {
   .section-description__content{
-    margin-bottom: 57px;
+    margin-bottom: 55px;
+
+  }
+
+  .section-description__content-no-display{
+    display: none;
   }
 }
