@@ -1,24 +1,86 @@
+@media(min-width: $screen-sm){
+  .post-container{
+    width: 680px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: $screen-md) {
+  .post-container{
+    width: 100%;
+  }
+}
+
 .post{
   width:85%;
   margin: 0 auto;
   border-bottom: 1px solid $border-grey;
   border-top: 1px solid $border-grey;
   padding: 40px 0 37px;
-  text-align: center;
+  /*text-align: left;*/
   line-height: 1.5;
+}
+
+@media (min-width: $screen-sm) {
+  .post{
+    width: 296px;
+    display: inline-block;
+    border-bottom: none;
+    border-top: 2px solid $border-grey;
+
+    &:nth-child(odd){
+      margin-right: 84px;
+    }
+
+    &:nth-last-child(1),
+    &:nth-last-child(2){
+      border-bottom: 2px solid $border-grey;
+    }
+  }
+}
+
+@media (min-width: $screen-md) {
+  .post{
+    width:300px;
+    margin-left: 48px;
+    margin-right: 48px;
+
+    &:nth-child(odd) {
+      margin-right: 48px;
+    }
+    &:nth-last-child(3){
+      border-bottom: 2px solid $border-grey;
+    }
+
+  }
 }
 
 .post__heading{
   margin-bottom: 35px;
+  text-align: center;
+}
+
+@media(min-width: $screen-sm){
+  .post__heading{
+    line-height: 1.857rem;
+    margin-bottom: 28px;
+  }
 }
 
 .post__content{
   margin-bottom: 30px;
+  text-align: center;
+}
+
+@media (min-width: $screen-md) {
+  .post__content{
+    font-size: 0.857em;
+  }
 }
 
 .post__date{
   @extend .post-data__date;
-  margin-left: -10px;
+  margin-left: 17px;
 }
 
 .post__type{
@@ -29,13 +91,33 @@
   display: none;
 }
 
-.pagination__list{
-  margin:0 20px;
+@media (min-width: $screen-sm) {
+  .pagination__page{
+    display: inline-block;
+    font-size: $font-size-big;
+    font-weight: bold;
+    position: absolute;
+    left: -75px;
+    top:67px;
+  }
 }
 
+
+
 .pagination__list{
+  margin:0 20px;
   padding: 45px 0;
   border-bottom: 1px solid $border-grey;
+}
+
+@media (min-width: $screen-sm) {
+  .pagination__list{
+    text-align: center;
+    position: relative;
+    width: 50%;
+    margin: 0 auto;
+    border-bottom: none;
+  }
 }
 
 .pagination-list__item{

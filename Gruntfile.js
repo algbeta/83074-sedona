@@ -53,7 +53,7 @@ module.exports = function(grunt) {
             tasks: ['sass','cssmin']
         },
         js: {
-            files: 'src/js/appliction.js',
+            files: 'src/js/application.js',
             tasks: ['uglify']
         }
     },

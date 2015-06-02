@@ -4,6 +4,12 @@
   margin: 0 auto;
 }
 
+@media(min-width: $screen-sm){
+  .section-description{
+    width: 62%;
+  }
+}
+
 .section-description__heading{
   font-size: 2.143rem;
   margin-bottom: 40px;
@@ -14,4 +20,10 @@
   line-height: 1.714rem;
   margin-bottom: 30px;
   color: #333;
+}
+
+@media (min-width: $screen-sm) {
+  .section-description__content{
+    margin-bottom: 57px;
+  }
 }

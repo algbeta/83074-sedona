@@ -6,3 +6,5 @@ prepros.cfg
 *.sublime*
 *.map
 css/*
+js/*
+src/css/*

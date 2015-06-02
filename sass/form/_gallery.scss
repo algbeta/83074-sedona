@@ -33,7 +33,7 @@
 @media(min-width: $screen-sm){
   .survey-gallery__item{
     @include same(width, height, 140px);
-    margin: 0  0 60px  60px;
+    margin: 0  30px 60px  30px;
   }
 
   .survey-gallery__item-close {

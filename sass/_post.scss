@@ -30,7 +30,7 @@
   &:before{
     @include sprite($post-date-icon);
   }
-  margin-right: 45px;
+  width:45%;
 }
 
 .post-data__type{

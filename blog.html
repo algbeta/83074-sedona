@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
+<div class="container">
 <header class="page-header">
     <div class="navbar">
         <nav class="navbar__menu">
@@ -33,7 +34,7 @@
         <div class="navbar__toggle-btn"></div>
     </div>
     <div class="intro intro--shortered">
-        <img class="intro__sedona" src="img/intro-3.png" alt="Sedona"/>
+        <img class="intro__sedona" src="img/text-sedona.svg" alt="Sedona"/>
     </div>
 </header>
 <main class="main">
@@ -45,34 +46,81 @@
             общается на форумах
         </p>
     </div>
-  
-    <article class="post">
-        <h1 class="post__heading">Внимание сбежала моя домашняя анаконда!</h1>
-        <p class="post__content">
-            жители седоны и гости города,будьте бдительны - сбежала моя домашняя змея.
-            Увидевшему срочно звонить 911 и бежать подальше.
-        </p>
-       <span class="post__date">
-           <time datetime="2014-05-08">Вчера</time>
-       </span>
-        <span class="post__type">проишествия</span>
-    </article>
+    <div class="post-container">
+        <article class="post">
+            <h1 class="post__heading">Внимание сбежала моя домашняя анаконда!</h1>
+            <p class="post__content">
+                жители седоны и гости города,будьте бдительны - сбежала моя домашняя змея.
+                Увидевшему звонить 911 и бежать подальше.
+            </p>
+           <span class="post__date">
+               <time datetime="2014-05-08">Вчера</time>
+           </span>
+            <span class="post__type">проишествия</span>
+        </article>
 
-    <article class="post">
-        <h1 class="post__heading">Принят антитабачный закон штата</h1>
-        <p class="post__content">
-            уважаемые туристы, пожалуйста, не забывайте, что курение в общественных местах города седона
-            категорически запрещено
-        </p>
-        <span class="post__date">
-            <time datetime="2014-05-08">Вчера</time>
-        </span>
-        <span class="post__type">проишествия</span>
-    </article>
-    
+        <article class="post">
+            <h1 class="post__heading">Принят антитабачный закон штата</h1>
+            <p class="post__content">
+                уважаемые туристы, пожалуйста, не забывайте, что курение в общественных местах города седона
+                категорически запрещено
+            </p>
+            <span class="post__date">
+                <time datetime="2014-05-08">Вчера</time>
+            </span>
+            <span class="post__type">проишествия</span>
+        </article>
+
+        <article class="post">
+            <h1 class="post__heading">Маньяк задержан, дает показания</h1>
+            <p class="post__content">
+                Жители Седоны могут спать спокойно. Задержан маньяк-эксгибиционист, державщий в страхе весь город. Пострадавшим обращаться в 911.
+            </p>
+            <span class="post__date">
+                <time datetime="2014-05-08">3 дня назад</time>
+            </span>
+            <span class="post__type">проишествия</span>
+        </article>
+
+        <article class="post">
+            <h1 class="post__heading">Водопад закрыт на реконструкцию</h1>
+            <p class="post__content">
+                Всем, кто планировал посещать водопад в эти выходные, придется изменить планы. На нем ведутся ремонтные работы по улучшению
+                подачи воды.
+            </p>
+            <span class="post__date">
+                <time datetime="2014-05-08">Вчера</time>
+            </span>
+            <span class="post__type">проишествия</span>
+        </article>
+
+        <article class="post">
+            <h1 class="post__heading">Открылся новый стейк-хауз "Горный бык"</h1>
+            <p class="post__content">
+                Лучшие стейки в Седоне! Приемлемые цены и только самые лучшие продукты. Заходи попробовать! Действует акция: съешь два и
+                получи третий!
+            </p>
+            <span class="post__date">
+                <time datetime="2014-05-08">Месяц назад</time>
+            </span>
+            <span class="post__type">проишествия</span>
+        </article>
+
+        <article class="post">
+            <h1 class="post__heading">Прогноз погоды на ближайшие выходные</h1>
+            <p class="post__content">
+                Синоптики обещают, что будет ясно, безветрено и около 90 градусов по фаренгейту. Как в пустыне! Проверим их слова уже через
+                пару дней!
+            </p>
+            <span class="post__date">
+                <time datetime="2014-05-08">Год назад</time>
+            </span>
+            <span class="post__type">Проишествия</span>
+        </article>
+    </div>
     <div class="pagination">
-      <span class="pagination__page">Страница</span>
       <ul class="pagination__list">
+          <span class="pagination__page">Страница:</span>
           <li class="pagination-list__item pagination-list__item--active"><a href="#">1</a></li>
           <li class="pagination-list__item"><a href="#">2</a></li>
           <li class="pagination-list__item"><a href="#">3</a></li>
@@ -81,7 +129,6 @@
       </ul>
     </div>
 </main>
-
 <footer class="page-footer">
     <div class="page-footer__hashtag">#visitsedona</div>
     <div class="page-footer__socials">
@@ -94,6 +141,6 @@
         <a class="page-footer__copyright-author-link" href="#"><img src="img/htmlacademy_1x.png" alt="htmlacademy"/></a>
     </div>
 </footer>
-
+</div>
 </body>
 </html>
