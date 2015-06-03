@@ -7,9 +7,19 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-githooks');
   grunt.loadNpmTasks('grunt-lintspaces');
   grunt.loadNpmTasks('grunt-spritesmith');
+  grunt.loadNpmTasks('grunt-autoprefixer');
 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
+
+    autoprefixer: {
+        options: {
+            browsers: ['last 2 versions']
+        },
+        style: {
+           src: "src/css/style.css"
+        },
+    },
 
     less: {
       style: {
