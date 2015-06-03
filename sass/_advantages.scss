@@ -1,6 +1,3 @@
-@import "sprites/functions";
-@import "sprites/icons-sprite";
-
 .sedona-intro {
   line-height: 1.5;
   text-align: center;
@@ -15,6 +12,14 @@
     background: url(../img/intro-triangle--blue.svg)no-repeat;
     height: 40px;
     background-position: 49% 100%;
+  }
+}
+
+@media (min-width: $screen-sm) {
+  .sedona-intro{
+    &:after{
+      display: none;
+    }
   }
 }
 
@@ -36,6 +41,26 @@
   background: #eee;
 }
 
+@media (min-width: $screen-sm) {
+  .advantage--grey{
+    display: table-cell;
+    width: 33.3%;
+    padding: 45px 40px;
+  }
+}
+
+@media (min-width: $screen-sm) {
+  .advantage--table{
+    display: table;
+    border-collapse:collapse;
+    width:100%;
+  }
+
+  .advantage--rtl{
+    direction: rtl;
+  }
+}
+
 .advantage-view{
   width: 100%;
   height: 256px;
@@ -48,6 +73,14 @@
     background: url("../img/photo-bridge@1x.jpg") no-repeat;
     background-position: 34% 0%;
   }
+}
+
+@media (min-width: $screen-sm) {
+   .advantage-view{
+     display: table-cell;
+     width: 66%;
+     vertical-align: top;
+   }
 }
 
 .advantage__item{
@@ -67,6 +100,14 @@
   }
 }
 
+@media (min-width: $screen-sm) {
+  .advantage__item{
+    width: 33%;
+    vertical-align: top;
+    display: table-cell;
+  }
+}
+
 .advantage--no-border{
   .advantage__item {
     border: none;
@@ -76,37 +117,14 @@
 .advantage__item-heading{
   font-size: $font-size-big;
   margin-bottom: 20px;
+  line-height: 1.857rem;
 }
 
-.sedona-advantage__item-content{
-  width: 85%;
-  margin:0 auto;
-  &:before{
-    content:'\2014 \20 №1 \20 \2014';
-    display: block;
-    margin-bottom: 25px;
-    width: 100%;
-  }
-
-  &--second:before{
-    content:'\2014 \20 №2 \20 \2014';
-  }
-
-  &--third:before{
-    content:'\2014 \20 №3 \20 \2014';
-  }
-
-  &--fourth:before{
-    content:'\2014 \20 №4 \20 \2014';
-  }
-
-  &--fifth{
-    width:86%;
-  }
-
-  &--fifth:before{
-    content:'\2014 \20 №5 \20 \2014';
-  }
+.advantage__item-number{
+  display: block;
+  margin-bottom: 25px;
+  width: 100%;
+  text-align: center;
 
 }
 
@@ -114,6 +132,12 @@
   margin: 0 auto;
   width: 90%;
   padding-top: 30px;
+}
+
+@media (min-width: $screen-sm) {
+  .advantage-list{
+    width: 100%;
+  }
 }
 
 .advantage-list__item-heading{
@@ -127,21 +151,50 @@
   }
 }
 
+@media (min-width: $screen-sm) {
+  .advantage-list__item-heading{
+     font-size: 1.5rem;
+     line-height: 1.857rem;
+     display: block;
+     text-align: center;
+     margin-bottom: 30px;
+  }
+}
+
 .advantage-list__item{
   margin-bottom: 25px;
 }
 
 @media (min-width: $screen-sm) {
-  .advantage-list__item{
-    margin-bottom: 25px;
+ .advantage-list__item{
+    margin-bottom: 65px;
     display: inline-block;
     width: 33%;
   }
 }
 
+.advantage-list__item-image{
+  fill: #81b3d2;
+}
+
+@media (min-width: $screen-sm) {
+  .advantage-list__item--accomodation,
+  .advantage-list__item--food,
+  .advantage-list__item--gift {
+    padding: 0 36px;
+    text-align: center;
+   & .advantage-list__item-image {
+      display: block;
+      margin-right: 0;
+      margin-left: 0;
+      margin: 0 auto;
+      margin-bottom: 32px;
+    }
+  }
+}
+
 .advantage-list__item--accomodation{
-  .advantage-list__item-heading:before{
-    @include sprite($advantage-house-icon);
+  .advantage-list__item-image{
     width: 37px;
     height: 37px;
     margin-right: 11px;
@@ -149,8 +202,7 @@
 }
 
 .advantage-list__item--gift{
-  .advantage-list__item-heading:before{
-       @include sprite($advantage-gift-icon);
+  .advantage-list__item-image{
        width: 32px;
        height: 38px;
        margin:0 13px 0 5px;
@@ -158,17 +210,54 @@
 }
 
 .advantage-list__item--food{
-  .advantage-list__item-heading:before{
-    @include  sprite($advantage-food-icon);
+  .advantage-list__item-image{
     width: 37px;
     height: 35px;
     margin-right: 13px;
   }
 }
 
+@media (min-width: $screen-sm) {
+  .advantage-list__item--accomodation{
+    .advantage-list__item-image{
+      width: 74px;
+      height: 74px;
+    }
+  }
+
+  .advantage-list__item--gift{
+    .advantage-list__item-image{
+      width: 64px;
+      height: 72px;
+    }
+  }
+
+  .advantage-list__item--food{
+    .advantage-list__item-image{
+      width: 74px;
+      height: 60px;
+    }
+  }
+
+}
+
 .advantage-list__item-desc{
   line-height: 1.5;
   padding-left: 50px;
+  color: #333;
 }
 
+@media (min-width: $screen-sm) {
+  .advantage-list__item-desc{
+    padding-left: 0;
+  }
+}
+
+@media (min-width: $screen-sm) {
+  .advantage-container{
+      display: table;
+      width: 100%;
+      border-collapse: collapse;
+  }
+}
 

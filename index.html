@@ -49,9 +49,10 @@
         <p class="sedona-intro__desc">рассмотрим пять причин, по которым седона лучше, чем гранд каньон</p>
     </div>
 
-    <div class="advantage">
+    <div class="advantage advantage--table">
         <div class="advantage__item advantage__item--left">
           <h2 class="advantage__item-heading">настоящий городок</h2>
+          <span class="advantage__item-number">&mdash; 1 &mdash;</span>
           <p class="sedona-advantage__item-content">седона не аттракциона для туристов, там течет своя жизнь</p>
         </div>
         <div class="advantage-view advantage-view--right"></div>
@@ -59,49 +60,56 @@
 
     <ul class="advantage-list">
         <li class="advantage-list__item advantage-list__item--accomodation">
+            <img src="img/icon-house.svg" alt="жилье" class="advantage-list__item-image"/>
             <span class="advantage-list__item-heading">жилье</span>
             <p class="advantage-list__item-desc">рекомендуем пожить в настоящем мотеле, все как в кино!</p>
         </li>
         <li class="advantage-list__item advantage-list__item--gift">
+            <img src="img/icon-gift.svg" alt="сувениры" class="advantage-list__item-image"/>
             <span class="advantage-list__item-heading">сувениры</span>
             <p class="advantage-list__item-desc">не только китайского, но и местного производства!</p>
         </li>
         <li class="advantage-list__item advantage-list__item--food">
+            <img src="img/icon-burger.svg" alt="еда" class="advantage-list__item-image"/>
             <span class="advantage-list__item-heading">еда</span>
             <p class="advantage-list__item-desc">всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
         </li>
     </ul>
 
-    <div class="advantage">
+    <div class="advantage advantage--table advantage--rtl">
         <div class="advantage__item advantage__item--right">
           <h2 class="advantage__item-heading">там есть мост дьявола</h2>
-          <p class="sedona-advantage__item-content sedona-advantage__item-content--second">да, по нему можно пройтись, если, конечно, вы осмелитесь</p>
+          <span class="advantage__item-number">&mdash; 2 &mdash;</span>
+           <p class="sedona-advantage__item-content sedona-advantage__item-content--second">да, по нему можно пройтись, если, конечно, вы осмелитесь</p>
         </div>
         <div class="advantage-view advantage-view--left"></div>
     </div>
     
+    <div class="advantage-container">
+        <div class="advantage advantage--grey">
+            <div class="advantage__item">
+                <h2 class="advantage__item-heading">Небольшая площадь</h2>
+                <span class="advantage__item-number">&mdash; 3 &mdash;</span>
+                <p class="sedona-advantage__item-content sedona-advantage__item-content--third">Все достопримечательности находятся очень близко</p>
+            </div>
+        </div>
 
-    <div class="advantage advantage--grey">
-        <div class="advantage__item">
-            <h2 class="advantage__item-heading">Небольшая площадь</h2>
-            <p class="sedona-advantage__item-content sedona-advantage__item-content--third">Все достопримечательности находятся очень близко</p>
+        <div class="advantage advantage--grey">
+            <div class="advantage__item">
+                <h2 class="advantage__item-heading">Красивая дорога</h2>
+                <span class="advantage__item-number">&mdash; 4 &mdash;</span>
+                <p class="sedona-advantage__item-content sedona-advantage__item-content--fourth">Eхать в седону из лас-вегаса совсем не скучно</p>
+            </div>
+        </div>
+
+        <div class="advantage advantage--grey advantage--no-border">
+            <div class="advantage__item">
+                <h2 class="advantage__item-heading">Мало туристов</h2>
+                <span class="advantage__item-number">&mdash; 5 &mdash;</span>
+                <p class="sedona-advantage__item-content sedona-advantage__item-content--fifth">Большинство едет в гранд каньон и толпится там</p>
+            </div>
         </div>
     </div>
-
-    <div class="advantage advantage--grey">
-        <div class="advantage__item">
-            <h2 class="advantage__item-heading">Красивая дорога</h2>
-            <p class="sedona-advantage__item-content sedona-advantage__item-content--fourth">Eхать в седону из лас-вегаса совсем не скучно</p>
-        </div>
-    </div>
-
-    <div class="advantage advantage--grey advantage--no-border">
-        <div class="advantage__item">
-            <h2 class="advantage__item-heading">Мало туристов</h2>
-            <p class="sedona-advantage__item-content sedona-advantage__item-content--fifth">Большинство едет в гранд каньон и толпится там</p>
-        </div>
-    </div>
-  
     <div class="hotel-offer">
         <h2 class="hotel-offer__heading">Заинтересовались?</h2>
         <p class="hotel-offer__content">Укажите преполагаемые даты поездки и мы покажем вам лучшие предложения гостиниц в седоне</p>
@@ -134,7 +142,7 @@
         showMap(markers, "img/sedona-map-icon.png")
     });
 
-    var svgs = document.querySelectorAll('.intro__welcome,.intro__gorgeous, .intro__sedona, .intro__because');
+    var svgs = document.querySelectorAll('.intro__welcome,.intro__gorgeous, .intro__sedona, .intro__because, .advantage-list__item-image');
     SVGInjector(svgs);
 
 </script>

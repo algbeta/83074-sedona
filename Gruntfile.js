@@ -181,7 +181,9 @@ module.exports = function(grunt) {
       ]
 
   );
-
+  
+  grunt.registerTask('default', ['build']);
+  
   if (grunt.file.exists(__dirname, 'less', 'style.less')) {
     grunt.registerTask('gosha', ['less:style', 'copy:gosha', 'clean:gosha']);
   } else if (grunt.file.exists(__dirname, 'sass', 'style.scss')) {

@@ -32,18 +32,20 @@
   margin-top: 47px;
   margin-bottom: 9px;
   fill: #81b3d2;
+  width: 100%;
 }
 
 .intro__gorgeous{
   fill: #766357;
   margin-bottom: 60px;
+  width: 100%;
 }
 
 .intro__sedona{
   width: 52%;
   margin:0 auto;
   margin-bottom: 68px;
-
+  width:100%;
   .intro--shortered &{
     margin-top: 50px;
   }
@@ -60,4 +62,5 @@
 .intro__because{
   margin-bottom: 35px;
   fill: #fff;
+  width:100%;
 }
