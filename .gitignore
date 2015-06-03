@@ -1,4 +1,5 @@
 node_modules
+bower_components
 npm-debug.log
 Thumbs.db
 .DS_Store
@@ -6,5 +7,5 @@ prepros.cfg
 *.sublime*
 *.map
 css/*
-js/*
+build/*
 src/css/*
