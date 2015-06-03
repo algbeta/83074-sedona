@@ -106,7 +106,8 @@
 
 .navbar__logo{
   display: inline-block;
-  z-index: 2;
+  z-index: 1;
+  position: relative;
 }
 @media (min-width: $screen-sm) {
   .navbar__logo{

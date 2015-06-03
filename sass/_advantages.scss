@@ -4,32 +4,51 @@
 .sedona-intro {
   line-height: 1.5;
   text-align: center;
-  background-image:linear-gradient(5deg, $blue 15px, transparent 15px),  linear-gradient(355deg, $blue 15px, transparent 15px);
-  background-image:-webkit-linear-gradient(linear, 5deg, $blue 15px, transparent 15px),  -webkit-linear-gradient(linear, 355deg, $blue 15px, transparent 15px);
-  background-image:-o-linear-gradient(5deg, $blue 15px, transparent 15px),  -o-linear-gradient(355deg, $blue 15px, transparent 15px);
-  background-image:-ms-linear-gradient(5deg, $blue 15px, transparent 15px),  -ms-linear-gradient(355deg, $blue 15px, transparent 15px);
   padding-bottom: 50px;
-  & > *{
-    margin: 0 auto;
-    width: 95%;
+  position: relative;
+  &:after{
+    position: absolute;
+    content:'';
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url(../img/intro-triangle--blue.svg)no-repeat;
+    height: 40px;
+    background-position: 49% 100%;
   }
 }
 
 .sedona-intro__heading {
   font-size: $font-size-big;
   line-height: 1.857rem;
+  margin: 0 auto;
   margin-bottom: 40px;
+  width: 95%;
 }
 
-.sedona-intro__content{
+.sedona-intro__desc{
   line-height: 1.857rem;
+  margin: 0 auto;
+  width: 95%;
 }
 
 .advantage--grey{
   background: #eee;
 }
 
+.advantage-view{
+  width: 100%;
+  height: 256px;
+  &--right {
+    background: url("../img/photo-city@1x.jpg") no-repeat;
+    background-position: 59% 12%;
+  }
 
+  &--left {
+    background: url("../img/photo-bridge@1x.jpg") no-repeat;
+    background-position: 34% 0%;
+  }
+}
 
 .advantage__item{
   color: #fff;
@@ -110,6 +129,14 @@
 
 .advantage-list__item{
   margin-bottom: 25px;
+}
+
+@media (min-width: $screen-sm) {
+  .advantage-list__item{
+    margin-bottom: 25px;
+    display: inline-block;
+    width: 33%;
+  }
 }
 
 .advantage-list__item--accomodation{
