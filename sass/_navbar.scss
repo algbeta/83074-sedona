@@ -112,11 +112,24 @@
 }
 @media (min-width: $screen-sm) {
   .navbar__logo{
-    display: block;
     position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%);
+    top:0;
+
+    .navbar__logo-svg,.navbar__logo-img {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%);
+    }
+
+    .navbar__logo-svg{
+      fill: $blue;
+    }
+
+    .navbar__logo-img{
+      z-index: 2;
+    }
 
   }
 }

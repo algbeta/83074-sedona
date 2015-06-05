@@ -28,6 +28,8 @@ function showMap(mapObjects, mapIconUrl){
 };
 
 (function(){
+    //picturefill snippet
+    document.createElement( "picture" );
 
     //navbar menu actions
     var toggleButtons = document.querySelectorAll(".navbar__toggle-btn, .navbar__close");

@@ -3,10 +3,22 @@
   text-align: center;
 }
 
+@media (min-width: $screen-sm) {
+  .hotel-offer{
+    padding: 55px 0 60px 0;
+  }
+}
+
 .hotel-offer__heading{
   font-size: 1.5rem;
   margin-bottom: 32px;
   font-weight: bold;
+}
+
+@media (min-width: $screen-sm) {
+  .hotel-offer__heading{
+    font-size: 3rem;
+  }
 }
 
 .hotel-offer__content{
@@ -14,6 +26,13 @@
   margin-bottom: 40px;
   line-height: 1.714rem;
   width:75%;
+  color: #333;
+}
+
+@media (min-width: $screen-sm) {
+  .hotel-offer__content{
+    width: 50%;
+  }
 }
 
 .hotel-offer__link{
@@ -31,6 +50,12 @@
   &:hover,
   &:active{
     text-decoration: none;
+  }
+}
+
+@media(min-width: $screen-sm){
+  .hotel-offer__link{
+    width: 460px;
   }
 }
 
