@@ -4,6 +4,12 @@
   text-align: center;
 }
 
+@media (min-width: $screen-sm) {
+  .page-footer{
+    padding: 40px 0 0 0;
+  }
+}
+
 .page-footer__hashtag{
   font-size: 1.5rem;
   font-weight: bold;
@@ -30,9 +36,7 @@
 
   &:active{
     background-color: $blue-active;
-    &:before{
-    opacity: .3;
-    }
+    fill: $text-color-active;
   }
 }
 
@@ -44,7 +48,18 @@
 .page-footer__copyright-author-link{
   vertical-align: middle;
   display: inline-block;
+
+  &:hover{
+    fill: $blue;
+  }
+
+  &:active{
+    fill: #b2b2b2;
+  }
 }
+
+
+
 
 @media (min-width: $screen-sm) {
   .page-footer{
@@ -65,7 +80,13 @@
   .page-footer__socials,
   .page-footer__copyright{
     display: inline-block;
-    width: 33%;
+    width: 32%;
     margin-bottom: 36px;
+    height: 48px;
+    line-height: 48px;
+  }
+
+  .page-footer__copyright-author-img{
+    vertical-align: middle;
   }
 }

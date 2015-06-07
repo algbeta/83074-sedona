@@ -14,10 +14,13 @@
     <div class="navbar">
         <nav class="navbar__menu">
             <ul>
+                <a class="navbar__close" href="#">
+                    <img src="img/icon-cross.svg" alt="закройте меню"/>
+                </a>
                 <li class="navbar__menu-item">
                     <a href="#">карта штата</a>
                 </li>
-                <li class="navbar__menu-item">
+                <li class="navbar__menu-item navbar__menu-item--active">
                     <a href="#">информация</a>
                 </li>
                 <li class="navbar__menu-item">
@@ -35,7 +38,7 @@
             </picture>
             <img alt="sedona"  class="navbar__logo-svg" src="img/form-logo-triangle.svg"/>
         </a>
-        <a class="navbar__close" href="#">&times;</a>
+
         <div class="navbar__toggle-btn"></div>
 
     </div>
@@ -64,18 +67,24 @@
 
     <ul class="advantage-list">
         <li class="advantage-list__item advantage-list__item--accomodation">
-            <img src="img/icon-house.svg" alt="жилье" class="advantage-list__item-image"/>
-            <span class="advantage-list__item-heading">жилье</span>
+            <div class="advantage-list__item-heading-wrap">
+              <img src="img/icon-house.svg" alt="жилье" class="advantage-list__item-image"/>
+              <span class="advantage-list__item-heading">жилье</span>
+            </div>
             <p class="advantage-list__item-desc">рекомендуем пожить в настоящем мотеле, все как в кино!</p>
         </li>
         <li class="advantage-list__item advantage-list__item--gift">
-            <img src="img/icon-gift.svg" alt="сувениры" class="advantage-list__item-image"/>
-            <span class="advantage-list__item-heading">сувениры</span>
+            <div class="advantage-list__item-heading-wrap">
+              <img src="img/icon-gift.svg" alt="сувениры" class="advantage-list__item-image"/>
+              <span class="advantage-list__item-heading">сувениры</span>
+            </div>
             <p class="advantage-list__item-desc">не только китайского, но и местного производства!</p>
         </li>
         <li class="advantage-list__item advantage-list__item--food">
-            <img src="img/icon-burger.svg" alt="еда" class="advantage-list__item-image"/>
-            <span class="advantage-list__item-heading">еда</span>
+            <div class="advantage-list__item-heading-wrap">
+              <img src="img/icon-burger.svg" alt="еда" class="advantage-list__item-image"/>
+              <span class="advantage-list__item-heading">еда</span>
+            </div>
             <p class="advantage-list__item-desc">всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
         </li>
     </ul>
@@ -139,7 +148,7 @@
     </div>
     <div class="page-footer__copyright">
           <span class="page-footer__copyright-text">разработано</span>
-          <a class="page-footer__copyright-author-link" href="#"><img src="img/htmlacademy.svg" alt="htmlacademy"/></a>
+          <a class="page-footer__copyright-author-link" href="#"><img class="page-footer__copyright-author-img" src="img/htmlacademy.svg" alt="htmlacademy"/></a>
     </div>
 </footer>
 </div>
@@ -153,7 +162,7 @@
         showMap(markers, "img/sedona-map-icon.png")
     });
 
-    var svgs = document.querySelectorAll('.navbar__logo-svg, .page-footer__copyright-author-link, .intro__welcome,.intro__gorgeous, .intro__sedona, .intro__because, .advantage-list__item-image, .page-footer__link img');
+    var svgs = document.querySelectorAll('.navbar__close img, .navbar__logo-svg, .page-footer__copyright-author-link img, .intro__welcome,.intro__gorgeous, .intro__sedona, .intro__because, .advantage-list__item-image, .page-footer__link img');
     SVGInjector(svgs);
 </script>
 </body>

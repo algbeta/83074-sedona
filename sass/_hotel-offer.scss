@@ -9,6 +9,12 @@
   }
 }
 
+@media (min-width: $screen-md) {
+  .hotel-offer{
+    padding: 55px 0 67px 0;
+  }
+}
+
 .hotel-offer__heading{
   font-size: 1.5rem;
   margin-bottom: 32px;
@@ -17,7 +23,8 @@
 
 @media (min-width: $screen-sm) {
   .hotel-offer__heading{
-    font-size: 3rem;
+    font-size: 2.143rem;
+    margin-bottom: 40px;
   }
 }
 
@@ -32,6 +39,7 @@
 @media (min-width: $screen-sm) {
   .hotel-offer__content{
     width: 50%;
+    margin-bottom: 50px;
   }
 }
 
@@ -41,7 +49,7 @@
   font-size: 1.5rem;
   display: block;
   width: 280px;
-  padding: 20px 0;
+  padding: 15px 0;
   background: $blue;
   margin: 0 auto;
 
@@ -51,11 +59,21 @@
   &:active{
     text-decoration: none;
   }
+
+  &:hover{
+    background-color: $blue-hover;
+  }
+
+  &:active{
+    background-color: $blue-active;
+    color: $text-color-active;;
+  }
 }
 
 @media(min-width: $screen-sm){
   .hotel-offer__link{
     width: 460px;
+    padding: 20px 0;
   }
 }
 
