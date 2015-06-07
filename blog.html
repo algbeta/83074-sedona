@@ -13,10 +13,13 @@
     <div class="navbar">
         <nav class="navbar__menu">
             <ul>
+                <a class="navbar__close" href="#">
+                    <img src="img/icon-cross.svg" alt="закройте меню"/>
+                </a>
                 <li class="navbar__menu-item">
                     <a href="#">карта штата</a>
                 </li>
-                <li class="navbar__menu-item">
+                <li class="navbar__menu-item navbar__menu-item--active">
                     <a href="#">информация</a>
                 </li>
                 <li class="navbar__menu-item">
@@ -28,9 +31,12 @@
             </ul>
         </nav>
         <a class="navbar__logo" href="app/index.html">
-            <img alt="на главную" src="img/logo.png"/>
+            <picture>
+                <img class="navbar__logo-img" src="img/logo-sedona@1x.png" alt="на главную"
+                     srcset="img/logo-sedona@2x.png 2x, img/logo-sedona@3x.png 3x"/>
+            </picture>
+            <img alt="sedona"  class="navbar__logo-svg" src="img/form-logo-triangle.svg"/>
         </a>
-        <a class="navbar__close" href="#">&times;</a>
         <div class="navbar__toggle-btn"></div>
     </div>
     <div class="intro intro--shortered">
@@ -46,7 +52,7 @@
             общается на форумах
         </p>
     </div>
-    <div class="post-container">
+    <div class="blog-container">
         <article class="post">
             <h1 class="post__heading">Внимание сбежала моя домашняя анаконда!</h1>
             <p class="post__content">
@@ -54,9 +60,13 @@
                 Увидевшему звонить 911 и бежать подальше.
             </p>
            <span class="post__date">
+               <img class="post__date-img" src="img/blog-calendar.svg"/>
                <time datetime="2014-05-08">Вчера</time>
            </span>
-            <span class="post__type">проишествия</span>
+            <span class="post__type">
+                <img class="post__type-img" src="img/blog-flag.svg"/>
+                проишествия
+            </span>
         </article>
 
         <article class="post">
@@ -66,9 +76,13 @@
                 категорически запрещено
             </p>
             <span class="post__date">
+                 <img class="post__date-img" src="img/blog-calendar.svg"/>
                 <time datetime="2014-05-08">Вчера</time>
             </span>
-            <span class="post__type">проишествия</span>
+            <span class="post__type">
+                <img class="post__type-img" src="img/blog-flag.svg"/>
+                проишествия
+            </span>
         </article>
 
         <article class="post">
@@ -77,9 +91,13 @@
                 Жители Седоны могут спать спокойно. Задержан маньяк-эксгибиционист, державщий в страхе весь город. Пострадавшим обращаться в 911.
             </p>
             <span class="post__date">
+                <img class="post__date-img" src="img/blog-calendar.svg"/>
                 <time datetime="2014-05-08">3 дня назад</time>
             </span>
-            <span class="post__type">проишествия</span>
+            <span class="post__type">
+                <img class="post__type-img" src="img/blog-flag.svg"/>
+                проишествия
+            </span>
         </article>
 
         <article class="post">
@@ -89,9 +107,13 @@
                 подачи воды.
             </p>
             <span class="post__date">
+                <img class="post__date-img" src="img/blog-calendar.svg"/>
                 <time datetime="2014-05-08">Вчера</time>
             </span>
-            <span class="post__type">проишествия</span>
+            <span class="post__type">
+                <img class="post__type-img" src="img/blog-flag.svg"/>
+                проишествия
+            </span>
         </article>
 
         <article class="post">
@@ -101,9 +123,13 @@
                 получи третий!
             </p>
             <span class="post__date">
+                <img class="post__date-img" src="img/blog-calendar.svg"/>
                 <time datetime="2014-05-08">Месяц назад</time>
             </span>
-            <span class="post__type">проишествия</span>
+            <span class="post__type">
+                <img class="post__type-img" src="img/blog-flag.svg"/>
+                проишествия
+            </span>
         </article>
 
         <article class="post">
@@ -113,9 +139,13 @@
                 пару дней!
             </p>
             <span class="post__date">
+                <img class="post__date-img" src="img/blog-calendar.svg"/>
                 <time datetime="2014-05-08">Год назад</time>
             </span>
-            <span class="post__type">Проишествия</span>
+            <span class="post__type">
+                <img class="post__type-img" src="img/blog-flag.svg"/>
+                Проишествия
+            </span>
         </article>
     </div>
     <div class="pagination">
@@ -129,18 +159,37 @@
       </ul>
     </div>
 </main>
-<footer class="page-footer">
-    <div class="page-footer__hashtag">#visitsedona</div>
-    <div class="page-footer__socials">
-        <a class="page-footer__link page-footer__link--twitter" href="twitter.com" title="twitter"></a>
-        <a class="page-footer__link page-footer__link--facebook" href="facebook.com" title="facebook"></a>
-        <a class="page-footer__link page-footer__link--youtube" href="youtube.com" title="youtube"></a>
-    </div>
-    <div class="page-footer__copyright">
-        <span class="page-footer__copyright-text">разработано</span>
-        <a class="page-footer__copyright-author-link" href="#"><img src="img/htmlacademy_1x.png" alt="htmlacademy"/></a>
-    </div>
-</footer>
+    <footer class="page-footer">
+        <div class="page-footer__hashtag">#visitsedona</div>
+        <div class="page-footer__socials">
+            <a class="page-footer__link page-footer__link--twitter" href="twitter.com" title="twitter">
+                <img src="img/icon-twitter.svg" alt="twitter"/>
+            </a>
+            <a class="page-footer__link page-footer__link--facebook" href="facebook.com" title="facebook">
+                <img src="img/icon-facebook.svg" alt="facebook"/>
+            </a>
+            <a class="page-footer__link page-footer__link--youtube" href="youtube.com" title="youtube">
+                <img src="img/icon-youtube.svg" alt="youtube"/>
+            </a>
+        </div>
+        <div class="page-footer__copyright">
+            <span class="page-footer__copyright-text">разработано</span>
+            <a class="page-footer__copyright-author-link" href="#"><img class="page-footer__copyright-author-img" src="img/htmlacademy.svg" alt="htmlacademy"/></a>
+        </div>
+    </footer>
 </div>
+<script src="js/libs/svg-injector.min.js"></script>
+<script src="js/libs/picturefill.min.js"></script>
+<script src="js/app.min.js" type="text/javascript"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+        var markers = [{lat:34.8543784, lng: -111.7951384}]
+        showMap(markers, "img/sedona-map-icon.png")
+    });
+
+    var svgs = document.querySelectorAll('.post__date-img, .post__type-img,.navbar__close img, .navbar__logo-svg, .page-footer__copyright-author-link img,.intro__sedona,  .page-footer__link img');
+    SVGInjector(svgs);
+</script>
+
 </body>
 </html>
