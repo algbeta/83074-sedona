@@ -5,7 +5,7 @@
 
 .survey-gallery__item{
   @include same(width, height, 60px);
-  margin: 0  0 35px  35px;
+  margin: 0  17px 35px  17px;
   display: inline-block;
   background: url("../img/gallery-pic.jpg") no-repeat;
   position: relative;
@@ -20,9 +20,9 @@
   left: 15px;
   color: #c6c6c6;
   transform: rotate(45deg);
-  font-size: 35px;
-  padding-left:7px;
-  line-height: 35px;
+  font-size: 39px;
+  padding-left:5px;
+  line-height: 30px;
   cursor: pointer;
 }
 

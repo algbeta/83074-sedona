@@ -11,7 +11,7 @@
 
 .survey-complex-value__field-value{
   @extend .survey__field-value;
-  padding:20px;
+  padding:18px;
   margin-right: 6px;
 }
 
@@ -56,11 +56,12 @@
   vertical-align: middle;
   text-align: center;
   cursor: pointer;
-  @include same(width, height, 60px);
+  width: 60px;
+  height: 57px;
   &:before{
     display: inline-block;
     //I use px here because font-size is relative to height of block
-    font-size: 45px;
+    font-size: 42px;
     vertical-align: middle;
     opacity: .3;
   }

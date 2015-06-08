@@ -62,3 +62,20 @@ function showMap(mapObjects, mapIconUrl){
 
 
 }());
+
+function initPopups(){
+    var submitBtn = document.querySelector(".survey__field-value-submit");
+
+    submitBtn.addEventListener('click', function(e){
+        document.querySelector('.popup--failure').classList.add('popup--visible');
+    });
+
+    document.querySelector('.popup--failure .popup__btn').addEventListener('click',function(e){
+        document.querySelector('.popup--failure').classList.remove('popup--visible');
+        document.querySelector('.popup--success').classList.add('popup--visible');
+    });
+
+    document.querySelector('.popup--success .popup__btn').addEventListener('click', function(e){
+        document.querySelector('.popup--success').classList.remove('popup--visible');
+    });
+}
