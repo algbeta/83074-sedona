@@ -12,6 +12,9 @@
 @media (min-width: $screen-md) {
   .survey-complex-value{
     width: 276px;
+    &--np{
+      margin-left: 0;
+    }
   }
 }
 

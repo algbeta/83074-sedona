@@ -9,7 +9,7 @@
 
 @media (min-width: $screen-md) {
   .survey{
-    width: 950px;
+    width: 990px;
     margin-bottom: 60px;
   }
 }
@@ -250,6 +250,7 @@
 
 @media (min-width: $screen-md) {
   .survey-travelers{
+    margin-left: 24px;
     .survey__field-wrap{
       width: 28%;
       &:first-child{

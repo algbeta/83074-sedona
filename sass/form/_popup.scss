@@ -12,9 +12,49 @@
     transform: translate(-50%, -50%);
   }
 }
+
+@media (min-width: $screen-sm) {
+  .popup{
+    width: 400px;
+    padding: 50px 60px;
+  }
+
+  .popup--success{
+    width: 650px;
+    padding:0;
+
+    .popup__footer{
+      background-color: #f2f2f2;
+      padding-top: 44px;
+      padding-bottom: 44px;
+    }
+
+    .popup__text{
+      padding: 60px 0 40px;
+    }
+
+    .popup__content{
+      width: 67%;
+      margin: 0 auto;
+    }
+
+    .popup__btn{
+      width: 457px;
+      margin: 0 auto;
+    }
+  }
+}
+
 .popup__heading{
   font-size: 1.286rem;
-  margin-bottom: 35px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+@media (min-width: $screen-sm) {
+  .popup__heading{
+    font-size: 2.143rem;
+  }
 }
 
 .popup__content{

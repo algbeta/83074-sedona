@@ -61,8 +61,6 @@ function showMap(mapObjects, mapIconUrl){
             });
         }
     }
-
-
     initFormPreview();
 
 }());

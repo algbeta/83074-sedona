@@ -134,7 +134,7 @@
 
             <div class="survey__field-wrap survey__field-wrap--full">
                 <label class="survey__field-name survey__field-name--required survey__field-name--np">кол-во путешественников</label>
-                <div class="survey-complex-value" id="travelersComplexValue">
+                <div class="survey-complex-value survey-complex-value--np" id="travelersComplexValue">
                     <span class="survey-complex-value__decrease survey-complex-value__decrease--travel"></span>
                      <span class="survey-complex-value__field-value-wrapper  survey-complex-value__field-value-wrapper--trlnum">
                          <input class="survey-complex-value__field-value" type="number" value="2" min="2" required readonly/>
@@ -223,7 +223,7 @@
 
     <!-- failure popup-->
     <div class="popup popup--failure">
-        <h2 class="popup__heading">Что-то пошло не так?</h2>
+        <h2 class="popup__heading">Что-то пошло не так!</h2>
         <p class="popup__content">Проверьте поля, выделенные красным, ксорее всего, вы забыли их заполнить</p>
         <a class="popup__btn">Ok</a>
     </div>
@@ -231,10 +231,12 @@
 
     <!-- success popup -->
    <div class="popup popup--success">
-        <h2 class="popup__heading">Ваш отзыв отправлен!</h2>
-        <p class="popup__content">
-            Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте
-        </p>
+        <div class="popup__text">
+            <h2 class="popup__heading">Ваш отзыв отправлен!</h2>
+            <p class="popup__content">
+                Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте
+            </p>
+        </div>
         <div class="popup__footer">
            <a class="popup__btn">Закрыть окно</a>
         </div>
