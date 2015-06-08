@@ -52,16 +52,32 @@ function showMap(mapObjects, mapIconUrl){
                 if(this.classList.contains('survey-complex-value__decrease') &&
                     ( input.attributes.min ? input.value >input.attributes.min.value : input.value > 0)){
                         input.value= Number(input.value) - 1;
+                        if(this.classList.contains('survey-complex-value__decrease--travel'))removeTraveler();
                 }else if(this.classList.contains('survey-complex-value__increase') &&
                         (input.attributes.max ? input.value < input.attributes.max.value : true)){
                         input.value = Number(input.value) +  1;
+                        if(this.classList.contains('survey-complex-value__increase--travel'))addTraveler(template.innerHTML);
                 }
             });
         }
     }
 
 
+    initFormPreview();
+
 }());
+
+function addTraveler(html){
+    var li = document.createElement('li')
+    li.classList.add('survey-travelers__item');
+    li.innerHTML = html;
+    document.querySelector("#travelers").appendChild(li);
+};
+
+function removeTraveler(){
+    document.querySelector("#travelers").removeChild(
+        document.querySelector('#travelers li:last-child'));
+}
 
 function initPopups(){
     var submitBtn = document.querySelector(".survey__field-value-submit");
@@ -78,4 +94,50 @@ function initPopups(){
     document.querySelector('.popup--success .popup__btn').addEventListener('click', function(e){
         document.querySelector('.popup--success').classList.remove('popup--visible');
     });
+};
+
+function initFormPreview(){
+    if (!("FormData" in window) || !("FileReader" in window)) {
+        return;
+    }
+
+    var form = document.querySelector("#survey");
+    form.querySelector("#fileInput").addEventListener("change", function(){
+        var files = this.files;
+        for(var i = 0; i< files.length; i++){
+            preview(files[i]);
+        }
+    });
+
+
+};
+
+function preview(file){
+    if(file.type.match(/image.*/)){
+        var reader = new FileReader();
+        reader.addEventListener('load', function(event){
+
+            var li = document.createElement('li');
+            li.classList.add('survey-gallery__item');
+            li.innerHTML = document.querySelector('#imagePreview').innerHTML;
+
+            var img = document.createElement("img");
+            img.src = event.target.result;
+            img.alt = file.name;
+            img.classList.add('survey-galley__item-image');
+
+            li.appendChild(img);
+
+            li.querySelector('.survey-gallery__item-close').addEventListener('click', function(e){
+                document.querySelector(".survey-gallery").removeChild(e.target.parentNode);
+            });
+
+            li.querySelector('.survey-gallery__item-name').innerHTML = file.name;
+
+            document.querySelector('.survey-gallery').appendChild(li);
+
+        });
+
+        reader.readAsDataURL(file);
+    }
 }

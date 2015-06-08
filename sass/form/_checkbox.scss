@@ -40,6 +40,13 @@
   height: 60px;
   font-weight: bold;
   user-select: none;
+  display: inline-block;
+}
+
+@media (min-width: $screen-md) {
+  .survey__field-value-check + label {
+      width: 49%;
+  }
 }
 
 .survey__field-value-check:checked + label{

@@ -4,8 +4,14 @@
 
 @media (min-width: $screen-sm){
   .survey-complex-value{
-    width:245px;
+    width:184px;
     margin: 0 auto;
+  }
+}
+
+@media (min-width: $screen-md) {
+  .survey-complex-value{
+    width: 276px;
   }
 }
 
@@ -13,11 +19,19 @@
   @extend .survey__field-value;
   padding:18px;
   margin-right: 6px;
+  text-align: center;
 }
 
 @media (min-width: $screen-sm) {
   .survey-complex-value__field-value{
     width: 100%;
+  }
+}
+
+@media(min-width: $screen-md){
+  .survey-complex-value__field-value{
+    width: 142px;
+    text-align: left;
   }
 }
 
@@ -28,7 +42,8 @@
     content:'дн.';
     position: absolute;
     display: block;
-    @include  same(right, top, 22px);
+    right: 22px;
+    top:20px;
     opacity: .3;
   }
 
@@ -48,6 +63,21 @@
     }
   }
 }
+
+@media (min-width: $screen-md) {
+  .survey-complex-value__field-value-wrapper{
+    &:after{
+      display: block;
+    }
+  }
+}
+
+@media( min-width: $screen-md){
+  .survey-complex-value__field-value-wrapper{
+    width: 141px;
+  }
+}
+
 
 .survey-complex-value__decrease,
 .survey-complex-value__increase{
@@ -94,5 +124,14 @@
   .survey-complex-value__decrease,
   .survey-complex-value__increase{
     margin:0;
+  }
+}
+
+@media (min-width: $screen-md) {
+  .survey-complex-value__decrease{
+    margin-right: 6px;
+  }
+  .survey-complex-value__increase{
+    margin-left: 6px;
   }
 }

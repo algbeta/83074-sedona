@@ -4,7 +4,6 @@
   background-color: #fff;
   @include photoshop-drop-shadow(90,7,0,15,rgba(0,0,0,.15));
   padding: 36px 20%;
-
   &--visible{
     display: block;
     position: fixed;
@@ -13,7 +12,6 @@
     transform: translate(-50%, -50%);
   }
 }
-
 .popup__heading{
   font-size: 1.286rem;
   margin-bottom: 35px;
@@ -22,7 +20,6 @@
 .popup__content{
   line-height: 1.714rem;
 }
-
 .popup__btn{
   padding: 18px 0;
   text-align: center;
