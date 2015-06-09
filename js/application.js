@@ -31,6 +31,10 @@ function showMap(mapObjects, mapIconUrl){
     //picturefill snippet
     document.createElement( "picture" );
 
+    //svg injection
+    var svgs = document.querySelectorAll('.page-footer__copyright-author-link img, .page-footer__link img');
+    SVGInjector(svgs);
+
     //navbar menu actions
     var toggleButtons = document.querySelectorAll(".navbar__toggle-btn, .navbar__close");
     if(toggleButtons && toggleButtons.length > 0){
@@ -100,13 +104,14 @@ function initFormPreview(){
     }
 
     var form = document.querySelector("#survey");
-    form.querySelector("#fileInput").addEventListener("change", function(){
-        var files = this.files;
-        for(var i = 0; i< files.length; i++){
-            preview(files[i]);
-        }
-    });
-
+    if(form) {
+        form.querySelector("#fileInput").addEventListener("change", function () {
+            var files = this.files;
+            for (var i = 0; i < files.length; i++) {
+                preview(files[i]);
+            }
+        });
+    }
 
 };
 
