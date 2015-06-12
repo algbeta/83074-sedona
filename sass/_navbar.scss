@@ -192,22 +192,29 @@
   }
 }
 
-.navbar__close{
-  text-decoration: none;
-  fill: #fff;
-  position: absolute;
-  right: 20px;
-  top: 19px;
-  display: block;
-  width: 23px;
-  height: 22px;
+.navbar__menu{
+  .navbar__close{
+    display: none;
+  }
+  &--expanded {
+    .navbar__close {
+      text-decoration: none;
+      fill: #fff;
+      position: absolute;
+      right: 20px;
+      top: 19px;
+      display: block;
+      width: 23px;
+      height: 22px;
+      z-index: 1;
 
-  &:hover,
-  &:active{
-   fill: #fff;
+      &:hover,
+      &:active {
+        fill: #fff;
+      }
+    }
   }
 }
-
 @media (min-width: $screen-sm) {
   .navbar__close{
     display: none;

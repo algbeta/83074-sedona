@@ -27,9 +27,19 @@
     display: inline-block;
     border-bottom: none;
     border-top: 2px solid $border-grey;
+    position: relative;
 
     &:nth-child(odd){
       margin-right: 84px;
+      &:after{
+        content:'';
+        display: block;
+        border-right:  2px solid $border-grey;
+        position: absolute;
+        right: -42px;
+        top:0;
+        bottom:-2px;
+      }
     }
 
     &:nth-last-child(1),
@@ -45,9 +55,27 @@
     margin-left: 48px;
     margin-right: 48px;
 
+
+    &:after{
+       content:'';
+       display: block;
+       border-right:  2px solid $border-grey;
+       position: absolute;
+       right: -42px;
+       top:0;
+       bottom:-2px;
+    }
+
+    &:nth-child(3n){
+      &:after{
+        display: none;
+      }
+    }
+
     &:nth-child(odd) {
       margin-right: 48px;
     }
+
     &:nth-last-child(3){
       border-bottom: 2px solid $border-grey;
     }
@@ -111,6 +139,23 @@
   top:3px;
 }
 
+.pagination{
+  position: relative;
+}
+
+@media (min-width: $screen-sm) {
+   .pagination{
+     margin: 0 auto;
+     width: 680px;
+   }
+}
+
+@media (min-width: $screen-md) {
+   .pagination{
+     width: 1100px;
+   }
+}
+
 .pagination__page{
   display: none;
 }
@@ -121,11 +166,10 @@
     font-size: $font-size-big;
     font-weight: bold;
     position: absolute;
-    left: -150px;
+    left: 0;
     top:67px;
   }
 }
-
 
 
 .pagination__list{
@@ -138,10 +182,10 @@
   .pagination__list{
     text-align: center;
     position: relative;
-    width: 50%;
+    width: 60%;
     margin: 0 auto;
     border-bottom: none;
-    padding: 45px 0 20px 0;
+    padding: 45px 0 10px 0;
   }
 }
 
@@ -199,6 +243,6 @@
 
 @media (min-width: $screen-sm) {
   .pagination-list__item{
-    margin: 0 8px;
+    margin: 0 8px 10px;
   }
 }
