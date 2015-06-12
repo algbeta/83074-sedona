@@ -25,6 +25,7 @@
   .post{
     width: 296px;
     display: inline-block;
+    vertical-align: top;
     border-bottom: none;
     border-top: 2px solid $border-grey;
     position: relative;
@@ -87,12 +88,6 @@
   margin-bottom: 28px;
   text-align: center;
   line-height: 1.857rem;
-}
-
-@media(min-width: $screen-sm){
-  .post__heading{
-
-  }
 }
 
 .post__content{
