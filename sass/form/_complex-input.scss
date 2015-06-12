@@ -91,10 +91,8 @@
   cursor: pointer;
   width: 60px;
   height: 57px;
-  &:before{
+  img{
     display: inline-block;
-    //I use px here because font-size is relative to height of block
-    font-size: 42px;
     vertical-align: middle;
     opacity: .3;
   }
@@ -105,36 +103,14 @@
 
   &:active{
     background-color: $input-grey-active;
-    color: $input-grey-active-cl;
+    fill: $input-grey-active-cl;
   }
 }
 
-.survey-complex-value__decrease{
-  margin-right: 6px;
-  &:before{
-    content: '-';
-  }
+.survey-complex-value__img{
+    margin-top: 18px;
+    @include same(width, height, 20px);
 }
 
-.survey-complex-value__increase{
-  margin-left: 6px;
-  &:before{
-    content: '+';
-  }
-}
 
-@media(min-width: $screen-sm){
-  .survey-complex-value__decrease,
-  .survey-complex-value__increase{
-    margin:0;
-  }
-}
 
-@media (min-width: $screen-md) {
-  .survey-complex-value__decrease{
-    margin-right: 6px;
-  }
-  .survey-complex-value__increase{
-    margin-left: 6px;
-  }
-}

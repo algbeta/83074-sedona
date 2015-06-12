@@ -32,7 +32,7 @@ function showMap(mapObjects, mapIconUrl){
     document.createElement( "picture" );
 
     //svg injection
-    var svgs = document.querySelectorAll('.page-footer__copyright-author-link img, .page-footer__link img');
+    var svgs = document.querySelectorAll('.page-footer__copyright-author-link img, .page-footer__link img, .survey-complex-value__img');
     SVGInjector(svgs);
 
     //navbar menu actions
