@@ -4,20 +4,37 @@
 
 @media (min-width: $screen-sm){
   .survey-complex-value{
-    width:245px;
+    width:184px;
     margin: 0 auto;
+  }
+}
+
+@media (min-width: $screen-md) {
+  .survey-complex-value{
+    width: 276px;
+    &--np{
+      margin-left: 0;
+    }
   }
 }
 
 .survey-complex-value__field-value{
   @extend .survey__field-value;
-  padding:20px;
+  padding:18px;
   margin-right: 6px;
+  text-align: center;
 }
 
 @media (min-width: $screen-sm) {
   .survey-complex-value__field-value{
     width: 100%;
+  }
+}
+
+@media(min-width: $screen-md){
+  .survey-complex-value__field-value{
+    width: 142px;
+    text-align: left;
   }
 }
 
@@ -28,7 +45,8 @@
     content:'дн.';
     position: absolute;
     display: block;
-    @include  same(right, top, 22px);
+    right: 22px;
+    top:20px;
     opacity: .3;
   }
 
@@ -49,6 +67,21 @@
   }
 }
 
+@media (min-width: $screen-md) {
+  .survey-complex-value__field-value-wrapper{
+    &:after{
+      display: block;
+    }
+  }
+}
+
+@media( min-width: $screen-md){
+  .survey-complex-value__field-value-wrapper{
+    width: 141px;
+  }
+}
+
+
 .survey-complex-value__decrease,
 .survey-complex-value__increase{
   background-color: $input-grey;
@@ -56,11 +89,10 @@
   vertical-align: middle;
   text-align: center;
   cursor: pointer;
-  @include same(width, height, 60px);
-  &:before{
+  width: 60px;
+  height: 57px;
+  img{
     display: inline-block;
-    //I use px here because font-size is relative to height of block
-    font-size: 45px;
     vertical-align: middle;
     opacity: .3;
   }
@@ -71,27 +103,14 @@
 
   &:active{
     background-color: $input-grey-active;
-    color: $input-grey-active-cl;
+    fill: $input-grey-active-cl;
   }
 }
 
-.survey-complex-value__decrease{
-  margin-right: 6px;
-  &:before{
-    content: '-';
-  }
+.survey-complex-value__img{
+    margin-top: 18px;
+    @include same(width, height, 20px);
 }
 
-.survey-complex-value__increase{
-  margin-left: 6px;
-  &:before{
-    content: '+';
-  }
-}
 
-@media(min-width: $screen-sm){
-  .survey-complex-value__decrease,
-  .survey-complex-value__increase{
-    margin:0;
-  }
-}
+

@@ -39,7 +39,14 @@
   padding: 20px 0 0 75px;
   height: 60px;
   font-weight: bold;
-  @include text-select-disable;
+  user-select: none;
+  display: inline-block;
+}
+
+@media (min-width: $screen-md) {
+  .survey__field-value-check + label {
+      width: 49%;
+  }
 }
 
 .survey__field-value-check:checked + label{

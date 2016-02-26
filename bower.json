@@ -1,0 +1,30 @@
+{
+  "name": "83074-sedona",
+  "version": "1.0.0",
+  "homepage": "https://github.com/algbeta/83074-sedona",
+  "authors": [
+    "natallia <n.gorbunova@softteco.com>"
+  ],
+  "description": "учебный проект для html-academy",
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "picturefill": "~2.3.1",
+    "svg-injector": "~1.1.2",
+    "tap": "~1.0.6"
+  },
+  "keywords": [
+    "html",
+    "css",
+    "sedona",
+    "adaptive",
+    "design"
+  ]
+}

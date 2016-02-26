@@ -10,15 +10,17 @@ body, html{
   padding: 0;
   text-transform: uppercase;
   font-size: 14px;
-  background-color: $input-grey;
+ /* background-color: $input-grey;*/
 
 }
 
 ul, menu, dir, h1, h2, h3,p, blockquote{
-  -webkit-margin-before: 0;
+/*  -webkit-margin-before: 0;
   -webkit-margin-after: 0;
   -webkit-padding-start: 0;
-  -webkit-padding-end: 0;
+  -webkit-padding-end: 0;*/
+  margin: 0;
+  padding: 0;
 }
 
 ul{

@@ -28,9 +28,14 @@
     "grunt-sass": "^0.18.1"
   },
   "devDependencies": {
+    "grunt-autoprefixer": "^3.0.1",
+    "grunt-combine-media-queries": "^1.0.19",
     "grunt-contrib-cssmin": "^0.12.3",
+    "grunt-contrib-htmlmin": "^0.4.0",
+    "grunt-contrib-imagemin": "^0.9.4",
     "grunt-contrib-uglify": "^0.9.1",
     "grunt-contrib-watch": "^0.6.1",
-    "grunt-spritesmith": "^4.6.1"
+    "grunt-csscomb": "^3.0.1",
+    "load-grunt-tasks": "^3.2.0"
   }
 }

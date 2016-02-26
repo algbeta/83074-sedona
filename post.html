@@ -9,49 +9,62 @@
     <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
+<div class="container">
 <header class="page-header">
-    <div class="navbar">
-        <nav class="navbar__menu">
-            <ul>
-                <li class="navbar__menu-item">
-                    <a href="#">карта штата</a>
-                </li>
-                <li class="navbar__menu-item">
-                    <a href="#">информация</a>
-                </li>
-                <li class="navbar__menu-item">
-                    <a href="#">фото и видео</a>
-                </li>
-                <li class="navbar__menu-item">
-                    <a href="#">гостиницы</a>
-                </li>
-            </ul>
-        </nav>
-        <a class="navbar__logo" href="app/index.html">
-            <img alt="на главную" src="img/logo.png"/>
-        </a>
-        <a class="navbar__close" href="#">&times;</a>
-        <div class="navbar__toggle-btn"></div>
-    </div>
-    <div class="intro intro--shortered">
-        <img class="intro__sedona" src="img/intro-3.png" alt="Sedona"/>
-    </div>
-</header>
+        <div class="navbar">
+            <nav class="navbar__menu">
+                <a class="navbar__close" href="#">
+                    <img src="img/icon-cross.svg" alt="закройте меню"/>
+                </a>
+                <ul>
+                    <li class="navbar__menu-item">
+                        <a href="#">карта штата</a>
+                    </li>
+                    <li class="navbar__menu-item navbar__menu-item--active">
+                        <a href="#">информация</a>
+                    </li>
+                    <li class="navbar__menu-item">
+                        <a href="#">фото и видео</a>
+                    </li>
+                    <li class="navbar__menu-item">
+                        <a href="#">гостиницы</a>
+                    </li>
+                </ul>
+            </nav>
+            <a class="navbar__logo" href="app/index.html">
+                <img class="navbar__logo-img" src="img/logo-sedona@1x.png" alt="на главную"
+                         srcset="img/logo-sedona@2x.png 2x, img/logo-sedona@3x.png 3x"/>
+                <img alt="sedona"  class="navbar__logo-svg" src="img/form-logo-triangle.svg"/>
+            </a>
+            <div class="navbar__toggle-btn"></div>
+        </div>
+        <div class="intro intro--shortered">
+            <img class="intro__sedona" src="img/text-sedona.svg" alt="Sedona"/>
+        </div>
+    </header>
 <main class="main">
-   
-    <div class="section-description">
+    <div class="post-container">
+    <div class="section-description section-description--narrow">
         <p class="section-description__heading">блог шерифа</p>
         <p class="section-description__content">
-            седона - удивительный город! горы здесь красного цвета, а шериф ведет блог и
-            общается на форумах
+            седона - удивительный город! горы здесь красного цвета<span class="section-description__content-no-display">, а шериф ведет блог и
+            общается на форумах</span>
         </p>
     </div>
   
-    <div class="post-data">
-        <span class="post-data__date">
-              <time datetime="2014-05-08">Вчера</time>
-        </span>
-        <span class="post-data__type">Проишествия</span>
+    <div class="post-data post-data--upper">
+        <span class="post-data__decor post-data__decor--left"></span>
+        <div class="post-data__wrap">
+            <span class="post-data__date">
+                  <img class="post__date-img" src="img/blog-calendar.svg" alt="дата"/>
+                  <time datetime="2014-05-08">Вчера</time>
+            </span>
+            <span class="post-data__type">
+                <img class="post__type-img" src="img/blog-flag.svg" alt="категория"/>
+                Проишествия
+            </span>
+        </div>
+        <span class="post-data__decor post-data__decor--right"></span>
     </div>
 
     <article class="post-full">
@@ -73,7 +86,7 @@
 
         <h2 class="post-full__subheading">Пропажа</h2>
 
-        <p class="post-full__content post-full__content-before-list">
+        <p class="post-full__content post-full__content--before-list">
             Неделю назад я вернулся из канзаса и не нашел анаконду дома. обошел все 200 гектаров своего участка,
             но ее нигде нет. решил сообщить в полицию, но вовремя вспомнил, что я и есть полиция, поэтому отправился на поиски сам.
             особые приметы змеи:
@@ -97,7 +110,7 @@
 
         <h2 class="post-full__subheading">Предостережение</h2>
 
-        <p class="post-full__content">
+        <p class="post-full__content post-full__content--before-qoute">
             Не пытайтесь убить змею, если увидите! помните, что она тоже живое существо, хоть и выглядит не очень
             приятно.
             вот цитата, которая мне очень нравится:
@@ -113,20 +126,30 @@
         <a class="previous-next-section_item" href="#next">След.</a>
         <a class="previous-next-section_item" href="#back">Назад к списку</a>
     </div>
+    </div>
+
 </main>
-
-<footer class="page-footer">
-    <div class="page-footer__hashtag">#visitsedona</div>
-    <div class="page-footer__socials">
-        <a class="page-footer__link page-footer__link--twitter" href="twitter.com" title="twitter"></a>
-        <a class="page-footer__link page-footer__link--facebook" href="facebook.com" title="facebook"></a>
-        <a class="page-footer__link page-footer__link--youtube" href="youtube.com" title="youtube"></a>
-    </div>
-    <div class="page-footer__copyright">
-        <span class="page-footer__copyright-text">разработано</span>
-        <a class="page-footer__copyright-author-link" href="#"><img src="img/htmlacademy_1x.png" alt="htmlacademy"/></a>
-    </div>
-</footer>
-
+    <footer class="page-footer">
+        <div class="page-footer__hashtag">#visitsedona</div>
+        <div class="page-footer__socials">
+            <a class="page-footer__link page-footer__link--twitter" href="twitter.com" title="twitter">
+                <img src="img/icon-twitter.svg" alt="twitter"/>
+            </a>
+            <a class="page-footer__link page-footer__link--facebook" href="facebook.com" title="facebook">
+                <img src="img/icon-facebook.svg" alt="facebook"/>
+            </a>
+            <a class="page-footer__link page-footer__link--youtube" href="youtube.com" title="youtube">
+                <img src="img/icon-youtube.svg" alt="youtube"/>
+            </a>
+        </div>
+        <div class="page-footer__copyright">
+            <span class="page-footer__copyright-text">разработано</span>
+            <a class="page-footer__copyright-author-link" href="#"><img class="page-footer__copyright-author-img" src="img/htmlacademy.svg" alt="htmlacademy"/></a>
+        </div>
+    </footer>
+</div>
+<script src="js/libs/svg-injector.min.js"></script>
+<script src="js/libs/picturefill.min.js"></script>
+<script src="js/app.min.js" type="text/javascript"></script>
 </body>
 </html>

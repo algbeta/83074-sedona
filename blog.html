@@ -8,14 +8,18 @@
     <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
+<div class="container">
 <header class="page-header">
     <div class="navbar">
         <nav class="navbar__menu">
+            <a class="navbar__close" href="#">
+                <img src="img/icon-cross.svg" alt="закройте меню"/>
+            </a>
             <ul>
                 <li class="navbar__menu-item">
                     <a href="#">карта штата</a>
                 </li>
-                <li class="navbar__menu-item">
+                <li class="navbar__menu-item navbar__menu-item--active">
                     <a href="#">информация</a>
                 </li>
                 <li class="navbar__menu-item">
@@ -27,13 +31,14 @@
             </ul>
         </nav>
         <a class="navbar__logo" href="app/index.html">
-            <img alt="на главную" src="img/logo.png"/>
+            <img class="navbar__logo-img" src="img/logo-sedona@1x.png" alt="на главную"
+                     srcset="img/logo-sedona@2x.png 2x, img/logo-sedona@3x.png 3x"/>
+            <img alt="sedona"  class="navbar__logo-svg" src="img/form-logo-triangle.svg"/>
         </a>
-        <a class="navbar__close" href="#">&times;</a>
         <div class="navbar__toggle-btn"></div>
     </div>
     <div class="intro intro--shortered">
-        <img class="intro__sedona" src="img/intro-3.png" alt="Sedona"/>
+        <img class="intro__sedona" src="img/text-sedona.svg" alt="Sedona"/>
     </div>
 </header>
 <main class="main">
@@ -45,34 +50,105 @@
             общается на форумах
         </p>
     </div>
-  
-    <article class="post">
-        <h1 class="post__heading">Внимание сбежала моя домашняя анаконда!</h1>
-        <p class="post__content">
-            жители седоны и гости города,будьте бдительны - сбежала моя домашняя змея.
-            Увидевшему срочно звонить 911 и бежать подальше.
-        </p>
-       <span class="post__date">
-           <time datetime="2014-05-08">Вчера</time>
-       </span>
-        <span class="post__type">проишествия</span>
-    </article>
+    <div class="blog-container">
+        <article class="post">
+            <h1 class="post__heading">Внимание сбежала моя домашняя анаконда!</h1>
+            <p class="post__content">
+                жители седоны и гости города,будьте бдительны - сбежала моя домашняя змея.
+                Увидевшему звонить 911 и бежать подальше.
+            </p>
+           <span class="post__date">
+               <img class="post__date-img" src="img/blog-calendar.svg" alt="дата"/>
+               <time datetime="2014-05-08">Вчера</time>
+           </span>
+            <span class="post__type">
+                <img class="post__type-img" src="img/blog-flag.svg" alt="категория"/>
+                проишествия
+            </span>
+        </article>
 
-    <article class="post">
-        <h1 class="post__heading">Принят антитабачный закон штата</h1>
-        <p class="post__content">
-            уважаемые туристы, пожалуйста, не забывайте, что курение в общественных местах города седона
-            категорически запрещено
-        </p>
-        <span class="post__date">
-            <time datetime="2014-05-08">Вчера</time>
-        </span>
-        <span class="post__type">проишествия</span>
-    </article>
-    
+        <article class="post">
+            <h1 class="post__heading">Принят антитабачный закон штата</h1>
+            <p class="post__content">
+                уважаемые туристы, пожалуйста, не забывайте, что курение в общественных местах города седона
+                категорически запрещено
+            </p>
+            <span class="post__date">
+                 <img class="post__date-img" src="img/blog-calendar.svg" alt="дата"/>
+                <time datetime="2014-05-08">Вчера</time>
+            </span>
+            <span class="post__type">
+                <img class="post__type-img" src="img/blog-flag.svg" alt="категория"/>
+                проишествия
+            </span>
+        </article>
+
+        <article class="post">
+            <h1 class="post__heading">Маньяк задержан, дает показания</h1>
+            <p class="post__content">
+                Жители Седоны могут спать спокойно. Задержан маньяк-эксгибиционист, державщий в страхе весь город. Пострадавшим обращаться в 911.Еще немжножко текста, чтоб добить эту штуку до большей высоты и потестить
+            </p>
+            <span class="post__date">
+                <img class="post__date-img" src="img/blog-calendar.svg" alt="дата"/>
+                <time datetime="2014-05-08">3 дня назад</time>
+            </span>
+            <span class="post__type">
+                <img class="post__type-img" src="img/blog-flag.svg" alt="категория"/>
+                проишествия
+            </span>
+        </article>
+
+        <article class="post">
+            <h1 class="post__heading">Водопад закрыт на реконструкцию</h1>
+            <p class="post__content">
+                Всем, кто планировал посещать водопад в эти выходные, придется изменить планы. На нем ведутся ремонтные работы по улучшению
+                подачи воды.
+            </p>
+            <span class="post__date">
+                <img class="post__date-img" src="img/blog-calendar.svg" alt="дата"/>
+                <time datetime="2014-05-08">Вчера</time>
+            </span>
+            <span class="post__type">
+                <img class="post__type-img" src="img/blog-flag.svg" alt="категория"/>
+                проишествия
+            </span>
+        </article>
+
+        <article class="post">
+            <h1 class="post__heading">Открылся новый стейк-хауз "Горный бык"</h1>
+            <p class="post__content">
+                Лучшие стейки в Седоне! Приемлемые цены и только самые лучшие продукты. Заходи попробовать! Действует акция: съешь два и
+                получи третий!
+            </p>
+            <span class="post__date">
+                <img class="post__date-img" src="img/blog-calendar.svg" alt="дата"/>
+                <time datetime="2014-05-08">Месяц назад</time>
+            </span>
+            <span class="post__type">
+                <img class="post__type-img" src="img/blog-flag.svg" alt="категория"/>
+                проишествия
+            </span>
+        </article>
+
+        <article class="post">
+            <h1 class="post__heading">Прогноз погоды на ближайшие выходные</h1>
+            <p class="post__content">
+                Синоптики обещают, что будет ясно, безветрено и около 90 градусов по фаренгейту. Как в пустыне! Проверим их слова уже через
+                пару дней!
+            </p>
+            <span class="post__date">
+                <img class="post__date-img" src="img/blog-calendar.svg" alt="дата"/>
+                <time datetime="2014-05-08">Год назад</time>
+            </span>
+            <span class="post__type">
+                <img class="post__type-img" src="img/blog-flag.svg" alt="категория"/>
+                Проишествия
+            </span>
+        </article>
+    </div>
     <div class="pagination">
-      <span class="pagination__page">Страница</span>
-      <ul class="pagination__list">
+        <div class="pagination__page">Страница:</div>
+        <ul class="pagination__list">
           <li class="pagination-list__item pagination-list__item--active"><a href="#">1</a></li>
           <li class="pagination-list__item"><a href="#">2</a></li>
           <li class="pagination-list__item"><a href="#">3</a></li>
@@ -81,19 +157,27 @@
       </ul>
     </div>
 </main>
-
-<footer class="page-footer">
-    <div class="page-footer__hashtag">#visitsedona</div>
-    <div class="page-footer__socials">
-        <a class="page-footer__link page-footer__link--twitter" href="twitter.com" title="twitter"></a>
-        <a class="page-footer__link page-footer__link--facebook" href="facebook.com" title="facebook"></a>
-        <a class="page-footer__link page-footer__link--youtube" href="youtube.com" title="youtube"></a>
-    </div>
-    <div class="page-footer__copyright">
-        <span class="page-footer__copyright-text">разработано</span>
-        <a class="page-footer__copyright-author-link" href="#"><img src="img/htmlacademy_1x.png" alt="htmlacademy"/></a>
-    </div>
-</footer>
-
+    <footer class="page-footer">
+        <div class="page-footer__hashtag">#visitsedona</div>
+        <div class="page-footer__socials">
+            <a class="page-footer__link page-footer__link--twitter" href="twitter.com" title="twitter">
+                <img src="img/icon-twitter.svg" alt="twitter"/>
+            </a>
+            <a class="page-footer__link page-footer__link--facebook" href="facebook.com" title="facebook">
+                <img src="img/icon-facebook.svg" alt="facebook"/>
+            </a>
+            <a class="page-footer__link page-footer__link--youtube" href="youtube.com" title="youtube">
+                <img src="img/icon-youtube.svg" alt="youtube"/>
+            </a>
+        </div>
+        <div class="page-footer__copyright">
+            <span class="page-footer__copyright-text">разработано</span>
+            <a class="page-footer__copyright-author-link" href="#"><img class="page-footer__copyright-author-img" src="img/htmlacademy.svg" alt="htmlacademy"/></a>
+        </div>
+    </footer>
+</div>
+<script src="js/libs/svg-injector.min.js"></script>
+<script src="js/libs/picturefill.min.js"></script>
+<script src="js/app.min.js" type="text/javascript"></script>
 </body>
 </html>

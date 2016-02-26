@@ -3,16 +3,45 @@
   .survey{
     width: 85%;
     margin: 0 auto;
-    margin-bottom: 120px;
+    margin-bottom: 60px;
+  }
+}
+
+@media (min-width: $screen-md) {
+  .survey{
+    width: 990px;
+    margin-bottom: 60px;
   }
 }
 
 @media(min-width: $screen-sm){
+  .survey__field-row--flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+
+
+  }
+
+  .survery__field-row{
+    .survey__field-row{
+      display: inline-block;
+    }
+
+    .survey__field-wrap{
+      display: inline-block;
+      vertical-align: top;
+      width: 32%;
+    }
+  }
+
   .survey__field-wrap{
-    width:33%;
-    display: inline-block;
+
     &--half{
       width:49%;
+      margin-top: 25px;
+      display: inline-block;
     }
 
     &--full{
@@ -20,6 +49,34 @@
       margin:0 auto;
       display: block;
       text-align: center;
+    }
+  }
+
+  .survey__field-checkbox-wrap{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    .survey__field-wrap--half{
+      width: auto;
+    }
+  }
+}
+
+@media(min-width: $screen-md){
+  .survey__field-wrap{
+    &--full{
+      width: 30%;
+      margin-left: 0;
+    }
+  }
+
+  .survey__field-checkbox-wrap{
+    display: block;
+    width: 85%;
+    margin-left: 140px;
+    .survey__field-wrap--half{
+      width: 49%;
     }
   }
 }
@@ -31,13 +88,22 @@
   }
 }
 
+@media (min-width: $screen-md) {
+   .survey__section-wrap{
+     &--checkbox{
+       width: 980px;
+       .survey__field-wrap--half{
+          width:49%;
+          display: inline-block;
+       }
+     }
+   }
+}
+
 .survey__section{
   border:none;
   border-bottom: 1px solid #e5e5e5;
   padding-top: 20px;
-  label{
-    display: inline-block;
-  }
 
   &:last-of-type{
     border-bottom: 0;
@@ -51,19 +117,27 @@
 @media(min-width: $screen-sm){
   .survey__section{
     border-bottom:none;
-    padding-bottom: 50px;
+    padding-bottom: 30px;
     &:first-of-type{
       border: none;
     }
   }
 }
 
+@media (min-width: $screen-md) {
+  .survey__section{
+    &--np{
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
 .survey__legend{
   font-size: $font-size-big;
   line-height: 1.857rem;
   font-weight: bold;
   float: left;
-  margin-bottom: 35px;
+  margin-bottom: 20px;
   width:100%;
   text-align: center;
   @include clearfix;
@@ -73,23 +147,37 @@
   .survey__legend{
     &--striked{
       position: relative;
-       span{
+       .survey__legend-strike{
          position: absolute;
-
          top:13px;
          border-top:1px solid #dbdbdb;
-         width: 200px;
+         width: 122px;
        }
 
-      span:first-of-type{
+      .survey__legend-strike:first-of-type{
         left:0;
       }
 
-      span:last-of-type{
+      .survey__legend-strike:last-of-type{
         right: 0;
       }
     }
   }
+}
+
+@media (min-width: $screen-md) {
+  .survey__legend{
+    &--striked{
+      position: relative;
+      .survey__legend-strike{
+         width:278px;
+      }
+    }
+  }
+}
+
+.form-description{
+  margin-top: 30px;
 }
 
 .form-description__heading{
@@ -107,7 +195,8 @@
 }
 
 .form-description__content{
-  font-size: $font-size-big;
+/*  font-size: $font-size-big;*/
+  line-height: 1.714rem;
   text-align: center;
   @extend .centered;
   margin-bottom: 45px;
@@ -122,8 +211,9 @@
 .survey-travelers{
   counter-reset: li;
   list-style: none;
-  width:90%;
+  /*width:90%;*/
   margin: 0 auto;
+  margin-left:20px;
 
   li {
     position: relative;
@@ -132,9 +222,9 @@
       counter-increment: li;
       position: absolute;
       left: -65px;
-      top: 50px;
+      top: 48px;
       background: $input-grey;
-      @include same(height, width, line-height, 60px);
+      @include same(height, width, line-height, 56px);
       text-align: center;
       font-weight: bold;
       font-size: $font-size-big;
@@ -149,8 +239,37 @@
   }
 }
 
+@media (min-width: $screen-sm) {
+  .survey-travelers{
+    .survey__field-wrap{
+      display: inline-block;
+      width: 32%;
+    }
+  }
+}
+
+@media (min-width: $screen-md) {
+  .survey-travelers{
+    margin-left: 24px;
+    .survey__field-wrap{
+      width: 28%;
+      &:first-child{
+        margin-right: 2%;
+      }
+      &:nth-child(2){
+        margin-right: 4%;
+        width: 280px;
+      }
+      &:last-child{
+        margin-right: 0;
+        width: 280px;
+      }
+    }
+  }
+}
+
 .survey-file{
-  width:90%;
+  width:97%;
   margin: 0 auto;
 
   .survey-file__value{
@@ -175,9 +294,16 @@
   padding: 22px 0;
   text-align: center;
   margin-bottom: 55px;
+  margin-top: 42px;
+  display: block;
 
   &:hover{
     background-color: $input-grey-hover;
+  }
+}
+@media (min-width: $screen-md) {
+  .survey-file__name{
+    margin-top: 78px;
   }
 }
 
@@ -199,6 +325,9 @@
   font-weight: bold;
   font-size: 1.5rem;
   text-transform: uppercase;
+  text-align: center;
+  cursor: pointer;
+  margin-bottom: 80px;
 
   &:hover{
     background: $blue-hover;
@@ -213,11 +342,42 @@
 @media (min-width: $screen-sm) {
   .survey__field-value-submit{
     width: 50%;
+    margin-bottom: 69px;
   }
 }
+
+/*@media (min-width: $screen-md) {
+  .survey__field-value-submit{
+    width: 100%;
+  }
+}*/
 
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="date"]::-webkit-inner-spin-button{
+  display: none;
+}
+
+@media(min-width: $screen-sm){
+  .survey__legend-text{
+    width: 60%;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+@media(min-width: $screen-md){
+  .survey__legend-text{
+    width: 30%;
+  }
+
+  .survey__field-wrap--full .survey__field-name--np{
+    padding-left: 0;
+    text-align: left;
+  }
 }

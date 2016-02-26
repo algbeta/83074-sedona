@@ -1,10 +1,13 @@
-@import "sprites/functions";
-@import "sprites/icons-sprite";
-
 .page-footer{
   background-color: #fefefe;
   padding: 40px 0 25px 0;
   text-align: center;
+}
+
+@media (min-width: $screen-sm) {
+  .page-footer{
+    padding: 40px 0 0 0;
+  }
 }
 
 .page-footer__hashtag{
@@ -21,10 +24,11 @@
   display: inline-block;
   width: 46px;
   height: 48px;
-  line-height: 46px;
+  line-height: 53px;
   vertical-align: middle;
   background-color: $blue;
   margin-right: 3px;
+  fill: #fff;
 
   &:hover{
     background-color: $blue-hover;
@@ -32,49 +36,57 @@
 
   &:active{
     background-color: $blue-active;
-    &:before{
-    opacity: .3;
-    }
-  }
-
-  &:before{
-    content: '';
-    display: inherit;
-    vertical-align: middle;
-  }
-
-  &--twitter:before{
-     @include sprite($twitter-icon-1x);
-  }
-
-  &--facebook:before{
-     @include sprite($facebook-icon-1x);
-  }
-
-  &--youtube:before{
-    @include sprite($youtube-icon-1x);
+    fill: $text-color-active;
   }
 }
 
 .page-footer__copyright-text{
   vertical-align: middle;
+  margin-right: 5px;
 }
 
 .page-footer__copyright-author-link{
   vertical-align: middle;
   display: inline-block;
+
+  &:hover{
+    fill: $blue;
+  }
+
+  &:active{
+    fill: #b2b2b2;
+  }
 }
+
+
+
 
 @media (min-width: $screen-sm) {
   .page-footer{
     width: 85%;
     margin: 0 auto;
+    margin-bottom: 0;
+  }
+
+  .page-footer__hashtag{
+    text-align: left;
+  }
+
+  .page-footer__copyright{
+    text-align: right;
   }
 
   .page-footer__hashtag,
   .page-footer__socials,
   .page-footer__copyright{
     display: inline-block;
-    width: 33%;
+    width: 32%;
+    margin-bottom: 36px;
+    height: 48px;
+    line-height: 48px;
+  }
+
+  .page-footer__copyright-author-img{
+    vertical-align: middle;
   }
 }

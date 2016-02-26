@@ -3,12 +3,33 @@
   margin: 0 auto;
 }
 
+@media (min-width: $screen-sm) {
+  .survey-gallery{
+    width: 600px;
+  }
+}
+
+@media (min-width: $screen-md) {
+  .survey-gallery{
+    width: 960px;
+  }
+}
+
 .survey-gallery__item{
-  @include same(width, height, 60px);
-  margin: 0  0 35px  35px;
+  margin: 0  17px 35px  17px;
   display: inline-block;
-  background: url("../img/gallery-pic.jpg") no-repeat;
+/*  background: url("../img/gallery-pic.jpg") no-repeat;*/
   position: relative;
+
+  img{
+    @include same(width, height, 60px);
+  }
+}
+
+@media (min-width: $screen-md) {
+  .survey-gallery__item{
+    margin: 0 23px 35px;
+  }
 }
 
 .survey-gallery__item-close{
@@ -20,9 +41,9 @@
   left: 15px;
   color: #c6c6c6;
   transform: rotate(45deg);
-  font-size: 35px;
-  padding-left:7px;
-  line-height: 35px;
+  font-size: 39px;
+  padding-left:5px;
+  line-height: 30px;
   cursor: pointer;
 }
 
@@ -32,8 +53,11 @@
 
 @media(min-width: $screen-sm){
   .survey-gallery__item{
-    @include same(width, height, 140px);
-    margin: 0  0 60px  60px;
+
+    img {
+      @include same(width, height, 140px);
+    }
+    margin: 0  30px 60px  30px;
   }
 
   .survey-gallery__item-close {

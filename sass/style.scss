@@ -4,9 +4,9 @@
 @import "mixins/math";
 @import "mixins/same";
 @import "mixins/shadow";
-@import "mixins/gradient";
 @import "mixins/clearfix";
-@import "mixins/text-select-disable";
+@import "mixins/retina-image";
+
 
 @import "advantages";
 @import "blog";
@@ -25,3 +25,4 @@
 @import "form/complex-input";
 @import "form/checkbox";
 @import "form/gallery";
+@import "form/popup";
